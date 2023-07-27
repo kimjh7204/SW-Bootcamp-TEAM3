@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 public class MouseClick : MonoBehaviour
 {
     
-    private Vector3 mousePos, transPos, targetPos;
+    private Vector3  targetPos;
     private Camera mainCamera;
 
 
@@ -26,6 +26,8 @@ public class MouseClick : MonoBehaviour
 
     private void CalTargetPos()
     {
+        //내비게이션 메쉬 코드추가해야함.
+
         //mousePos = Input.mousePosition;
         //transPos = Camera.main.ScreenToWorldPoint(mousePos);
         //targetPos = new Vector3(transPos.x, 0, transPos.y);
