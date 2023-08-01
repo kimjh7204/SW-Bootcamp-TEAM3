@@ -18,8 +18,17 @@ public class SlotDrop : MonoBehaviour, IDropHandler
     public void OnDrop(PointerEventData eventData)
     {
         var temp = this.slot.slotItem;
-        this.slot.slotItem = GameData.droppedObejct.GetComponent<InventorySlot>().slotItem;
-        GameData.droppedObejct.GetComponent<InventorySlot>().slotItem = temp;
+        if(GameData.droppedObejct.GetComponent<InventorySlot>() != null)
+        {
+            this.slot.slotItem = GameData.droppedObejct.GetComponent<InventorySlot>().slotItem;
+            GameData.droppedObejct.GetComponent<InventorySlot>().slotItem = temp;
+        }
+        else
+        {
+            this.slot.slotItem = GameData.droppedObejct.GetComponent<MiniInventorySlot>().slotItem;
+            GameData.droppedObejct.GetComponent<MiniInventorySlot>().slotItem = temp;
+        }
+        
         GameData.droppedObejct = null;
     }
 }

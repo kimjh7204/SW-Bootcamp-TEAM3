@@ -17,4 +17,4 @@ MonoBehaviour:
   mesh: {fileID: 0}
   itemTooltip: tree
   itemGameObject: {fileID: 6471889771797441461, guid: 2c2115811c9e30145973a2f5fead6a3f, type: 3}
-  amount: 1
+  amount: 0
