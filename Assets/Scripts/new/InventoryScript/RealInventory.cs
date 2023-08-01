@@ -14,6 +14,8 @@ public class RealInventory : MonoBehaviour
     [SerializeField]
     private InventorySlot[] slots;
 
+    public Item testItem;
+
     private void OnValidate()
     {
         slots = slotParent.GetComponentsInChildren<InventorySlot>();
@@ -22,6 +24,7 @@ public class RealInventory : MonoBehaviour
     private void Awake()
     {
         FreshSlot();
+        AddItem(testItem);
     }
 
     public void FreshSlot()

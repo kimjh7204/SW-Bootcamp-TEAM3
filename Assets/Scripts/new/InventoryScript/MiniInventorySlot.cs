@@ -7,7 +7,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
 
-public class InventorySlot : MonoBehaviour, IPointerClickHandler
+public class MiniInventorySlot : MonoBehaviour, IPointerClickHandler
 {
     // 슬롯 아이템이 있으면 몇개인지 표시하고
     // 클릭하면 해당 아이템 3D 오브젝트 생성하는 것. 생성하고 툴팁 텍스트도 설정.
@@ -28,21 +28,22 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
         set
         {
             abc = value;
-            if(abc != null)
-            {
-                slotImage.sprite = abc.itemImage;
-                slotImage.color = new Color(1, 1, 1, 1);
-            }
-            else
-            {
-                slotImage.color = new Color(1, 1, 1, 0);
-            }
         }
     }
 
     private void Update()
     {
-        if(abc != null)
+        if (abc != null)
+        {
+            slotImage.sprite = abc.itemImage;
+            slotImage.color = new Color(1, 1, 1, 1);
+        }
+        else
+        {
+            slotImage.color = new Color(1, 1, 1, 0);
+        }
+
+        if (abc != null)
         {
             if (abc.amount >= 2)
                 text.text = slotItem.amount.ToString();
