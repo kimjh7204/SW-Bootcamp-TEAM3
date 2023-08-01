@@ -11,21 +11,23 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        ani = GetComponent < Animator>();
+        ani = GetComponent<Animator>();
     }
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(0) && NavData.playerCanMove)
+        if (Input.GetMouseButton(0) && NavData.playerCanMove)
         {
             RaycastHit hit;
-            if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
             {
-                agent.SetDestination(hit.point) ;
-                ani.SetBool("Walking" , true);
+                agent.SetDestination(hit.point);
+                ani.SetBool("Walking", true);
             }
-            
         }
-        else ani.SetBool("Walking" , false);
+        else
+        {
+            ani.SetBool("Walking", false);
+        }
     }
 }
