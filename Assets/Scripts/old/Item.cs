@@ -8,6 +8,8 @@ public class Item : ScriptableObject
     public string itemName;
     public Sprite itemImage;
     public Mesh mesh;
+    public string itemTooltip;
+    public GameObject itemGameObject;
 
     // Start is called before the first frame update
     void Start()
