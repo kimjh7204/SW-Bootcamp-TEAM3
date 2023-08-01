@@ -10,13 +10,13 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     private Transform slotParent; // bag 이 담기는 곳.
     [SerializeField]
-    private Slot[] slots; //bag 넣으면 slot 자동으로 채워짐
+    private InventorySlot[] slots; //bag 넣으면 slot 자동으로 채워짐
 
     private Vector3 DefaultPos;
 
     private void OnValidate()
     {
-        slots = slotParent.GetComponentsInChildren<Slot>();
+        slots = slotParent.GetComponentsInChildren<InventorySlot>();
     }
 
     void Awake()

@@ -10,6 +10,7 @@ public class Item : ScriptableObject
     public Mesh mesh;
     public string itemTooltip;
     public GameObject itemGameObject;
+    public int amount;
 
     // Start is called before the first frame update
     void Start()
