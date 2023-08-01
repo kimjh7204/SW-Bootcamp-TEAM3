@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    // Start is called before the first frame update
+    /*// Start is called before the first frame update
     public List<Item> items;
 
     [SerializeField]
@@ -48,5 +48,5 @@ public class Inventory : MonoBehaviour
         {
             print("슬롯이 가득 차 있습니다.");
         }
-    }
+    }*/
 }

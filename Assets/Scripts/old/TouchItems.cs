@@ -30,7 +30,7 @@ public class TouchItems : MonoBehaviour
         {
             Item item = clickInterface.ClickItem();
             print($"{item.itemName}");
-            inventory.AddItem(item);
+            //inventory.AddItem(item);
 
         }
     }

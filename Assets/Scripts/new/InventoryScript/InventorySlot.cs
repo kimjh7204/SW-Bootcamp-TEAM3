@@ -29,11 +29,11 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
             if(abc != null)
             {
                 slotImage.sprite = abc.itemImage;
-                image.color = new Color(1, 1, 1, 1);
+                slotImage.color = new Color(1, 1, 1, 1);
             }
             else
             {
-                image.color = new Color(1, 1, 1, 0);
+                slotImage.color = new Color(1, 1, 1, 0);
             }
         }
     }

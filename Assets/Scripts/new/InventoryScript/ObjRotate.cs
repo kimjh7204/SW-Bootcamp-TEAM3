@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 
 public class ObjRotate : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IBeginDragHandler
 {
+    // 3D 오브젝트 회전시키는 것
+
     [Header("3D 오브젝트 회전 속도")]
     public float rotateSpeed = 30f;
     Vector3 mousePos, offset, rotation;
