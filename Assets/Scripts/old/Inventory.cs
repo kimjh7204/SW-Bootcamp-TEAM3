@@ -8,9 +8,9 @@ public class Inventory : MonoBehaviour
     public List<Item> items;
 
     [SerializeField]
-    private Transform slotParent; // bag ÀÌ ´ã±â´Â °÷.
+    private Transform slotParent; // bag ì´ ë‹´ê¸°ëŠ” ê³³.
     [SerializeField]
-    private InventorySlot[] slots; //bag ³ÖÀ¸¸é slot ÀÚµ¿À¸·Î Ã¤¿öÁü
+    private InventorySlot[] slots; //bag ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ slot ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ Ã¤ï¿½ï¿½ï¿½ï¿½
 
     private Vector3 DefaultPos;
 
@@ -46,7 +46,7 @@ public class Inventory : MonoBehaviour
         }
         else
         {
-            print("½½·ÔÀÌ °¡µæ Â÷ ÀÖ½À´Ï´Ù.");
+            print("ìŠ¬ë¡¯ì´ ê°€ë“ ì°¨ ìˆìŠµë‹ˆë‹¤.");
         }
     }*/
 }
