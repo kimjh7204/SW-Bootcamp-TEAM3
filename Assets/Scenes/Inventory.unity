@@ -10878,7 +10878,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1413365975
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11943,7 +11943,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1583969071}
   - component: {fileID: 1583969070}
-  - component: {fileID: 1583969069}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -11951,14 +11950,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1583969069
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1583969068}
-  m_Enabled: 1
 --- !u!20 &1583969070
 Camera:
   m_ObjectHideFlags: 0
@@ -14833,7 +14824,7 @@ Light:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 388.22955
-  m_SpotAngle: 82.11146
+  m_SpotAngle: 179
   m_InnerSpotAngle: 20.016045
   m_CookieSize: 10
   m_Shadows:
