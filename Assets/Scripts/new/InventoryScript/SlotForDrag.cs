@@ -25,9 +25,9 @@ public class SlotForDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
     {
         startPos = this.transform.position;
         GameData.droppedObejct = this.gameObject;
-        this.transform.SetParent(parent.parent.parent.parent);
+        this.transform.SetParent(parent.parent.parent.parent.parent);
         this.GetComponent<Image>().raycastTarget = false;
-        numberText.transform.SetParent(parent.parent.parent.parent);
+        numberText.transform.SetParent(parent.parent.parent.parent.parent);
         
     }
 

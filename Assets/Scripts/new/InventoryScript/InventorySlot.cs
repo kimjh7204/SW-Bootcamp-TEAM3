@@ -64,7 +64,7 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
                 Destroy(GameData.objectShowed);
                 tooltipText.text = null;
             }
-            GameData.objectShowed = Instantiate<GameObject>(slotItem.itemGameObject, new Vector3(0, 0, 0), Quaternion.identity);
+            GameData.objectShowed = Instantiate<GameObject>(slotItem.itemGameObject, new Vector3(-0.0026165843f, -53.3899994f, 0), Quaternion.identity);
             tooltipText.text = slotItem.itemTooltip;
         }
     }

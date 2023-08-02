@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Tree
   itemImage: {fileID: 21300000, guid: 580c9f0470aec604dbe8dcff2daa8d4f, type: 3}
-  mesh: {fileID: 0}
   itemTooltip: tree
   itemGameObject: {fileID: 6471889771797441461, guid: 2c2115811c9e30145973a2f5fead6a3f, type: 3}
-  amount: 0
+  amount: 2

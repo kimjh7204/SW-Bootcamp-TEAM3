@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ObjRotate : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IBeginDragHandler
+public class ObjRotate : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IBeginDragHandler, IDragHandler
 {
     // 3D 오브젝트 회전시키는 것
 
@@ -15,21 +15,13 @@ public class ObjRotate : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        isDrag = true;
     }
 
 
 
     void Update()
     {
-        if (Input.GetMouseButton(0) && isPointerEnter && isDrag)
-        {
-            offset = (-Input.mousePosition + mousePos);
-            rotation.x = offset.y * Time.deltaTime * rotateSpeed;
-            rotation.y = offset.x * Time.deltaTime * rotateSpeed;
-            GameData.objectShowed.transform.Rotate(rotation, Space.World);
-        }
-        mousePos = Input.mousePosition;
+        
 
 
     }
@@ -43,6 +35,17 @@ public class ObjRotate : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     public void OnPointerExit(PointerEventData eventData)
     {
         isPointerEnter = false;
-        isDrag = false;
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        //if (Input.GetMouseButton(0) && isPointerEnter)
+        //{
+            offset = (-Input.mousePosition + mousePos);
+            float x = eventData.delta.x * Time.deltaTime * rotateSpeed;
+            float y = eventData.delta.y * Time.deltaTime * rotateSpeed;
+            GameData.objectShowed.transform.Rotate(y, -x, 0, Space.World);
+        //}
+        mousePos = Input.mousePosition;
     }
 }
