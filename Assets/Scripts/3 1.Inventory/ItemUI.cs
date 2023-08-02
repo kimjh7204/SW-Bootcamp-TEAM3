@@ -18,7 +18,7 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
         rectTransform = GetComponent<RectTransform>();
     }
 
-    public void Init(MyItem data, InvetoryManager manager, ItemSlot slot)
+    public void Init(MyItem data, InventoryController manager, ItemSlot slot)
     {
         itemData = data;
         itemImage = GetComponent<Image>();
@@ -83,7 +83,7 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
         rectTransform.position = eventData.position;
     }
 
-    private void ChangeSlot(ItemSlot slot)
+    public void ChangeSlot(ItemSlot slot)
     {
         slot.item = this;
         rectTransform.SetParent(slot.transform);

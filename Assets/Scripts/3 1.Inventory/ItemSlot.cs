@@ -6,9 +6,9 @@ using UnityEngine.EventSystems;
 public class ItemSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     private InvetoryManager manager;
-    public ItemUI item;
+    public Itemtxt item;
 
-    public void Init(InvetoryManager inventoryManager)
+    public void Init(InventoryController inventoryManager)
     {
         manager = inventoryManager;
     }
