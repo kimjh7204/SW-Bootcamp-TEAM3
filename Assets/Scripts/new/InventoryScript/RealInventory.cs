@@ -12,13 +12,13 @@ public class RealInventory : MonoBehaviour
     [SerializeField]
     private Transform slotParent;
     [SerializeField]
-    private InventorySlot[] slots;
+    private InventorySlotsClass[] slots;
 
     public Item testItem;
 
     private void OnValidate()
     {
-        slots = slotParent.GetComponentsInChildren<InventorySlot>();
+        slots = slotParent.GetComponentsInChildren<InventorySlotsClass>();
     }
 
     private void Awake()

@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class InventorySystem : MonoBehaviour
 {
-    public GameObject itemUIPrefab;
-    public RectTransform inventoryPanel;
-    public RectTransform dragLayer;
+    public GameObject slotUIPrefab;
+    public RectTransform inventoryPanelLayer;
+    public RectTransform slotDragLayer;
 
     public ScriptTooltip tooltip;
 
-    private SlotManagerScript _draggingItem = null;
+    private SlotManagerScript _dragItem = null;
     public SlotManagerScript dragItem
     {
-        get => _draggingItem;
-        set => _draggingItem = value;
+        get => _dragItem;
+        set => _dragItem = value;
     }
 
-    private InventorySlotsClass _selectedSlot = null;
-    public InventorySlotsClass selectedSlot
+    private InventorySlotsClass _enteredSlot = null;
+    public InventorySlotsClass enteredSlot
     {
-        get => _selectedSlot;
-        set => _selectedSlot = value;
+        get => _enteredSlot;
+        set => _enteredSlot = value;
     }
     
     [SerializeField] private List<InventorySlotsClass> itemSlots = new List<InventorySlotsClass>();
@@ -43,7 +43,7 @@ public class InventorySystem : MonoBehaviour
         {
             if (itemSlot.item == null)
             {
-                GameObject tempItemUI = Instantiate(itemUIPrefab, itemSlot.transform);
+                GameObject tempItemUI = Instantiate(slotUIPrefab, itemSlot.transform);
                 SlotManagerScript temp = tempItemUI.GetComponent<SlotManagerScript>();
                 Item tempItemData = Resources.Load<Item>("Items/" + itemName);
                 temp.Init(tempItemData, this, itemSlot);

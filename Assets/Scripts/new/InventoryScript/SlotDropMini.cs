@@ -21,10 +21,10 @@ public class SlotDropMini : MonoBehaviour, IDropHandler
         var temp = this.slot.slotItem;
         if(GameData.droppedObejct != null)
         {
-            if (GameData.droppedObejct.GetComponent<InventorySlot>() != null)
+            if (GameData.droppedObejct.GetComponent<InventorySlotsClass>() != null)
             {
-                this.slot.slotItem = GameData.droppedObejct.GetComponent<InventorySlot>().slotItem;
-                GameData.droppedObejct.GetComponent<InventorySlot>().slotItem = temp;
+                this.slot.slotItem = GameData.droppedObejct.GetComponent<InventorySlotsClass>().slotItem;
+                GameData.droppedObejct.GetComponent<InventorySlotsClass>().slotItem = temp;
             }
             else
             {

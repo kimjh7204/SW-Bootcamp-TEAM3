@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Tooltip : MonoBehaviour
+public class ScriptTooltip : MonoBehaviour
 {
     private RectTransform rectTransform;
     private TextMeshProUGUI textMeshProUGUI;

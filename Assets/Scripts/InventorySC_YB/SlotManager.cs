@@ -4,39 +4,39 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler, IDragHandler
+public class SlotManagerScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler, IDragHandler
 {
-    private MyItem itemData;
-    private Image itemImage;
+    private Item itemData;
+    private Image itemImageComp;
     private RectTransform rectTransform;
 
-    private InvetoryManager invetoryManager;
-    private ItemSlot itemSlot;
+    private InvetorySystem invetorySystem;
+    private InventorySlotsClass itemSlot;
 
     private void Start()
     {
         rectTransform = GetComponent<RectTransform>();
     }
 
-    public void Init(MyItem data, InvetoryManager manager, ItemSlot slot)
+    public void Init(Item data, InvetorySystem manager, InventorySlotsClass slot)
     {
         itemData = data;
-        itemImage = GetComponent<Image>();
-        itemImage.sprite = itemData.itemImage;
+        itemImageComp = GetComponent<Image>();
+        itemImageComp.sprite = itemData.itemImage;
 
-        invetoryManager = manager;
+        invetorySystem = manager;
         itemSlot = slot;
         itemSlot.item = this;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        invetoryManager.tooltip.SetTooltip(rectTransform.position, itemData.description);
+        invetorySystem.tooltip.SetTooltip(rectTransform.position, itemData.description);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        invetoryManager.tooltip.Disable();
+        invetorySystem.tooltip.Disable();
     }
 
     //-------------------------------------------------------------------
@@ -44,38 +44,38 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        invetoryManager.draggingItem = this;
-        itemImage.raycastTarget = false;
+        invetorySystem.dragItem = this;
+        itemImageComp.raycastTarget = false;
         
-        rectTransform.SetParent(invetoryManager.dragLayer);
+        rectTransform.SetParent(invetorySystem.dragLayer);
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        invetoryManager.draggingItem = null;
+        invetorySystem.dragItem = null;
 
-        if (invetoryManager.selectedSlot == null)
+        if (invetorySystem.selectedSlot == null)
         {
             rectTransform.SetParent(itemSlot.transform);
         }
         else
         {
-            if (invetoryManager.selectedSlot.item == null)
+            if (invetorySystem.selectedSlot.item == null)
             {
                 itemSlot.item = null;
-                rectTransform.SetParent(invetoryManager.selectedSlot.transform);
-                itemSlot = invetoryManager.selectedSlot;
+                rectTransform.SetParent(invetorySystem.selectedSlot.transform);
+                itemSlot = invetorySystem.selectedSlot;
             }
             else //Item Swap
             {
-                invetoryManager.selectedSlot.item.ChangeSlot(itemSlot);
-                ChangeSlot(invetoryManager.selectedSlot);
+                invetorySystem.selectedSlot.item.ChangeSlot(itemSlot);
+                ChangeSlot(invetorySystem.selectedSlot);
             }
             
         }
 
         rectTransform.localPosition = Vector3.zero;
-        itemImage.raycastTarget = true;
+        itemImageComp.raycastTarget = true;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -83,7 +83,7 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
         rectTransform.position = eventData.position;
     }
 
-    private void ChangeSlot(ItemSlot slot)
+    private void ChangeSlot(InventorySlotsClass slot)
     {
         slot.item = this;
         rectTransform.SetParent(slot.transform);

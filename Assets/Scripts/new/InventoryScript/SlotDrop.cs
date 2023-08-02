@@ -9,19 +9,19 @@ public class SlotDrop : MonoBehaviour, IDropHandler
 {
     // 자신에게 드롭된 슬롯이 있을 때 그 슬롯과 자신의 아이템 정보를 바꿈.
 
-    private InventorySlot slot;
+    private InventorySlotsClass slot;
 
     private void Start()
     {
-        slot = GetComponent<InventorySlot>();
+        slot = GetComponent<InventorySlotsClass>();
     }
     public void OnDrop(PointerEventData eventData)
     {
         var temp = this.slot.slotItem;
-        if(GameData.droppedObejct.GetComponent<InventorySlot>() != null)
+        if(GameData.droppedObejct.GetComponent<InventorySlotsClass>() != null)
         {
-            this.slot.slotItem = GameData.droppedObejct.GetComponent<InventorySlot>().slotItem;
-            GameData.droppedObejct.GetComponent<InventorySlot>().slotItem = temp;
+            this.slot.slotItem = GameData.droppedObejct.GetComponent<InventorySlotsClass>().slotItem;
+            GameData.droppedObejct.GetComponent<InventorySlotsClass>().slotItem = temp;
         }
         else
         {

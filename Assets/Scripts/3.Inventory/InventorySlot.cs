@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ItemSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class InventorySlotsClass : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    private InvetoryManager manager;
-    public ItemUI item;
+    private InventorySystem manager;
+    public SlotManagerScript item;
 
-    public void Init(InvetoryManager inventoryManager)
+    public void Init(InventorySystem inventoryManager)
     {
         manager = inventoryManager;
     }
