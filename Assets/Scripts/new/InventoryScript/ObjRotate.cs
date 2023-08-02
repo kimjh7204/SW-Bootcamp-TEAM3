@@ -13,6 +13,8 @@ public class ObjRotate : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     private bool isPointerEnter = false;
     private bool isDrag = false;
 
+    public InvetoryManager0 inventoryManager;
+
     public void OnBeginDrag(PointerEventData eventData)
     {
     }
@@ -44,7 +46,7 @@ public class ObjRotate : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
             offset = (-Input.mousePosition + mousePos);
             float x = eventData.delta.x * Time.deltaTime * rotateSpeed;
             float y = eventData.delta.y * Time.deltaTime * rotateSpeed;
-            GameData.objectShowed.transform.Rotate(y, -x, 0, Space.World);
+        inventoryManager.showedObject.transform.Rotate(y, -x, 0, Space.World);
         //}
         mousePos = Input.mousePosition;
     }
