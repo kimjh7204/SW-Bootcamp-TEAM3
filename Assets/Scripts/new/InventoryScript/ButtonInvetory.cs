@@ -10,10 +10,14 @@ public class ButtonInvetory : MonoBehaviour
 
     public GameObject Inventorypanel;
 
+
+
     private void Start()
     {
+
         Inventorypanel.SetActive(false);
         GameData.isInventoryOpen = false;
+
     }
 
     public void OnClick()
@@ -22,11 +26,15 @@ public class ButtonInvetory : MonoBehaviour
         {
             Inventorypanel.SetActive(false);
             GameData.isInventoryOpen = false;
+            
+
         }
         else
         {
             Inventorypanel.SetActive(true);
             GameData.isInventoryOpen = true;
+
         }
+
     }
 }
