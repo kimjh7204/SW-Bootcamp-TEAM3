@@ -31,7 +31,7 @@ public class SlotManagerScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        inventorySystem.tooltip.SetTooltip(rectTransform.position, slotItemData.description);
+        inventorySystem.tooltip.SetTooltip(rectTransformVariable.position, slotItemData.itemTooltip);
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -46,48 +46,48 @@ public class SlotManagerScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
     {
         inventorySystem.dragItem = this;
         itemImageComp.raycastTarget = false;
-        
-        rectTransform.SetParent(inventorySystem.dragLayer);
+
+        rectTransformVariable.SetParent(inventorySystem.slotDragLayer);
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
         inventorySystem.dragItem = null;
 
-        if (inventorySystem.selectedSlot == null)
+        if (inventorySystem.enteredSlot == null)
         {
-            rectTransform.SetParent(itemSlot.transform);
+            rectTransformVariable.SetParent(itemSlot.transform);
         }
         else
         {
-            if (inventorySystem.selectedSlot.item == null)
+            if (inventorySystem.enteredSlot.item == null)
             {
                 itemSlot.item = null;
-                rectTransform.SetParent(inventorySystem.selectedSlot.transform);
-                itemSlot = inventorySystem.selectedSlot;
+                rectTransformVariable.SetParent(inventorySystem.enteredSlot.transform);
+                itemSlot = inventorySystem.enteredSlot;
             }
             else //Item Swap
             {
-                inventorySystem.selectedSlot.item.ChangeSlot(itemSlot);
-                ChangeSlot(inventorySystem.selectedSlot);
+                inventorySystem.enteredSlot.item.ChangeSlot(itemSlot);
+                ChangeSlot(inventorySystem.enteredSlot);
             }
             
         }
 
-        rectTransform.localPosition = Vector3.zero;
+        rectTransformVariable.localPosition = Vector3.zero;
         itemImageComp.raycastTarget = true;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        rectTransform.position = eventData.position;
+        rectTransformVariable.position = eventData.position;
     }
 
     private void ChangeSlot(InventorySlotsClass slot)
     {
         slot.item = this;
-        rectTransform.SetParent(slot.transform);
+        rectTransformVariable.SetParent(slot.transform);
         itemSlot = slot;
-        rectTransform.localPosition = Vector3.zero;
+        rectTransformVariable.localPosition = Vector3.zero;
     }
 }
