@@ -45,14 +45,14 @@ public class InvetoryManager0 : MonoBehaviour
 
     public void SetItem(Item item)
     {
-        foreach (var itemSlot in itemSlots)
+        for (int i = 3; i < itemSlots.Count; i++)
         {
-            if (itemSlot.item == null)
+            if (itemSlots[i].item == null)
             {
-                GameObject tempItemUI = Instantiate(itemUIPrefab, itemSlot.transform);
+                GameObject tempItemUI = Instantiate(itemUIPrefab, itemSlots[i].transform);
                 ItemUI0 temp = tempItemUI.GetComponent<ItemUI0>();
                 Item tempItemData = item;
-                temp.Init(tempItemData, this, itemSlot);
+                temp.Init(tempItemData, this, itemSlots[i]);
                 break;
             }
         }

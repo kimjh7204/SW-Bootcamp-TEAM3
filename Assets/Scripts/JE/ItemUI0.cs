@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using static UnityEditor.Progress;
 
-public class ItemUI0 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler, IPointerClickHandler
+public class ItemUI0 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
 {
     public Item itemData;
     private Image itemImage;
@@ -19,16 +19,6 @@ public class ItemUI0 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, ID
     {
         rectTransform = GetComponent<RectTransform>();
     }
-
-
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        Debug.Log("Click");
-        
-    }
-
-
-
 
 
     public void Init(Item data, InvetoryManager0 manager, ItemSlot0 slot)
