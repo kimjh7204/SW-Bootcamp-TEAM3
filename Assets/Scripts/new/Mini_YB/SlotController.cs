@@ -10,6 +10,10 @@ public class SlotController : MonoBehaviour
     public TextMeshProUGUI itemName;
     public Item item = null;
 
+    private void Start()
+    {
+        //textMeshProUGUI = GetComponentInChildren<TextMeshProUGUI>();  //나중에 이미지, 네임 이걸로 컴포넌트 변경.
+    }
     void Update()
     {
         if (item == null)

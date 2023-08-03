@@ -18,7 +18,6 @@ public class ContentController : MonoBehaviour, IPointerEnterHandler, IPointerEx
     private void Start()
     {
         instance = this;
-        slots[0] = null;  // slots[0]은 사용하지 않음. (편의를 위해서)
         content.SetActive(false);
     }
 
