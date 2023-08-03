@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: figure
   m_EditorClassIdentifier: 
   itemName: figure
-  itemImage: {fileID: 0}
+  itemImage: {fileID: 21300000, guid: cc78e5a3d5cce9e408b6fad80291fccf, type: 3}
   itemTooltip: Watch Out! Very Sharp.
   itemGameObject: {fileID: 919132149155446097, guid: 87740a231b0d65949bd9216ede3c87d9, type: 3}
   amount: 0
