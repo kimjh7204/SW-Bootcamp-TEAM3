@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class itemController : MonoBehaviour
+public class ItemController : MonoBehaviour
 {
     public Item item;
     //private ContentController instance; // 나중에 변경.

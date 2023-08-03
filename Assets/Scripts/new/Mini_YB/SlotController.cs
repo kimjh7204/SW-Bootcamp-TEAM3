@@ -18,8 +18,9 @@ public class SlotController : MonoBehaviour
     {
         if (item == null)
         {
+            
             this.gameObject.SetActive(false);
-            this.itemImage.color = new Color(1, 1, 1, 0);
+            //this.itemImage.color = new Color(1, 1, 1, 0);
             itemName.text = null;
             itemImage.sprite = null;
 
