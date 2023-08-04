@@ -9,4 +9,6 @@ public static class GameData
     public static GameObject droppedObejct;
     //public static List<Item> miniInventoryItems;
     public static bool isMenuPanelOpen;
+
+    public static Item installItem;
 }

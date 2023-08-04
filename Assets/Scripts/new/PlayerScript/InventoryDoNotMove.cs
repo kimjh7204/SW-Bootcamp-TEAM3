@@ -8,7 +8,6 @@ public class InventoryDoNotMove : MonoBehaviour, IPointerEnterHandler, IPointerE
     public void OnPointerEnter(PointerEventData eventData)
     {
         NavData.playerCanMove = false;
-        Debug.Log("인벤토리 안에 마우스 -> false");
     }
 
     public void OnPointerExit(PointerEventData eventData)
