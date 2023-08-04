@@ -15,5 +15,5 @@ MonoBehaviour:
   itemName: tape
   itemImage: {fileID: 21300000, guid: b9d03ed7952d1d64e8b766aaadb75e92, type: 3}
   itemTooltip: tape
-  itemGameObject: {fileID: 919132149155446097, guid: 4716ab0907c0fd649ab4797d8928dcb8, type: 3}
+  itemGameObject: {fileID: 6228361611277651931, guid: 7a9f85d83136ad9448f67f6654a30fdb, type: 3}
   amount: 0

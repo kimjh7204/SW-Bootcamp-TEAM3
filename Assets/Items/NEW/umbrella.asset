@@ -15,5 +15,5 @@ MonoBehaviour:
   itemName: umbrella
   itemImage: {fileID: 21300000, guid: 7f86ea61deeac0347b693a6373db17a3, type: 3}
   itemTooltip: umbrella
-  itemGameObject: {fileID: 919132149155446097, guid: 8b40f1e97d02e0c4eb4d71fec0a05f8d, type: 3}
+  itemGameObject: {fileID: 3721378380620936265, guid: 7bdb08cb1422c1d43b7015a9ed046373, type: 3}
   amount: 0

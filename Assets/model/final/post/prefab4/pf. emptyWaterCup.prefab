@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8127474983448703459}
   - component: {fileID: 6384120558763112708}
   m_Layer: 0
-  m_Name: pf. waterCup
+  m_Name: pf. emptyWaterCup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
