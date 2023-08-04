@@ -101,6 +101,7 @@ public class ItemUI0 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, ID
             // 우클릭(buttonUp)
             // 미니 버튼 창 나타나게
             miniButtons.transform.position = eventData.position;
+            miniButtons.GetComponent<MiniButtons>().SetItemUI(this);
             miniButtons.SetActive(true);
         }
     }

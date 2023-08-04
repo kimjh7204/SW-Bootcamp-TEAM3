@@ -5,6 +5,13 @@ using UnityEngine.EventSystems;
 
 public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    private ItemUI0 itemUI; // 내가 우클릭한 현재 ItemUI
+
+    public void SetItemUI(ItemUI0 itemui)
+    {
+        itemUI = itemui;
+    }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         
@@ -28,8 +35,13 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void InstallButtonClick()
     {
-        // 아이템이 장착되고(GameData에 아이템 정보 전달)
+        // 아이템이 장착되고(InstallState에 아이템 정보 전달)
         // 장착한 아이템은 인벤토리에 남아있는가*****
+        if(this.itemUI != null)
+        {
+            InstallState.instance.InstallItem(itemUI.itemData);
+        }
+        
 
     }
    

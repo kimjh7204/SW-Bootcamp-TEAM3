@@ -10,5 +10,5 @@ public static class GameData
     //public static List<Item> miniInventoryItems;
     public static bool isMenuPanelOpen;
 
-    public static Item installItem;
+
 }
