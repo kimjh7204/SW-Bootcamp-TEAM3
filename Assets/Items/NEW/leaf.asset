@@ -15,5 +15,5 @@ MonoBehaviour:
   itemName: leaf
   itemImage: {fileID: 21300000, guid: e2e5703674622e6459ee65c689e5c22e, type: 3}
   itemTooltip: leaf
-  itemGameObject: {fileID: 919132149155446097, guid: 96d51bf40997e90488ee1bb42d2d9eb2, type: 3}
+  itemGameObject: {fileID: 4526713492092127469, guid: 0e2df1d18b196d847a97e2bb69674d7e, type: 3}
   amount: 0

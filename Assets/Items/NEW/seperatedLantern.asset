@@ -15,5 +15,5 @@ MonoBehaviour:
   itemName: seperated lantern
   itemImage: {fileID: 21300000, guid: 9d83ae954eb83e940acf5d969e288479, type: 3}
   itemTooltip: seperated lantern
-  itemGameObject: {fileID: 919132149155446097, guid: ef08730b61473184483bf7532f5533eb, type: 3}
+  itemGameObject: {fileID: 3688110850347387755, guid: 0ae1c5973fd19f446a20ab3cdbf90a1d, type: 3}
   amount: 0

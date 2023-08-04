@@ -15,5 +15,5 @@ MonoBehaviour:
   itemName: log
   itemImage: {fileID: 21300000, guid: 580c9f0470aec604dbe8dcff2daa8d4f, type: 3}
   itemTooltip: log
-  itemGameObject: {fileID: 919132149155446097, guid: d312079305a84bc4b9bb7d1ab084a523, type: 3}
+  itemGameObject: {fileID: 9501331725508357, guid: 9d0ca4d9ab551d045a4132394ad1c87d, type: 3}
   amount: 0
