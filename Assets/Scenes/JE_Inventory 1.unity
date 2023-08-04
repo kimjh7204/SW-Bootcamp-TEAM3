@@ -4846,6 +4846,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 293140207}
   itemName: {fileID: 987582815}
+  itemTooltip: {fileID: 1742785799}
   item: {fileID: 0}
   inventoryManager: {fileID: 1071097807}
   slotIndex: 4
@@ -5448,6 +5449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 1912636868}
   itemName: {fileID: 1139673853}
+  itemTooltip: {fileID: 334100068}
   item: {fileID: 0}
   inventoryManager: {fileID: 1071097807}
   slotIndex: 3
@@ -8493,7 +8495,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 480, y: -270}
+  m_AnchoredPosition: {x: 480, y: -256}
   m_SizeDelta: {x: 200, y: 240}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1032498758
@@ -8960,7 +8962,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -64, y: -16}
+  m_AnchoredPosition: {x: -64, y: 0}
   m_SizeDelta: {x: 216, y: 80}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1071097804
@@ -14378,6 +14380,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 2143065401}
   itemName: {fileID: 1275766167}
+  itemTooltip: {fileID: 706816186}
   item: {fileID: 0}
   inventoryManager: {fileID: 1071097807}
   slotIndex: 0
@@ -18106,7 +18109,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1146509074}
   m_HandleRect: {fileID: 1146509073}
   m_Direction: 2
-  m_Value: 1.0000024
+  m_Value: 1.0000013
   m_Size: 0.52
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -18447,7 +18450,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00074548664, y: -0.0004545789}
+  m_AnchoredPosition: {x: -0.00065900973, y: -0.0002563536}
   m_SizeDelta: {x: 0, y: 400}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2038277136
@@ -19265,6 +19268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 63968441}
   itemName: {fileID: 1667278254}
+  itemTooltip: {fileID: 379087364}
   item: {fileID: 0}
   inventoryManager: {fileID: 1071097807}
   slotIndex: 1
@@ -19872,6 +19876,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 1598321810}
   itemName: {fileID: 818460847}
+  itemTooltip: {fileID: 63099902}
   item: {fileID: 0}
   inventoryManager: {fileID: 1071097807}
   slotIndex: 2

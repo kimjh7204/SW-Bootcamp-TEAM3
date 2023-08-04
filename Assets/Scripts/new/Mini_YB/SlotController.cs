@@ -10,10 +10,11 @@ public class SlotController : MonoBehaviour, IPointerClickHandler
 {
     public Image itemImage;
     public TextMeshProUGUI itemName;
+    public TextMeshProUGUI itemTooltip;
     public Item item = null;
     public InvetoryManager0 inventoryManager;
 
-    public int slotIndex;  // 
+    public int slotIndex;  // 화면에서 보이는 슬롯 순서(0부터)
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -34,6 +35,7 @@ public class SlotController : MonoBehaviour, IPointerClickHandler
             this.gameObject.SetActive(false);
             itemName.text = null;
             itemImage.sprite = null;
+            itemTooltip = null;
         }
         else
         {
@@ -41,6 +43,7 @@ public class SlotController : MonoBehaviour, IPointerClickHandler
 
             itemImage.sprite = item.itemImage;
             itemName.text = item.itemName;
+            itemTooltip.text = item.itemTooltip;
         }
     }
 }
