@@ -5,14 +5,12 @@ using UnityEngine;
 public class ItemController : MonoBehaviour
 {
     public Item item;
-    //private ContentController instance; // 나중에 변경.
 
     private void OnTriggerEnter(Collider player)
     {
-        Debug.Log("콜리전 발생");
         if (player.CompareTag("Player"))
         {
-            ContentController.instance.AddItem(item);
+            ContentController.instance.AddItem(item, this.gameObject);
         }
     }
 

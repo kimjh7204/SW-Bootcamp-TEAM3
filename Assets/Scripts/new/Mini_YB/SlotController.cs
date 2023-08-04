@@ -1,14 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class SlotController : MonoBehaviour
+public class SlotController : MonoBehaviour, IPointerClickHandler
 {
     public Image itemImage;
     public TextMeshProUGUI itemName;
     public Item item = null;
+    public InvetoryManager0 inventoryManager;
+
+    public int slotIndex;  // 
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        inventoryManager.SetItem(item);
+        Destroy(ContentController.instance.itemGameObjects[slotIndex]);
+        ContentController.instance.DeleteItem(item);
+    }
 
     private void Start()
     {
@@ -20,11 +32,8 @@ public class SlotController : MonoBehaviour
         {
             
             this.gameObject.SetActive(false);
-            //this.itemImage.color = new Color(1, 1, 1, 0);
             itemName.text = null;
             itemImage.sprite = null;
-
-
         }
         else
         {

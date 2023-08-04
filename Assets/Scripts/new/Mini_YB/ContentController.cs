@@ -8,6 +8,7 @@ using static UnityEditor.Progress;
 public class ContentController : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public GameObject[] slots = new GameObject[5];
+    public GameObject[] itemGameObjects = new GameObject[5];
 
     public static ContentController instance;
     public GameObject content;
@@ -27,7 +28,7 @@ public class ContentController : MonoBehaviour, IPointerEnterHandler, IPointerEx
         // 미니창 위치 설정
     }
 
-    public void AddItem(Item item)
+    public void AddItem(Item item, GameObject gameObject)
     {
         // 미니창 슬롯에 아이템을 추가하는 함수.
         // 빈 슬롯을 찾아 해당 슬롯에 아이템 정보를 넣는다.
@@ -39,6 +40,7 @@ public class ContentController : MonoBehaviour, IPointerEnterHandler, IPointerEx
             if (slots[i].GetComponent<SlotController>().item == null)
             {
                 slots[i].GetComponent<SlotController>().item = item;
+                itemGameObjects[i] = gameObject;
                 break;
             }
         }
@@ -55,6 +57,7 @@ public class ContentController : MonoBehaviour, IPointerEnterHandler, IPointerEx
             if (slots[i].GetComponent<SlotController>().item == item)
             {
                 slots[i].GetComponent<SlotController>().item = null;
+                itemGameObjects[i] = null;
                 CleanItem();
                 SetContent();
                 break;
