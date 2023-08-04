@@ -32,8 +32,12 @@ public class InvetoryManager0 : MonoBehaviour
     
     [SerializeField] private List<ItemSlot0> itemSlots = new List<ItemSlot0>();
 
+    [Header("미니 버튼 창")]
+    public GameObject miniButtons;
+
     private void Start()
     {
+
         for(var i = 0;  i < itemSlots.Count; i++)
         {
             itemSlots[i].Init(this);
@@ -58,7 +62,7 @@ public class InvetoryManager0 : MonoBehaviour
                     GameObject tempItemUI = Instantiate(itemUIPrefab, itemSlots[i].transform);
                     ItemUI0 temp = tempItemUI.GetComponent<ItemUI0>();
                     Item tempItemData = item;
-                    temp.Init(tempItemData, this, itemSlots[i]);
+                    temp.Init(tempItemData, this, itemSlots[i], miniButtons);
 
                     //item.amount = 1;  // 아이템 amount 1 늘린다
                     break;
