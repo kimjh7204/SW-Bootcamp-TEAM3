@@ -5,19 +5,19 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Item : ScriptableObject
 {
-    [Header("������ �̸�")]
+    [Header("아이템 이름")]
     public string itemName;
 
-    [Header("������ �̹���")]
+    [Header("아이템 이미지")]
     public Sprite itemImage;
 
-    [Header("������ ����")]
+    [Header("아이템 설명")]
     public string itemTooltip;
 
-    [Header("���ӿ�����Ʈ")]
+    [Header("아이템 게임오브젝트(프리팹)")]
     public GameObject itemGameObject;
 
-    [Header("�����ϰ� �ִ� ����")]
+    [Header("아이템 개수")]
     public int amount;
 
     
@@ -28,10 +28,10 @@ public class Item : ScriptableObject
         food,
         tool
     }
-    [Header("������ �±�(���� �� ������ food)")]
+    [Header("아이템 태그(먹을 수 있으면 food)")]
     public ItemTag itemTag;
 
-    [Header("���� �� �ִ� ��� ��ҷ����� ����")]
+    [Header("먹었을 때 배고픔 줄어드는 정도")]
     public float eatStateFull;
 
 
