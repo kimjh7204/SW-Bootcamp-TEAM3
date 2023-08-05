@@ -15,5 +15,7 @@ MonoBehaviour:
   itemName: chocolate
   itemImage: {fileID: 21300000, guid: 97b73724d6740464d8f692b3310098ff, type: 3}
   itemTooltip: It seems delicious...
-  itemGameObject: {fileID: 919132149155446097, guid: 6208ed97c12267045af668b5de436d5c, type: 3}
+  itemGameObject: {fileID: 999434723646932681, guid: 5e1305c5e8043de49ab7bf6930b699fe, type: 3}
   amount: 0
+  itemTag: 0
+  eatStateFull: 0

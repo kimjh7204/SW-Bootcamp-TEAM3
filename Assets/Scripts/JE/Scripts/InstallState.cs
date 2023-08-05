@@ -14,12 +14,17 @@ public class InstallState : MonoBehaviour
     void Start()
     {
         instance = this;
+        if(installITem == null)
+        {
+            installItemImage.gameObject.SetActive(false);
+        }
     }
 
     public void InstallItem(Item item)
     {
         installITem = item;
         installItemImage.sprite = installITem.itemImage;
+        installItemImage.gameObject.SetActive(true);
     }
 
 }
