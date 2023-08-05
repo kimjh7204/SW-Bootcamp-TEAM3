@@ -5,19 +5,19 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Item : ScriptableObject
 {
-    [Header("╬фюлеш юл╦╖")]
+    [Header("О©╫О©╫О©╫О©╫О©╫О©╫ О©╫л╦О©╫")]
     public string itemName;
 
-    [Header("╬фюлеш юл╧лаЖ")]
+    [Header("О©╫О©╫О©╫О©╫О©╫О©╫ О©╫л╧О©╫О©╫О©╫")]
     public Sprite itemImage;
 
-    [Header("╬фюлеш ╪Ё╦М")]
+    [Header("О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫")]
     public string itemTooltip;
 
-    [Header("╟тюс©ю╨Йа╖ф╝")]
+    [Header("О©╫О©╫О©╫с©О©╫О©╫О©╫О©╫О©╫ф╝")]
     public GameObject itemGameObject;
 
-    [Header("╨╦ю╞го╟М юж╢б ╪Ж╥╝")]
+    [Header("О©╫О©╫О©╫О©╫О©╫о╟О©╫ О©╫ж╢О©╫ О©╫О©╫О©╫О©╫")]
     public int amount;
 
     
@@ -28,10 +28,10 @@ public class Item : ScriptableObject
         food,
         tool
     }
-    [Header("╬фюлеш еб╠в(╦тю╩ ╪Ж южю╦╦И food)")]
+    [Header("О©╫О©╫О©╫О©╫О©╫О©╫ О©╫б╠О©╫(О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ food)")]
     public ItemTag itemTag;
 
-    [Header("╦тю╩ ╪Ж юж╢б ╟Ф©Л ╧Х╨р╥╞аЖ╢б а╓╣╣")]
+    [Header("О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫ж╢О©╫ О©╫О©╫О©╫ О©╫О©╫р╥О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫")]
     public float eatStateFull;
 
 
