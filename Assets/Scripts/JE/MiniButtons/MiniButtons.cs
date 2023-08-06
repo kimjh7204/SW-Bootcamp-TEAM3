@@ -12,7 +12,7 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public void SetItemUI(ItemUI0 itemui)
     {
         itemUI = itemui;
-        // 비교가 안됨*********
+        
         if(itemUI.itemData.itemTag == Item.ItemTag.food)
         {
             useOReatText.text = "eat";
@@ -21,7 +21,7 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         {
             useOReatText.text = "use";
         }
-        //Debug.Log(itemUI.itemData.itemTag);
+
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -64,6 +64,18 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
         // 현재 슬롯인 itemUI의 itemData의 itemTag가 food 이면 eat 실행
         // 아니면 use 실행
+        if(itemUI.itemData.itemTag == Item.ItemTag.food)
+        {
+            eatItem(itemUI.itemData);
+        }
+        else
+        {
+            useItem(itemUI.itemData);
+        }
+
+        itemUI.itemData.amount -= 1;
+
+        itemUI.AmountCheck();  // amount가 0개 이하면 슬롯 삭제
     }
 
     public void ThrowButtonClick()
@@ -85,5 +97,15 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
         itemUI.AmountCheck();  // amount가 0개 이하면 슬롯 삭제
 
+    }
+
+    private void eatItem(Item item)
+    {
+        // item eat
+    }
+
+    private void useItem(Item item)
+    {
+        // item use
     }
 }
