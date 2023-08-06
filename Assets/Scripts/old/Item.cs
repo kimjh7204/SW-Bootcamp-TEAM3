@@ -20,11 +20,13 @@ public class Item : ScriptableObject
     [Header("아이템 개수")]
     public int amount;
 
-    
-    
+    [Header("아이템이 바닥에 딱 붙는 Y값(아이템 생성시킬 때)")]
+    public float positionY;
+
 
     public enum ItemTag
-    {
+    { 
+        item,
         food,
         tool
     }

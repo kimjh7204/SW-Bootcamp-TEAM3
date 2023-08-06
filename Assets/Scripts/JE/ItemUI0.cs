@@ -130,4 +130,14 @@ public class ItemUI0 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, ID
         miniButtons.SetActive(false);
 
     }
+
+    //-------------------------
+    public void AmountCheck()
+    {
+        if(itemData.amount <= 0)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+    }
 }

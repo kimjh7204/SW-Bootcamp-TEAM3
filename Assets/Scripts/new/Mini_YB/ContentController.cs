@@ -44,6 +44,8 @@ public class ContentController : MonoBehaviour, IPointerEnterHandler, IPointerEx
                 break;
             }
         }
+
+        item.amount += 1;  // item amount 1¡ı∞°
     }
 
     public void DeleteItem(Item item)

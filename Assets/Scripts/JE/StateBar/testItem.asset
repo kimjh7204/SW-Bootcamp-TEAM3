@@ -17,5 +17,6 @@ MonoBehaviour:
   itemTooltip: This is food, apple
   itemGameObject: {fileID: 5468650056940751221, guid: 474209348c9b7a04ba179ed94f876ddc, type: 3}
   amount: 0
-  itemTag: 0
+  positionY: 0.53
+  itemTag: 1
   eatStateFull: 5
