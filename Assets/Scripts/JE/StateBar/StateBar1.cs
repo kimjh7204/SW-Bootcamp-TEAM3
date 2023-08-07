@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class StateBar1 : MonoBehaviour
 {
-    [Header("±æÀÌ Á¶ÀýÇÒ ÀÌ¹ÌÁö")]
+    [Header("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½")]
     public RectTransform stateBar1;
-    [Header("¿ø·¡ Å©±â")]
+    [Header("ï¿½ï¿½ï¿½ï¿½ Å©ï¿½ï¿½")]
     public float width;
     public float height;
-    [Header("Á¶Àý ¼Óµµ(¹è°íÆÄÁö´Â ¼Óµµ)")]
+    [Header("ï¿½ï¿½ï¿½ï¿½ ï¿½Óµï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Óµï¿½)")]
     public float hungrySpeed;
     private float i = 1;
 
