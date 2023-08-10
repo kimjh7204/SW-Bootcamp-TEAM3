@@ -9,6 +9,8 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     private ItemUI0 itemUI; // 내가 우클릭한 현재 ItemUI
     public TextMeshProUGUI useOReatText;
     public Transform player;
+    public GameObject statebar1;
+
     public void SetItemUI(ItemUI0 itemui)
     {
         itemUI = itemui;
@@ -102,6 +104,7 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     private void eatItem(Item item)
     {
         // item eat
+        statebar1.GetComponent<StateBar1>().eatFull(item.eatStateFull);
     }
 
     private void useItem(Item item)

@@ -21,4 +21,9 @@ public class StateBar1 : MonoBehaviour
             i += 1;
         }
     }
+
+    public void eatFull(float full)
+    {
+        stateBar1.sizeDelta = new Vector2(width, height - hungrySpeed * i + full);
+    }
 }
