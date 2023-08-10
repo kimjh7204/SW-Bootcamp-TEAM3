@@ -12,6 +12,14 @@ public class StateBar1 : MonoBehaviour
     [Header("���� �ӵ�(��������� �ӵ�)")]
     public float hungrySpeed;
     private float i = 1;
+    public static StateBar1 instance;
+
+
+    private void Start()
+    {
+        instance = this;
+    }
+
 
     void FixedUpdate()
     {
@@ -22,7 +30,7 @@ public class StateBar1 : MonoBehaviour
         }
     }
 
-    public void eatFull(float full)
+    public void EatFull(float full)
     {
         stateBar1.sizeDelta = new Vector2(width, height - hungrySpeed * i + full);
     }

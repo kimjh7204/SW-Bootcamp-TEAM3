@@ -9,7 +9,8 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     private ItemUI0 itemUI; // 내가 우클릭한 현재 ItemUI
     public TextMeshProUGUI useOReatText;
     public Transform player;
-    public GameObject statebar1;
+    public InvetoryManager0 inventoryManager;
+
 
     public void SetItemUI(ItemUI0 itemui)
     {
@@ -78,6 +79,9 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         itemUI.itemData.amount -= 1;
 
         itemUI.AmountCheck();  // amount가 0개 이하면 슬롯 삭제
+
+
+        DeleteShowed();
     }
 
     public void ThrowButtonClick()
@@ -99,16 +103,25 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
         itemUI.AmountCheck();  // amount가 0개 이하면 슬롯 삭제
 
+
+        DeleteShowed();
+
     }
 
     private void eatItem(Item item)
     {
         // item eat
-        statebar1.GetComponent<StateBar1>().eatFull(item.eatStateFull);
+        StateBar1.instance.EatFull(item.eatStateFull);    
     }
 
     private void useItem(Item item)
     {
         // item use
+    }
+
+    private void DeleteShowed()
+    {
+        Destroy(inventoryManager.showedObject);
+        inventoryManager.tooltipText.text = null;
     }
 }
