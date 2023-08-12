@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3565753dd2abd574fa0f5c39bbce5bf2, type: 3}
+  m_Name: magnetV2
+  m_EditorClassIdentifier: 
+  itemName: 
+  itemImage: {fileID: 0}
+  itemTooltip: 
+  itemGameObject: {fileID: 4485318430327015854, guid: d301a2b44188a3f449e56769d9197585, type: 3}
+  amount: 0
+  positionY: 0
+  itemTag: 0
+  eatStateFull: 0
