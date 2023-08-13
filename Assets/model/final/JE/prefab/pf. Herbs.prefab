@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 8644980756498100539}
   - component: {fileID: 2230256807273746859}
   m_Layer: 0
-  m_Name: Herbs
+  m_Name: pf. Herbs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
