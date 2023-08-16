@@ -20,3 +20,5 @@ MonoBehaviour:
   positionY: 0
   itemTag: 0
   eatStateFull: 0
+  combination:
+  - {fileID: 11400000, guid: 4af26a57cb4fb6e4dae1fbc6098e5f36, type: 2}

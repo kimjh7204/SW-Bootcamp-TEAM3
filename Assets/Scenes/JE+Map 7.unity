@@ -8522,11 +8522,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   testItem1: {fileID: 11400000, guid: a5fc99a2d8700e341a4647aa3224758b, type: 2}
   testItem2: {fileID: 11400000, guid: e917dbd1f3431584bb0f14c60ef6a53f, type: 2}
+  testItem3: {fileID: 11400000, guid: d24bba3f77d6ee845a5a9cf3c4c60f9f, type: 2}
+  isOnObjRotate: 0
   tooltipText: {fileID: 345542701}
   itemUIPrefab: {fileID: 4630616599999814747, guid: 46482e5d105fc5b4d9653853ff77fb34, type: 3}
   inventoryPanel: {fileID: 1767420693}
   dragLayer: {fileID: 686337989}
   showedObject: {fileID: 0}
+  showedItem: {fileID: 0}
+  showedItemUI: {fileID: 0}
+  draggingItemUI: {fileID: 0}
   itemSlots:
   - {fileID: 500213282}
   - {fileID: 159497237}

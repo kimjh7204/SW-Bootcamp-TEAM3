@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: battery lantern
   m_EditorClassIdentifier: 
   itemName: 
-  itemImage: {fileID: 0}
+  itemImage: {fileID: 21300000, guid: 4438b9e2126cf6249a2501f60486e169, type: 3}
   itemTooltip: 
-  itemGameObject: {fileID: 2977971194979176802, guid: ef30f00cee7538a48b60275a6f31c242, type: 3}
+  itemGameObject: {fileID: 1523881810401656205, guid: 7bc5fc67e686d6d43b0e3695da369b5e, type: 3}
   amount: 0
   positionY: 0
   itemTag: 0
   eatStateFull: 0
+  combination: []

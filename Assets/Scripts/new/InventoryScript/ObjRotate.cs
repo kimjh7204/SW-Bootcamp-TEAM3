@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ObjRotate : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IBeginDragHandler, IDragHandler
+public class ObjRotate : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IBeginDragHandler, IDragHandler, IPointerUpHandler
 {
     // 3D 오브젝트 회전시키는 것
 
@@ -32,11 +32,14 @@ public class ObjRotate : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     public void OnPointerEnter(PointerEventData eventData)
     {
         isPointerEnter = true;
+        inventoryManager.isOnObjRotate = true;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         isPointerEnter = false;
+        inventoryManager.isOnObjRotate = false;
+
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -50,4 +53,23 @@ public class ObjRotate : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         //}
         mousePos = Input.mousePosition;
     }
+
+    //-------------------------------
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        if (inventoryManager.draggingItem == null) return;
+        for (int i = 0; i < inventoryManager.showedItem.combination.Length; i++) 
+        {
+            if (inventoryManager.showedItem.combination[i].inputItem == inventoryManager.draggingItem)
+            {
+                // 두개 없애고
+                // resultITem 생성
+                inventoryManager.SetItem(inventoryManager.showedItem.combination[i].resultItem);
+            }
+        }
+    }
+
+    
+
 }

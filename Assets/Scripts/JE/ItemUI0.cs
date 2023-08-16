@@ -43,6 +43,7 @@ public class ItemUI0 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, ID
     public void OnPointerDown(PointerEventData eventData)
     {
         invetoryManager.draggingItem = this;
+        invetoryManager.draggingItemUI = this;
         itemImage.raycastTarget = false;
         
         rectTransform.SetParent(invetoryManager.dragLayer);
@@ -50,6 +51,29 @@ public class ItemUI0 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, ID
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        Debug.Log(invetoryManager.isOnObjRotate);
+
+        //--------
+        // 조합
+        if (invetoryManager.isOnObjRotate)
+        {
+            if (invetoryManager.draggingItem == null) return;
+            for (int i = 0; i < invetoryManager.showedItem.combination.Length; i++)
+            {
+                if (invetoryManager.showedItem.combination[i].inputItem == invetoryManager.draggingItem.itemData)
+                {
+                    // 두개 없애고
+                    Destroy(invetoryManager.showedItemUI.gameObject);
+                    Destroy(invetoryManager.draggingItemUI.gameObject);
+                    // resultItem 생성
+                    invetoryManager.SetItem(invetoryManager.showedItem.combination[i].resultItem);
+                    // resultItem object 생성
+                    CreateObject(invetoryManager.showedItem.combination[i].resultItem);
+                }
+            }
+        }
+
+        //--------
 
         invetoryManager.draggingItem = null;
 
@@ -80,19 +104,13 @@ public class ItemUI0 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, ID
 
         
 
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0) && itemSlot == invetoryManager.selectedSlot)
         {
             // 좌클릭(buttonUp)
             // 3D 오브젝트 생성
             if (itemData != null)
             {
-                if (invetoryManager.showedObject != null)
-                {
-                    Destroy(invetoryManager.showedObject);
-                    invetoryManager.tooltipText.text = null;
-                }
-                invetoryManager.showedObject = Instantiate<GameObject>(itemData.itemGameObject, new Vector3(-0.0026165843f, -53.3899994f, 0), Quaternion.identity);
-                invetoryManager.tooltipText.text = itemData.itemTooltip;
+                CreateObject(itemData);
             }
         }
 
@@ -104,6 +122,23 @@ public class ItemUI0 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, ID
             miniButtons.GetComponent<MiniButtons>().SetItemUI(this);
             miniButtons.SetActive(true);
         }
+
+
+        
+    }
+
+    private void CreateObject(Item itemData)
+    {
+        if (invetoryManager.showedObject != null)
+        {
+            Destroy(invetoryManager.showedObject);
+            invetoryManager.tooltipText.text = null;
+        }
+        invetoryManager.showedObject = Instantiate<GameObject>(itemData.itemGameObject, new Vector3(-0.0026165843f, -53.3899994f, 0), Quaternion.identity);
+        invetoryManager.showedObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
+        invetoryManager.tooltipText.text = itemData.itemTooltip;
+        invetoryManager.showedItem = itemData;
+        invetoryManager.showedItemUI = this;
     }
 
     public void OnDrag(PointerEventData eventData)

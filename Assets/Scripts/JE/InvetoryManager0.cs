@@ -7,6 +7,9 @@ public class InvetoryManager0 : MonoBehaviour
 {
     public Item testItem1;
     public Item testItem2;
+    public Item testItem3;
+
+    public bool isOnObjRotate = false;
 
     public TextMeshProUGUI tooltipText;
 
@@ -22,6 +25,12 @@ public class InvetoryManager0 : MonoBehaviour
         get => _draggingItem;
         set => _draggingItem = value;
     }
+
+    public Item showedItem;
+
+    public ItemUI0 showedItemUI = null;
+
+    public ItemUI0 draggingItemUI = null;
 
     private ItemSlot0 _selectedSlot = null;
     public ItemSlot0 selectedSlot
@@ -45,6 +54,7 @@ public class InvetoryManager0 : MonoBehaviour
 
         SetItem(testItem1);
         SetItem(testItem2);
+        SetItem(testItem3);
     }
 
     public void SetItem(Item item)
