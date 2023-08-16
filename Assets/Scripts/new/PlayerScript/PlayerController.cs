@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private NavMeshAgent agent;
     Animator animator;
     string animationState = "AnimationState";
+    [SerializeField] private ParticleSystem clickParticlePrefab; 
 
     enum States
     {
@@ -41,6 +42,8 @@ public class PlayerController : MonoBehaviour
             if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
             {
                 agent.SetDestination(hit.point);
+
+                CreateClickParticle(hit.point);
             }
         }
     }
@@ -58,5 +61,16 @@ public class PlayerController : MonoBehaviour
             animator.SetInteger(animationState, (int)States.Idle);
         }
     }
-
+    
+    private void CreateClickParticle(Vector3 position)
+    {
+        if (clickParticlePrefab != null)
+        {
+            ParticleSystem particle = Instantiate(clickParticlePrefab, position, Quaternion.identity);
+            Destroy(particle.gameObject, 0.5f);
+        }
+    }
+    
 }
+
+
