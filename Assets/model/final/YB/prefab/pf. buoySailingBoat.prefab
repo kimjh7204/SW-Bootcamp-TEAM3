@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 150649738184983431}
   - component: {fileID: 3878197096959365304}
   - component: {fileID: 3259725542152087242}
+  - component: {fileID: 6887092747640827448}
   m_Layer: 0
   m_Name: pf. buoySailingBoat
   m_TagString: Item
@@ -82,6 +83,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6887092747640827448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5211926236768767411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a14b0a0cd0b855c45943afe99db0cd92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
 --- !u!1001 &922694293779796286
 PrefabInstance:
   m_ObjectHideFlags: 0

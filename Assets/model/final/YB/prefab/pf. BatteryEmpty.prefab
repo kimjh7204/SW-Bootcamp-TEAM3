@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 293317659148646616}
   - component: {fileID: 1117610561452574698}
   - component: {fileID: 2176289392775915002}
+  - component: {fileID: 6396601749709397628}
   m_Layer: 0
   m_Name: pf. BatteryEmpty
   m_TagString: Item
@@ -82,6 +83,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.6958237, y: 2.5344598, z: 2.4926977}
   m_Center: {x: -0.75726604, y: 0.029892087, z: -0.020339727}
+--- !u!114 &6396601749709397628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523881810401656205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a14b0a0cd0b855c45943afe99db0cd92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
 --- !u!1001 &2094181937375513075
 PrefabInstance:
   m_ObjectHideFlags: 0

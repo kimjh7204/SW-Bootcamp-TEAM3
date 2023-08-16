@@ -498,6 +498,7 @@ MonoBehaviour:
   useOReatText: {fileID: 2124242383157496858}
   player: {fileID: 0}
   inventoryManager: {fileID: 0}
+  coconut: {fileID: 11400000, guid: b475c63205499d64db82bc31b9143a9c, type: 2}
 --- !u!1 &5248629229949886227
 GameObject:
   m_ObjectHideFlags: 0

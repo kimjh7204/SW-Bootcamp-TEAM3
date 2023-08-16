@@ -10,6 +10,12 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public TextMeshProUGUI useOReatText;
     public Transform player;
     public InvetoryManager0 inventoryManager;
+    
+
+
+    [Header("사용하기 버튼을 통해 생성할 필요가 있는 것들")]
+    public Item coconut;
+    private Vector3 pos;
 
 
     public void SetItemUI(ItemUI0 itemui)
@@ -70,15 +76,16 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         if(itemUI.itemData.itemTag == Item.ItemTag.food)
         {
             eatItem(itemUI.itemData);
+            itemUI.AmountCheck();
         }
         else
         {
             useItem(itemUI.itemData);
         }
 
-        itemUI.itemData.amount -= 1;
+        //itemUI.itemData.amount -= 1;
 
-        itemUI.AmountCheck();  // amount가 0개 이하면 슬롯 삭제
+        
 
 
         DeleteShowed();
@@ -121,6 +128,22 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     private void useItem(Item item)
     {
         // item use
+        Debug.Log(item.itemName + GameData.playerCollisionState);
+
+        if(item.itemName == "ax" && GameData.playerCollisionState == "tree")
+        {
+            // 코코넛 생성
+            Debug.Log("코코넛 생성");
+            pos = new Vector3(player.position.x + 1f, player.position.y + 2f, player.position.z);
+            Instantiate<GameObject>(coconut.itemGameObject, pos, Quaternion.identity);
+
+        }
+
+
+
+
+
+
     }
 
     private void DeleteShowed()

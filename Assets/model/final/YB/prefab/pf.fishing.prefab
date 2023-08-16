@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 379557566304167397}
   - component: {fileID: 5007429396961766893}
   - component: {fileID: 7991096091401886954}
+  - component: {fileID: 3600339067039650432}
   m_Layer: 0
   m_Name: pf.fishing
   m_TagString: Item
@@ -82,6 +83,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3600339067039650432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4388534673264580994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a14b0a0cd0b855c45943afe99db0cd92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
 --- !u!1001 &2450147845802677131
 PrefabInstance:
   m_ObjectHideFlags: 0

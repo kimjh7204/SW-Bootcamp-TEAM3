@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 920634849627893376}
   - component: {fileID: 5740924858206608931}
   - component: {fileID: 5642251790253174051}
+  - component: {fileID: -3097033586940172349}
   m_Layer: 0
   m_Name: pf. magnetV2
   m_TagString: Item
@@ -82,6 +83,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-3097033586940172349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3871354429854453706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a14b0a0cd0b855c45943afe99db0cd92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
 --- !u!1001 &4971321242131830725
 PrefabInstance:
   m_ObjectHideFlags: 0

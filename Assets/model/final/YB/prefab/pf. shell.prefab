@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1459904392666286366}
   - component: {fileID: 5556424841187041069}
   - component: {fileID: 3148614705443902094}
+  - component: {fileID: -3059363388085476618}
   m_Layer: 0
   m_Name: pf. shell
   m_TagString: Item
@@ -82,6 +83,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-3059363388085476618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78193954056942374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a14b0a0cd0b855c45943afe99db0cd92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
 --- !u!1001 &7611079739509328845
 PrefabInstance:
   m_ObjectHideFlags: 0

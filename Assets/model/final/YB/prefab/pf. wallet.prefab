@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2483092697402027540}
   - component: {fileID: 2766033968834127306}
   - component: {fileID: 8619139971568782525}
+  - component: {fileID: -621731098665060765}
   m_Layer: 0
   m_Name: pf. wallet
   m_TagString: Item
@@ -82,6 +83,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-621731098665060765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4362059312668802221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a14b0a0cd0b855c45943afe99db0cd92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
 --- !u!1001 &1960804416446302046
 PrefabInstance:
   m_ObjectHideFlags: 0
