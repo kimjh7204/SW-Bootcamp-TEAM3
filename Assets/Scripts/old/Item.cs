@@ -36,6 +36,7 @@ public class Item : ScriptableObject
     [Header("먹었을 때 배고픔 줄어드는 정도")]
     public float eatStateFull;
 
-
+    [Header("아이템 조합들")]
+    public itemCombination[] combination;
 
 }
