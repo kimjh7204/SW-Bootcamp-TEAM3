@@ -33,6 +33,7 @@ public class InstallState : MonoBehaviour
         {
             installITem = null;
             installItemImage.sprite = null;
+            installItemImage.gameObject.SetActive(false);
         }
 
     }
