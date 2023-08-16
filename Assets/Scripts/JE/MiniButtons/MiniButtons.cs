@@ -97,14 +97,18 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         newItem.transform.SetParent(player.transform);
         newItem.transform.localPosition = new Vector3(0, 0, 1.5f);
         newItem.transform.SetParent(player.transform.parent);
-        newItem.transform.position += new Vector3(0, itemUI.itemData.positionY, 0);
+        newItem.transform.position += new Vector3(0, 3f, 0);
 
-        itemUI.itemData.amount -= 1;
+        //itemUI.itemData.amount -= 1;
 
         itemUI.AmountCheck();  // amount가 0개 이하면 슬롯 삭제
 
+        InstallState.instance.CheckInstallItem(itemUI.itemData);
 
         DeleteShowed();
+
+
+
 
     }
 

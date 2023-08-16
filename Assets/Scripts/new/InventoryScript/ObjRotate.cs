@@ -11,7 +11,7 @@ public class ObjRotate : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     public float rotateSpeed = 30f;
     Vector3 mousePos, offset, rotation;
     private bool isPointerEnter = false;
-    private bool isDrag = false;
+    //private bool isDrag = false;
 
     public InvetoryManager0 inventoryManager;
 

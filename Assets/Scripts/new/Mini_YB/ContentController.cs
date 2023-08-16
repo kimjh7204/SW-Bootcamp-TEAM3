@@ -24,7 +24,7 @@ public class ContentController : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     private void Update()
     {
-        this.gameObject.transform.position = Camera.main.WorldToScreenPoint(player.transform.position + new Vector3(20, -10, 0));
+        //this.gameObject.transform.position = Camera.main.WorldToScreenPoint(player.transform.position + new Vector3(20, -10, 0));
         // 미니창 위치 설정
     }
 

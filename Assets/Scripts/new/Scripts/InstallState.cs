@@ -27,4 +27,14 @@ public class InstallState : MonoBehaviour
         installItemImage.gameObject.SetActive(true);
     }
 
+    public void CheckInstallItem(Item item)
+    {
+        if (installITem == item)
+        {
+            installITem = null;
+            installItemImage.sprite = null;
+        }
+
+    }
+
 }

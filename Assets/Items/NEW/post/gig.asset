@@ -15,5 +15,8 @@ MonoBehaviour:
   itemName: gig
   itemImage: {fileID: 21300000, guid: 71788d99305ddf64a9d500f0ad2b15a4, type: 3}
   itemTooltip: Let's catch a fisf!
-  itemGameObject: {fileID: 2401443051640188501, guid: 126db08d6ff794946a3c27d552caa545, type: 3}
+  itemGameObject: {fileID: 6489356457650457391, guid: 126db08d6ff794946a3c27d552caa545, type: 3}
   amount: 0
+  positionY: 0
+  itemTag: 0
+  eatStateFull: 0

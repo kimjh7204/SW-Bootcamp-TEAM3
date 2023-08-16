@@ -6,7 +6,7 @@ public class ItemController : MonoBehaviour
 {
     public Item item;
 
-    private void OnTriggerEnter(Collider player)
+    /*private void OnTriggerEnter(Collider player)
     {
         if (player.CompareTag("Player"))
         {
@@ -17,6 +17,6 @@ public class ItemController : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         ContentController.instance.DeleteItem(item);
-    }
+    }*/
 
 }

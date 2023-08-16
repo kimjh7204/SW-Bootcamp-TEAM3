@@ -15,7 +15,8 @@ MonoBehaviour:
   itemName: figure
   itemImage: {fileID: 21300000, guid: cc78e5a3d5cce9e408b6fad80291fccf, type: 3}
   itemTooltip: Watch Out! Very Sharp.
-  itemGameObject: {fileID: 2039046301749606384, guid: f455587a481c2be448dc5286d545fa00, type: 3}
+  itemGameObject: {fileID: 20055223307912439, guid: f455587a481c2be448dc5286d545fa00, type: 3}
   amount: 0
+  positionY: 0
   itemTag: 0
   eatStateFull: 0
