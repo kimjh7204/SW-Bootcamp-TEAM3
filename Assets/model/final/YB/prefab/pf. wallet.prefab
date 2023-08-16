@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2483092697402027540}
   - component: {fileID: 2766033968834127306}
+  - component: {fileID: 8619139971568782525}
   m_Layer: 0
   m_Name: pf. wallet
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   m_Children:
   - {fileID: 2070692961933451445}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2766033968834127306
 BoxCollider:
@@ -48,12 +49,39 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 20, y: 20, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.5743098, y: 0.5671369, z: 3.3233895}
+  m_Center: {x: 0.039482415, y: 0.009837747, z: -0.07596159}
+--- !u!54 &8619139971568782525
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4362059312668802221}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1960804416446302046
 PrefabInstance:
   m_ObjectHideFlags: 0
