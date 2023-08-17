@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e40a3454ceee49647bc8c62b7cf60ad6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickParticlePrefab: {fileID: 0}
 --- !u!95 &5847238698994898466
 Animator:
   serializedVersion: 5
