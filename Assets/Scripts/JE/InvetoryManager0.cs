@@ -79,4 +79,28 @@ public class InvetoryManager0 : MonoBehaviour
         
         
     }
+
+    public ItemUI0 SetItemAndReturnUI(Item item)
+    {
+        // 처음 획득하는 아이템이면 인벤토리의 빈 슬롯에 itemUIPrefab 생성해서 넣고
+        // 아니라면 아이템 정보의 amount만 늘린다 -> 취소
+
+
+
+        for (int i = 3; i < itemSlots.Count; i++)
+        {
+            if (itemSlots[i].item == null)
+            {
+                GameObject tempItemUI = Instantiate(itemUIPrefab, itemSlots[i].transform);
+                ItemUI0 temp = tempItemUI.GetComponent<ItemUI0>();
+                Item tempItemData = item;
+                temp.Init(tempItemData, this, itemSlots[i], miniButtons);
+
+                return temp;
+            }
+        }
+        return null;
+
+
+    }
 }

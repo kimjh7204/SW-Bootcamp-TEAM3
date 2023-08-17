@@ -65,10 +65,13 @@ public class ItemUI0 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, ID
                     // 두개 없애고
                     Destroy(invetoryManager.showedItemUI.gameObject);
                     Destroy(invetoryManager.draggingItemUI.gameObject);
-                    // resultItem 생성
-                    invetoryManager.SetItem(invetoryManager.showedItem.combination[i].resultItem);
+                    // resultItem UI 생성
+                    var tempUI = invetoryManager.SetItemAndReturnUI(invetoryManager.showedItem.combination[i].resultItem);
                     // resultItem object 생성
-                    CreateObject(invetoryManager.showedItem.combination[i].resultItem);
+                    CreateObject(invetoryManager.showedItem.combination[i].resultItem, 1);
+                    invetoryManager.showedItem = invetoryManager.showedItem.combination[i].resultItem;
+                    invetoryManager.showedItemUI = tempUI;
+                    break;
                 }
             }
         }
@@ -127,7 +130,7 @@ public class ItemUI0 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, ID
         
     }
 
-    private void CreateObject(Item itemData)
+    private void CreateObject(Item itemData, float i = 0)
     {
         if (invetoryManager.showedObject != null)
         {
@@ -137,8 +140,12 @@ public class ItemUI0 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, ID
         invetoryManager.showedObject = Instantiate<GameObject>(itemData.itemGameObject, new Vector3(-0.0026165843f, -53.3899994f, 0), Quaternion.identity);
         invetoryManager.showedObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
         invetoryManager.tooltipText.text = itemData.itemTooltip;
-        invetoryManager.showedItem = itemData;
-        invetoryManager.showedItemUI = this;
+        if(i==0)
+        {
+            invetoryManager.showedItem = itemData;
+            invetoryManager.showedItemUI = this;
+        }
+        
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -156,13 +163,15 @@ public class ItemUI0 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, ID
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        
+        NavData.playerCanMove = false;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         // 미니 버튼 창 꺼주기
         miniButtons.SetActive(false);
+
+        NavData.playerCanMove = true;
 
     }
 

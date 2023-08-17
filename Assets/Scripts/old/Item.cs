@@ -39,4 +39,7 @@ public class Item : ScriptableObject
     [Header("아이템 조합들")]
     public itemCombination[] combination;
 
+    [Header("분해 목록(이 아이템을 분해할 때)")]
+    public ItemDecomposition decomposition;
+
 }
