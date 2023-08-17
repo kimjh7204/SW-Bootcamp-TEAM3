@@ -128,15 +128,14 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     private void useItem(Item item)
     {
         // item use
-        Debug.Log(item.itemName + GameData.playerCollisionState);
+        //Debug.Log(item.itemName + GameData.playerCollisionState);
 
         if(item.itemName == "ax" && GameData.playerCollisionState == "tree")
         {
             // 内内秤 积己
-            Debug.Log("内内秤 积己");
             pos = new Vector3(player.position.x + 1f, player.position.y + 2f, player.position.z);
-            Instantiate<GameObject>(coconut.itemGameObject, pos, Quaternion.identity);
-
+            var coco = Instantiate<GameObject>(coconut.itemGameObject, pos, Quaternion.identity);
+            
         }
 
 

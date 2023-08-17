@@ -51,13 +51,13 @@ public class ItemUI0 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, ID
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        Debug.Log(invetoryManager.isOnObjRotate);
 
         //--------
         // а╤гу
-        if (invetoryManager.isOnObjRotate)
+        if (invetoryManager.isOnObjRotate && invetoryManager.showedItem != null)
         {
             if (invetoryManager.draggingItem == null) return;
+            
             for (int i = 0; i < invetoryManager.showedItem.combination.Length; i++)
             {
                 if (invetoryManager.showedItem.combination[i].inputItem == invetoryManager.draggingItem.itemData)
