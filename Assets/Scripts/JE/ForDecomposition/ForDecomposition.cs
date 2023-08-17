@@ -13,6 +13,7 @@ public class ForDecomposition : MonoBehaviour, IPointerClickHandler
     {
         if (eventData.clickCount >= 2)
         {
+            if (inventoryManager.showedItem == null) return;
             DecompositionItem(inventoryManager.showedItem);
         }
 
@@ -22,6 +23,7 @@ public class ForDecomposition : MonoBehaviour, IPointerClickHandler
     private void DecompositionItem(Item item)
     {
         if (item.decomposition == null) return;
+        
 
         // item ªË¡¶
         Destroy(inventoryManager.showedItemUI.gameObject);

@@ -85,9 +85,9 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
         //itemUI.itemData.amount -= 1;
 
-        
 
 
+        this.gameObject.SetActive(false);
         DeleteShowed();
     }
 
@@ -112,6 +112,7 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
         InstallState.instance.CheckInstallItem(itemUI.itemData);
 
+        this.gameObject.SetActive(false);
         DeleteShowed();
 
 

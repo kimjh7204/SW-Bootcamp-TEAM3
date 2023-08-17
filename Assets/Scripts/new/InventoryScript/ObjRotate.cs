@@ -10,21 +10,17 @@ public class ObjRotate : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     [Header("3D 오브젝트 회전 속도")]
     public float rotateSpeed = 30f;
     Vector3 mousePos, offset, rotation;
-    private bool isPointerEnter = false;
-    //private bool isDrag = false;
 
     public InvetoryManager0 inventoryManager;
 
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        isPointerEnter = true;
         inventoryManager.isOnObjRotate = true;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        isPointerEnter = false;
         inventoryManager.isOnObjRotate = false;
 
     }
