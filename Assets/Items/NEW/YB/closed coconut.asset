@@ -21,5 +21,6 @@ MonoBehaviour:
   itemTag: 0
   eatStateFull: 0
   thirstStateFull: 0
-  combination: []
+  combination:
+  - {fileID: 11400000, guid: c2684276e2e0ed043a5aed646d6a8f4e, type: 2}
   decomposition: {fileID: 0}

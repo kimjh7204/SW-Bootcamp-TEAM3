@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks.Sources;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -11,8 +12,21 @@ public class SlotController : MonoBehaviour, IPointerClickHandler
     public Image itemImage;
     public TextMeshProUGUI itemName;
     public TextMeshProUGUI itemTooltip;
-    public Item item = null;
+    public Item _item = null;
     public InvetoryManager0 inventoryManager;
+
+    public Item item
+    {
+        get { return _item; }
+        set
+        {
+            _item = value;
+            if(_item != null)
+                this.gameObject.SetActive(true);
+
+
+        }
+    }
 
     public int slotIndex;  // 화면에서 보이는 슬롯 순서(0부터)
 
@@ -31,19 +45,19 @@ public class SlotController : MonoBehaviour, IPointerClickHandler
     {
         if (item == null)
         {
-            
-            this.gameObject.SetActive(false);
             itemName.text = null;
             itemImage.sprite = null;
             itemTooltip = null;
+            this.gameObject.SetActive(false);
+
         }
         else
         {
             this.gameObject.SetActive(true);
-
             itemImage.sprite = item.itemImage;
             itemName.text = item.itemName;
             itemTooltip.text = item.itemTooltip;
+
         }
     }
 }

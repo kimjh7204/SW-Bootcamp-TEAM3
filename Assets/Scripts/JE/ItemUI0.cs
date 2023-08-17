@@ -64,7 +64,8 @@ public class ItemUI0 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, ID
                 {
                     // 滴俺 绝局绊
                     Destroy(invetoryManager.showedItemUI.gameObject);
-                    Destroy(invetoryManager.draggingItemUI.gameObject);
+                    if(invetoryManager.draggingItem.itemData.itemTag != Item.ItemTag.tool)
+                        Destroy(invetoryManager.draggingItemUI.gameObject);
                     // resultItem UI 积己
                     var tempUI = invetoryManager.SetItemAndReturnUI(invetoryManager.showedItem.combination[i].resultItem);
                     // resultItem object 积己

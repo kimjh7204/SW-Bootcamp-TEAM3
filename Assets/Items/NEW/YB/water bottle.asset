@@ -18,8 +18,8 @@ MonoBehaviour:
   itemGameObject: {fileID: 736715598872398621, guid: 64055ccb7e0cd504aa82247e0f9380f0, type: 3}
   amount: 0
   positionY: 0
-  itemTag: 0
+  itemTag: 2
   eatStateFull: 0
-  thirstStateFull: 0
+  thirstStateFull: 50
   combination: []
   decomposition: {fileID: 0}

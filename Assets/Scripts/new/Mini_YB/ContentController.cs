@@ -43,9 +43,10 @@ public class ContentController : MonoBehaviour, IPointerEnterHandler, IPointerEx
                 itemGameObjects[i] = gameObject;
                 break;
             }
+
         }
 
-        
+
     }
 
     public void DeleteItem(Item item)
@@ -81,8 +82,10 @@ public class ContentController : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
             if (currentItem == null && nextItem != null)
             {
-                currentItem = nextItem;
-                nextItem = null;
+                slots[i].GetComponent<SlotController>().item = slots[i + 1].GetComponent<SlotController>().item;
+                slots[i + 1].GetComponent<SlotController>().item = null;
+                itemGameObjects[i] = itemGameObjects[i + 1];
+                itemGameObjects[i + 1] = null;
             }
         }
     }
