@@ -28,6 +28,7 @@ public class Item : ScriptableObject
     { 
         item,
         food,
+        water,
         tool
     }
     [Header("아이템 태그(먹을 수 있으면 food)")]
@@ -35,6 +36,9 @@ public class Item : ScriptableObject
 
     [Header("먹었을 때 배고픔 줄어드는 정도")]
     public float eatStateFull;
+
+    [Header("먹었을 때 갈증 줄어드는 정도")]
+    public float thirstStateFull;
 
     [Header("아이템 조합들")]
     public itemCombination[] combination;

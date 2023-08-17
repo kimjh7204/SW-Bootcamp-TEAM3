@@ -75,15 +75,18 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         // 아니면 use 실행
         if(itemUI.itemData.itemTag == Item.ItemTag.food)
         {
-            eatItem(itemUI.itemData);
-            itemUI.AmountCheck();
+            EatItem(itemUI.itemData);
+            itemUI.DeleteUI();
+        }
+        else if(itemUI.itemData.itemTag == Item.ItemTag.water)
+        {
+            DrinkItem(itemUI.itemData);
+            itemUI.DeleteUI();
         }
         else
         {
-            useItem(itemUI.itemData);
+            UseItem(itemUI.itemData);
         }
-
-        //itemUI.itemData.amount -= 1;
 
 
 
@@ -106,9 +109,8 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         newItem.transform.SetParent(player.transform.parent);
         newItem.transform.position += new Vector3(0, 3f, 0);
 
-        //itemUI.itemData.amount -= 1;
 
-        itemUI.AmountCheck();  // amount가 0개 이하면 슬롯 삭제
+        itemUI.DeleteUI();
 
         InstallState.instance.CheckInstallItem(itemUI.itemData);
 
@@ -120,13 +122,18 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     }
 
-    private void eatItem(Item item)
+    private void EatItem(Item item)
     {
         // item eat
         StateBar1.instance.EatFull(item.eatStateFull);    
     }
 
-    private void useItem(Item item)
+    private void DrinkItem(Item item)
+    {
+        StateBar2.instance.Drink(item.thirstStateFull);
+    }
+
+    private void UseItem(Item item)
     {
         // item use
         //Debug.Log(item.itemName + GameData.playerCollisionState);

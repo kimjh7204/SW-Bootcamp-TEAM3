@@ -4,34 +4,48 @@ using UnityEngine;
 
 public class StateBar1 : MonoBehaviour
 {
-    [Header("���� ������ �̹���")]
+    [Header("길이 조절할 이미지")]
     public RectTransform stateBar1;
-    [Header("���� ũ��")]
+
+    [Header("원래 크기")]
     public float width;
     public float height;
-    [Header("���� �ӵ�(��������� �ӵ�)")]
-    public float hungrySpeed;
-    private float i = 1;
-    public static StateBar1 instance;
 
+    [Header("줄어드는 속도")]
+    public float hungrySpeed;
+
+    public static StateBar1 instance;
+    private float hungry;
 
     private void Start()
     {
         instance = this;
+        hungry = height;
     }
 
 
     void FixedUpdate()
     {
-        if(height - hungrySpeed * i >= 0)
+        
+        if (hungry > height)
         {
-            stateBar1.sizeDelta = new Vector2(width, height - hungrySpeed * i);
-            i += 1;
+            hungry = height;
         }
+        else if (hungry > 0)
+        {
+            hungry -= hungrySpeed;
+
+        }
+        else if (hungry <= 0)
+        {
+            hungry = 0;
+        }
+
+        stateBar1.sizeDelta = new Vector2(width, hungry);
     }
 
     public void EatFull(float full)
     {
-        stateBar1.sizeDelta = new Vector2(width, height - hungrySpeed * i + full);
+        hungry += full;
     }
 }

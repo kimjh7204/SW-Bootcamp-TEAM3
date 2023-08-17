@@ -176,12 +176,9 @@ public class ItemUI0 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, ID
     }
 
     //-------------------------
-    public void AmountCheck()
+    public void DeleteUI()
     {
-        if(itemData.amount <= 0)
-        {
-            Destroy(this.gameObject);
-            return;
-        }
+        Destroy(this.gameObject);
+        return;
     }
 }

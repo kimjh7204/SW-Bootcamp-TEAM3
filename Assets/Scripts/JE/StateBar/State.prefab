@@ -564,6 +564,7 @@ MonoBehaviour:
   stateBar2: {fileID: 8571109425214395869}
   width: 11.3347
   height: 100
+  thirstSpeed: 0.01
 --- !u!1 &7780910996623402065
 GameObject:
   m_ObjectHideFlags: 0

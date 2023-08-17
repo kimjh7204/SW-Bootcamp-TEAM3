@@ -19,4 +19,6 @@ MonoBehaviour:
   amount: 0
   positionY: 0.53
   itemTag: 1
-  eatStateFull: 5
+  eatStateFull: 50
+  combination: []
+  decomposition: {fileID: 0}
