@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: glass in fish
   m_EditorClassIdentifier: 
   itemName: 
-  itemImage: {fileID: 0}
+  itemImage: {fileID: 21300000, guid: a0c5c606dd23a91429088f086d89a929, type: 3}
   itemTooltip: 
   itemGameObject: {fileID: 4883145314426324500, guid: 0fc5215939a1f2840a4fd89435ff130d, type: 3}
   amount: 0
   positionY: 0
   itemTag: 0
   eatStateFull: 0
+  thirstStateFull: 0
+  combination: []
+  decomposition: {fileID: 0}

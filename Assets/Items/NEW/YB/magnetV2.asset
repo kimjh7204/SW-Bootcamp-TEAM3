@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: magnetV2
   m_EditorClassIdentifier: 
   itemName: 
-  itemImage: {fileID: 0}
+  itemImage: {fileID: 21300000, guid: 08071ca61d8d61e4ba8b4c4f0cd3cb1d, type: 3}
   itemTooltip: 
-  itemGameObject: {fileID: 4485318430327015854, guid: d301a2b44188a3f449e56769d9197585, type: 3}
+  itemGameObject: {fileID: 3871354429854453706, guid: d301a2b44188a3f449e56769d9197585, type: 3}
   amount: 0
   positionY: 0
   itemTag: 0
   eatStateFull: 0
+  thirstStateFull: 0
+  combination: []
+  decomposition: {fileID: 0}

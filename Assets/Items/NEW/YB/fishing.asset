@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: fishing
   m_EditorClassIdentifier: 
   itemName: 
-  itemImage: {fileID: 0}
+  itemImage: {fileID: 21300000, guid: 8082005e4bad8a8459af1cb304c1aa78, type: 3}
   itemTooltip: 
-  itemGameObject: {fileID: 7671999178779063875, guid: 4a2e627d4827ffd41a1f1fd177d13e5c, type: 3}
+  itemGameObject: {fileID: 4388534673264580994, guid: 4056535342cd50d479f20a87d7d13a39, type: 3}
   amount: 0
   positionY: 0
   itemTag: 0
   eatStateFull: 0
+  thirstStateFull: 0
+  combination: []
+  decomposition: {fileID: 0}

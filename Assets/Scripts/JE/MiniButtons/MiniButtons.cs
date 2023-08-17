@@ -141,6 +141,7 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         if(item.itemName == "ax" && GameData.playerCollisionState == "tree")
         {
             // 内内秤 积己
+            if (Random.Range(0, 2) == 0) return;  // 犬伏
             pos = new Vector3(player.position.x + 1f, player.position.y + 2f, player.position.z);
             var coco = Instantiate<GameObject>(coconut.itemGameObject, pos, Quaternion.identity);
             
