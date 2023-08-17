@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 20d4f77b9022eab48b4d94599ed4bf82, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: efd1c33efd2d58340b88804268e6833f, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4589972, g: 0.5251856, b: 0.5954101, a: 1}
+  m_IndirectSpecularColor: {r: 0.4147598, g: 0.5305151, b: 0.656061, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7055,6 +7055,7 @@ GameObject:
   m_Component:
   - component: {fileID: 925432449}
   - component: {fileID: 925432448}
+  - component: {fileID: 925432450}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -7139,6 +7140,20 @@ Transform:
   m_Father: {fileID: 1865673105}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &925432450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925432447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 915a6e33971fb3d4182ee8236d1b1b07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  daySeconds: 60
+  rotationSpeed: 10
 --- !u!1001 &926622172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17168,7 +17183,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00065900973, y: 192.00002}
+  m_AnchoredPosition: {x: -0.00065900973, y: 192.00003}
   m_SizeDelta: {x: 0, y: 400}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2038277136
