@@ -10,7 +10,19 @@ public class PlayerController : MonoBehaviour
     private NavMeshAgent agent;
     Animator animator;
     string animationState = "AnimationState";
-    [SerializeField] private ParticleSystem clickParticlePrefab; 
+    [SerializeField] private ParticleSystem clickParticlePrefab;
+
+    private static NavMeshAgent staticAgent;
+    private static bool _playerCanMove;
+    public static bool playerCanMove
+    {
+        get => _playerCanMove;
+        set
+        {
+            staticAgent.isStopped = !value;
+            _playerCanMove = value;
+        }
+    }
 
     enum States
     {
@@ -22,14 +34,18 @@ public class PlayerController : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        staticAgent = agent;
+        playerCanMove = true;
     }
 
     void Update()
     {
         UpdateState();
-        if (NavData.playerCanMove == true)
+
+        // For NavData Test
+        if (playerCanMove == true)
             Debug.Log("true");
-        else if (NavData.playerCanMove == false)
+        else if (playerCanMove == false)
             Debug.Log("false");
     }
 
@@ -40,13 +56,13 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
-        if(Input.GetMouseButtonDown(0) && NavData.playerCanMove)
+        if(Input.GetMouseButtonDown(0) && PlayerController.playerCanMove)
         {
             RaycastHit hit;
             if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
             {
                 agent.SetDestination(hit.point);
-
+               
                 CreateClickParticle(hit.point);
             }
         }

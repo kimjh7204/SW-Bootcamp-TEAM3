@@ -9,7 +9,7 @@ public class MenuCloseButton : MonoBehaviour
     {
         menuPanel.SetActive(false);
         GameData.isMenuPanelOpen = false;
-        NavData.playerCanMove = true;
+        PlayerController.playerCanMove = true;
     }
 
     

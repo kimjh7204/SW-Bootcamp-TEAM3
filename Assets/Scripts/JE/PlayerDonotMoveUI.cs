@@ -9,11 +9,11 @@ public class PlayerDonotMoveUI : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        NavData.playerCanMove = false;
+        //NavData.playerCanMove = false;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        NavData.playerCanMove = true;
+        //NavData.playerCanMove = true;
     }
 }

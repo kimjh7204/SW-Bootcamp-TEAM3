@@ -164,7 +164,7 @@ public class ItemUI0 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, ID
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        NavData.playerCanMove = false;
+       // NavData.playerCanMove = false;
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -172,7 +172,7 @@ public class ItemUI0 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, ID
         // 미니 버튼 창 꺼주기
         miniButtons.SetActive(false);
 
-        NavData.playerCanMove = true;
+        //NavData.playerCanMove = true;
 
     }
 

@@ -7,7 +7,7 @@ public class InventoryDoNotMove : MonoBehaviour, IPointerEnterHandler, IPointerE
 {
     public void OnPointerEnter(PointerEventData eventData)
     {
-        NavData.playerCanMove = false;
+        //PlayerController.playerCanMove = false;
     }
 
     public void OnPointerExit(PointerEventData eventData)

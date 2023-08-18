@@ -34,6 +34,18 @@ public class Item : ScriptableObject
     [Header("아이템 태그(먹을 수 있으면 food)")]
     public ItemTag itemTag;
 
+    public enum ItemTag2
+    {
+        none,
+        ax,
+        raft1,
+        raft2,
+        raft3
+    }
+    [Header("아이템 태그2(아이템 사용을 위한 태그임)")]
+    public ItemTag2 itemTag2;
+
+
     [Header("먹었을 때 배고픔 줄어드는 정도")]
     public float eatStateFull;
 

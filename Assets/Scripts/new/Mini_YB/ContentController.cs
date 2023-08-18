@@ -98,17 +98,17 @@ public class ContentController : MonoBehaviour, IPointerEnterHandler, IPointerEx
         if (slots[0].GetComponent<SlotController>().item == null)
         {
             content.SetActive(false);
-
+            PlayerController.playerCanMove = true;
         }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     { // 미니창 슬롯 범위를 클릭했을 때 플레이어가 의도치 않게 움직이는 것을 막기 위함.
-        NavData.playerCanMove = true;
+        PlayerController.playerCanMove = true;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     { // 미니창 슬롯 범위를 클릭했을 때 플레이어가 의도치 않게 움직이는 것을 막기 위함.
-        NavData.playerCanMove = false;
+        PlayerController.playerCanMove = false;
     }
 }

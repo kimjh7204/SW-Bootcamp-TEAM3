@@ -17,19 +17,20 @@ public class MenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         menuPanel.SetActive(true);
         GameData.isMenuPanelOpen = true;
+        PlayerController.playerCanMove = false; //
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if(!GameData.isMenuPanelOpen)
+        /*if(!GameData.isMenuPanelOpen)
         {
             NavData.playerCanMove = true;
-        }
+        }*/
         
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        NavData.playerCanMove = false;
+        //NavData.playerCanMove = false;
     }
 }

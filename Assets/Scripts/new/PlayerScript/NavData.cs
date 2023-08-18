@@ -4,6 +4,6 @@ using UnityEngine;
 
 public static class NavData
 {
-    public static bool playerCanMove = true;
+    //public static bool playerCanMove = true;
    
 }

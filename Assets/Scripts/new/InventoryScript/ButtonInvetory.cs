@@ -27,17 +27,15 @@ public class ButtonInvetory : MonoBehaviour, IPointerExitHandler, IPointerEnterH
             Inventorypanel.SetActive(false);
             GameData.isInventoryOpen = false;
             
-            if(isMouseExitButton)
-            {
-                NavData.playerCanMove = true;
-            }
+            PlayerController.playerCanMove = true;
+            
 
         }
         else
         {
             Inventorypanel.SetActive(true);
             GameData.isInventoryOpen = true;
-            NavData.playerCanMove = false;
+            PlayerController.playerCanMove = false;
         }
 
     }
@@ -45,17 +43,17 @@ public class ButtonInvetory : MonoBehaviour, IPointerExitHandler, IPointerEnterH
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        isMouseExitButton = true;
+        /*isMouseExitButton = true;
         if(!GameData.isInventoryOpen)
         {
             NavData.playerCanMove = true;
-        }
+        }*/
 
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        isMouseExitButton = false;
-        NavData.playerCanMove = false;
+        /*isMouseExitButton = false;
+        NavData.playerCanMove = false;*/
     }
 }
