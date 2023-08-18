@@ -21,8 +21,21 @@ public class SlotController : MonoBehaviour, IPointerClickHandler
         set
         {
             _item = value;
-            if(_item != null)
+            if (_item == null)
+            {
+                itemName.text = null;
+                itemImage.sprite = null;
+                itemTooltip.text = null;
+                this.gameObject.SetActive(false);
+
+            }
+            else
+            {
+                itemImage.sprite = item.itemImage;
+                itemName.text = item.itemName;
+                itemTooltip.text = item.itemTooltip;
                 this.gameObject.SetActive(true);
+            }
 
 
         }
@@ -39,25 +52,14 @@ public class SlotController : MonoBehaviour, IPointerClickHandler
 
     private void Start()
     {
-        //textMeshProUGUI = GetComponentInChildren<TextMeshProUGUI>();  //나중에 이미지, 네임 이걸로 컴포넌트 변경.
     }
-    void Update()
+
+    private void Update()
     {
-        if (item == null)
+        if(item == null)
         {
-            itemName.text = null;
-            itemImage.sprite = null;
-            itemTooltip = null;
             this.gameObject.SetActive(false);
-
         }
-        else
-        {
-            this.gameObject.SetActive(true);
-            itemImage.sprite = item.itemImage;
-            itemName.text = item.itemName;
-            itemTooltip.text = item.itemTooltip;
-
-        }
+        
     }
 }

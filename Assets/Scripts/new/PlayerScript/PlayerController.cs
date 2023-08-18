@@ -27,6 +27,10 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         UpdateState();
+        if (NavData.playerCanMove == true)
+            Debug.Log("true");
+        else if (NavData.playerCanMove == false)
+            Debug.Log("false");
     }
 
     private void FixedUpdate()

@@ -10,7 +10,7 @@ public class CameraFollow : MonoBehaviour
     private float xRotateMove;
 
     Vector2 clickPoint;
-    float dragSpeed = 30.0f;
+    //float dragSpeed = 30.0f;
 
     private void Start()
     {

@@ -11,4 +11,6 @@ public class MenuCloseButton : MonoBehaviour
         GameData.isMenuPanelOpen = false;
         NavData.playerCanMove = true;
     }
+
+    
 }
