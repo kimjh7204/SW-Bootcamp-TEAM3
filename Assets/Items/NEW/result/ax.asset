@@ -19,5 +19,8 @@ MonoBehaviour:
   amount: 0
   positionY: 0
   itemTag: 0
+  itemTag2: 1
   eatStateFull: 0
+  thirstStateFull: 0
   combination: []
+  decomposition: {fileID: 0}

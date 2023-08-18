@@ -12,8 +12,12 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public InvetoryManager0 inventoryManager;
     private Dictionary<Item.ItemTag2, int> percentages = new Dictionary<Item.ItemTag2, int>()
     {  // UseItem() 했을 때 사용이 안되는 확률
+        {Item.ItemTag2.none, 100},
         {Item.ItemTag2.ax, 50},
-        {Item.ItemTag2.raft1, 0 }
+        {Item.ItemTag2.raft1, 0},
+        {Item.ItemTag2.raft2, 0},
+        {Item.ItemTag2.raft3, 0},
+        {Item.ItemTag2.fishing, 0}
     };
 
 
@@ -23,6 +27,9 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     [Header("뗏목 사용시 띄울 패널")]
     public GameObject raftPanel;
+
+    [Header("낚시 패널")]
+    public GameObject fishingPanel;
 
     public void SetItemUI(ItemUI0 itemui)
     {
@@ -54,6 +61,8 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     void Start()
     {
         this.gameObject.SetActive(false);
+
+        raftPanel.SetActive(false);
     }
 
 
@@ -149,13 +158,24 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             pos = new Vector3(player.position.x + 1f, player.position.y + 2f, player.position.z);
             var coco = Instantiate<GameObject>(coconut.itemGameObject, pos, Quaternion.identity);
         }
-        else if(item.itemTag2 == Item.ItemTag2.raft1 && GameData.playerCollisionState == "ocean")
-        {   // 바다 구역에서 (ocean zone)
-            // 뗏목1 사용 -> 패널 띄우기
-            // use raft1 -> show panel
-            raftPanel.SetActive(true);  // 이후 과정은 패널에서 처리.
+        else if(GameData.playerCollisionState == "ocean")
+        {   
+            if(item.itemTag2 == Item.ItemTag2.raft1 || item.itemTag2 == Item.ItemTag2.raft2 || item.itemTag2 == Item.ItemTag2.raft3)
+            {   // 바다 구역에서 (ocean zone)
+                // 뗏목1 사용 -> 패널 띄우기
+                // use raft1 -> show panel
+                raftPanel.SetActive(true);  // 이후 과정은 패널에서 처리
+                GameData.useWhatOnOseanZone = item;  // 정보 넣어주기
+            }  
         }
-        
+        if (item.itemTag2 == Item.ItemTag2.fishing && GameData.playerCollisionState == "fishing")
+        {   // 낚시 구역에서 (fishing zone)
+            // 낚시도구 사용 -> 물고기 잡았다는 패널 띄우기
+            // use fishing tool -> show fishingPanel
+            fishingPanel.SetActive(true);
+        }
+
+
 
 
 

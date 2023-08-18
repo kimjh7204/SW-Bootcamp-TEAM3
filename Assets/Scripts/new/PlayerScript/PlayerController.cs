@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private ParticleSystem clickParticlePrefab;
 
     private static NavMeshAgent staticAgent;
+
     private static bool _playerCanMove;
     public static bool playerCanMove
     {
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
         {
             staticAgent.isStopped = !value;
             _playerCanMove = value;
+            staticAgent.ResetPath();
         }
     }
 
@@ -43,9 +45,9 @@ public class PlayerController : MonoBehaviour
         UpdateState();
 
         // For NavData Test
-        if (playerCanMove == true)
+        if (playerCanMove)
             Debug.Log("true");
-        else if (playerCanMove == false)
+        else if (!playerCanMove)
             Debug.Log("false");
     }
 
@@ -56,7 +58,7 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
-        if(Input.GetMouseButtonDown(0) && PlayerController.playerCanMove)
+        if(Input.GetMouseButtonDown(0) && playerCanMove)
         {
             RaycastHit hit;
             if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
