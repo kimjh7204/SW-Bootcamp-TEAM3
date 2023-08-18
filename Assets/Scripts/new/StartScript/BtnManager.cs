@@ -14,7 +14,7 @@ public class BtnManager : MonoBehaviour
     }
     public void OnStartBtnClick()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("JE+Map 7");
     }
     public void OnExitBtnClick()
     {

@@ -4,16 +4,25 @@ using UnityEngine;
 using System.IO;
 
 
+//저장하는 방법
+//1. 저장할 데이터가 존재
+//2. 데이터를 제이슨으로 변환
+//3. 제이슨을 외부에 저장
+
+
 public class PlayerData
     {
-        public int amountofhunger;
-        public float location;
+        public int amountofhunger; //배고픔 수치
+        public float location; //현재위치
     }
 
 public class DataManager : MonoBehaviour
 {
     public static DataManager instance;
     PlayerData nowPlayer = new PlayerData();
+
+    public string path;
+    public int nowSlot;
 
     
     private void Awake()
@@ -27,15 +36,25 @@ public class DataManager : MonoBehaviour
             Destroy((instance.gameObject));
         }
         DontDestroyOnLoad(this.gameObject);
+
+        path = Application.persistentDataPath + "/Uninhabitated-Save";;
     }
 
     void Start()
     {
-        
+      
     }
-        
-    void Update()
+
+    public void SaveData()
     {
-        
+        string data = JsonUtility.ToJson(nowPlayer);
+        File.WriteAllText(path + nowSlot.ToString(),data);
     }
+
+    public void LoadData()
+    {
+        string data = File.ReadAllText(path + nowSlot.ToString());
+        nowPlayer = JsonUtility.FromJson<PlayerData>(data);
+    }
+   
 }
