@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3565753dd2abd574fa0f5c39bbce5bf2, type: 3}
   m_Name: magnetV2
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Magnet2
   itemImage: {fileID: 21300000, guid: 08071ca61d8d61e4ba8b4c4f0cd3cb1d, type: 3}
   itemTooltip: 
   itemGameObject: {fileID: 3871354429854453706, guid: d301a2b44188a3f449e56769d9197585, type: 3}

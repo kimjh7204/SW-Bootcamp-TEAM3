@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 790773649375b464fb553555c6107fd3, type: 3}
-  m_Name: treeCombination
+  m_Name: SailingRaft
   m_EditorClassIdentifier: 
-  inputItem: {fileID: 11400000, guid: 3b782ae56fe0e5948ab55e707c75ea94, type: 2}
-  resultItem: {fileID: 11400000, guid: 4c460e01c71754d43a46b13ccd150f0e, type: 2}
+  inputItem: {fileID: 11400000, guid: 4ec86c752df430443be0adaf3ef666d4, type: 2}
+  resultItem: {fileID: 11400000, guid: 7ec5af08ae8fb94489723950f6c570cc, type: 2}
