@@ -38,16 +38,19 @@ public class InvetoryManager0 : MonoBehaviour
         get => _selectedSlot;
         set => _selectedSlot = value;
     }
-    
+
     [SerializeField] private List<ItemSlot0> itemSlots = new List<ItemSlot0>();
 
     [Header("미니 버튼 창")]
     public GameObject miniButtons;
 
+    [Header("인벤토리 가득 찼음을 알려주는 패널")]
+    public GameObject inventoryFullPanel;
+
     private void Start()
     {
-
-        for(var i = 0;  i < itemSlots.Count; i++)
+        inventoryFullPanel.SetActive(false);
+        for (var i = 0; i < itemSlots.Count; i++)
         {
             itemSlots[i].Init(this);
         }
@@ -59,34 +62,7 @@ public class InvetoryManager0 : MonoBehaviour
 
     public void SetItem(Item item)
     {
-        // 처음 획득하는 아이템이면 인벤토리의 빈 슬롯에 itemUIPrefab 생성해서 넣고
-        // 아니라면 아이템 정보의 amount만 늘린다 -> 취소
-
-
-        
-            for (int i = 3; i < itemSlots.Count; i++)
-            {
-                if (itemSlots[i].item == null)
-                {
-                    GameObject tempItemUI = Instantiate(itemUIPrefab, itemSlots[i].transform);
-                    ItemUI0 temp = tempItemUI.GetComponent<ItemUI0>();
-                    Item tempItemData = item;
-                    temp.Init(tempItemData, this, itemSlots[i], miniButtons);
-
-                    break;
-                }
-            }
-        
-        
-    }
-
-    public ItemUI0 SetItemAndReturnUI(Item item)
-    {
-        // 처음 획득하는 아이템이면 인벤토리의 빈 슬롯에 itemUIPrefab 생성해서 넣고
-        // 아니라면 아이템 정보의 amount만 늘린다 -> 취소
-
-
-
+        // 인벤토리의 빈 슬롯에 itemUIPrefab 생성해서 넣는다
         for (int i = 3; i < itemSlots.Count; i++)
         {
             if (itemSlots[i].item == null)
@@ -96,11 +72,43 @@ public class InvetoryManager0 : MonoBehaviour
                 Item tempItemData = item;
                 temp.Init(tempItemData, this, itemSlots[i], miniButtons);
 
+                break;
+            }
+        }
+    }
+
+    public ItemUI0 SetItemAndReturnUI(Item item)
+    {
+        // SetItem()과 똑같은데 생성한 UI를 return한다
+        for (int i = 3; i < itemSlots.Count; i++)
+        {
+            if (itemSlots[i].item == null)
+            {
+                GameObject tempItemUI = Instantiate(itemUIPrefab, itemSlots[i].transform);
+                ItemUI0 temp = tempItemUI.GetComponent<ItemUI0>();
+                Item tempItemData = item;
+                temp.Init(tempItemData, this, itemSlots[i], miniButtons);
                 return temp;
             }
         }
         return null;
+    }
 
+    public bool IsInventoryFUll()
+    {
+        // 인벤토리가 가득찼는지 확인하는 함수
+        // 가득 찼으면 true, 비어있으면 false return  (위의 미니인벤토리는 제외임)
+        for (int i = 3; i < itemSlots.Count; i++)
+        {
+            if (itemSlots[i].item == null)
+                return false;
+        }
+        return true;
+    }
 
+    public void NoticeInventoryFull()
+    {
+        // 인벤토리가 가득 찼음을 알려주는 함수
+        inventoryFullPanel.SetActive(true);
     }
 }

@@ -24,16 +24,23 @@ public class ForDecomposition : MonoBehaviour, IPointerClickHandler
     {
         if (item.decomposition == null) return;
         
+        if(inventoryManager.IsInventoryFUll())
+        {
+            inventoryManager.NoticeInventoryFull();
+        }
+        else
+        {
+            // item 삭제
+            Destroy(inventoryManager.showedItemUI.gameObject);
+            Destroy(inventoryManager.showedObject);
+            // item 분해 후 아이템 두개 생성
+            inventoryManager.SetItem(inventoryManager.showedItem.decomposition.decompositionItem1);
+            inventoryManager.SetItem(inventoryManager.showedItem.decomposition.decompositionItem2);
 
-        // item 삭제
-        Destroy(inventoryManager.showedItemUI.gameObject);
-        Destroy(inventoryManager.showedObject);
-        // item 분해 후 아이템 두개 생성
-        inventoryManager.SetItem(inventoryManager.showedItem.decomposition.decompositionItem1);
-        inventoryManager.SetItem(inventoryManager.showedItem.decomposition.decompositionItem2);
+            inventoryManager.showedItem = null;
 
-        inventoryManager.showedItem = null;
-        
+        }
+
     }
 
 

@@ -17,3 +17,11 @@ MonoBehaviour:
   itemTooltip: I'm Thisty.....
   itemGameObject: {fileID: 491590477229990815, guid: 4f4ee9a5998bb4446bcd943ced6171db, type: 3}
   amount: 0
+  positionY: 0
+  itemTag: 0
+  itemTag2: 6
+  eatStateFull: 0
+  thirstStateFull: 0
+  combination: []
+  decomposition: {fileID: 0}
+  bottleWithWater: {fileID: 0}

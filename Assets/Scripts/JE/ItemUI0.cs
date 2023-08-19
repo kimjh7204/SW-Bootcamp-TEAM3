@@ -62,10 +62,15 @@ public class ItemUI0 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, ID
             {
                 if (invetoryManager.showedItem.combination[i].inputItem == invetoryManager.draggingItem.itemData)
                 {
+                    if(invetoryManager.IsInventoryFUll())
+                    {
+                        invetoryManager.NoticeInventoryFull();
+                        break;
+                    }
                     // 滴俺 绝局绊
-                    Destroy(invetoryManager.showedItemUI.gameObject);
-                    if(invetoryManager.draggingItem.itemData.itemTag != Item.ItemTag.tool)
-                        Destroy(invetoryManager.draggingItemUI.gameObject);
+                    invetoryManager.showedItemUI.DeleteUI();
+                    if (invetoryManager.draggingItem.itemData.itemTag != Item.ItemTag.tool)
+                        invetoryManager.draggingItemUI.DeleteUI();
                     // resultItem UI 积己
                     var tempUI = invetoryManager.SetItemAndReturnUI(invetoryManager.showedItem.combination[i].resultItem);
                     // resultItem object 积己
@@ -179,6 +184,7 @@ public class ItemUI0 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, ID
     //-------------------------
     public void DeleteUI()
     {
+        itemSlot.item = null;
         Destroy(this.gameObject);
         return;
     }

@@ -45,9 +45,18 @@ public class SlotController : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        inventoryManager.SetItem(item);
-        Destroy(ContentController.instance.itemGameObjects[slotIndex]);
-        ContentController.instance.DeleteItem(item);
+        if(inventoryManager.IsInventoryFUll())
+        {
+            inventoryManager.NoticeInventoryFull();
+        }
+        else
+        {
+            inventoryManager.SetItem(item);
+            Destroy(ContentController.instance.itemGameObjects[slotIndex]);
+            ContentController.instance.DeleteItem(item);
+        }
+
+        
     }
 
     private void Start()

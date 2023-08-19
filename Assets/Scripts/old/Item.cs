@@ -16,14 +16,6 @@ public class Item : ScriptableObject
 
     [Header("아이템 게임오브젝트(프리팹)")]
     public GameObject itemGameObject;
-
-    [Header("아이템 개수")]
-    public int amount;
-
-    [Header("아이템이 바닥에 딱 붙는 Y값(아이템 생성시킬 때)")]
-    public float positionY;
-
-
     public enum ItemTag
     { 
         item,
@@ -41,7 +33,9 @@ public class Item : ScriptableObject
         raft1,
         raft2,
         raft3,
-        fishing
+        fishing,
+        bottle,
+        fireFood
     }
     [Header("아이템 태그2(아이템 사용을 위한 태그임)")]
     public ItemTag2 itemTag2;
@@ -59,4 +53,9 @@ public class Item : ScriptableObject
     [Header("분해 목록(이 아이템을 분해할 때)")]
     public ItemDecomposition decomposition;
 
+    [Header("itemTag2가 bottle인 경우 : 물이 든 물병(Item)")]
+    public Item bottleWithWater;
+
+    [Header("itemTag2가 fireFood인 경우 : 불에 구운 후의 Item")]
+    public Item itemAfterOnFire;
 }

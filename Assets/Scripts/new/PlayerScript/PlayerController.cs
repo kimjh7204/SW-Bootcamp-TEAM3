@@ -44,11 +44,12 @@ public class PlayerController : MonoBehaviour
     {
         UpdateState();
 
-        // For NavData Test
+        /*// For NavData Test
         if (playerCanMove)
             Debug.Log("true");
         else if (!playerCanMove)
-            Debug.Log("false");
+            Debug.Log("false");*/
+        Debug.Log(GameData.playerCollisionState);
     }
 
     private void FixedUpdate()

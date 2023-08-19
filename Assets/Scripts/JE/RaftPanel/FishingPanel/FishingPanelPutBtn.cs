@@ -13,7 +13,15 @@ public class FishingPanelPutBtn : MonoBehaviour
 
     public void PutBtnClick()
     {
-        inventoryManager.SetItem(fish);
-        fishingPanel.SetActive(false);
+        if(inventoryManager.IsInventoryFUll())
+        {
+            inventoryManager.NoticeInventoryFull();
+        }
+        else
+        {
+            inventoryManager.SetItem(fish);
+            fishingPanel.SetActive(false);
+        }
+        
     }
 }

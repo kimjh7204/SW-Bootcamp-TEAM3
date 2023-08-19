@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using static UnityEditor.Progress;
 
 public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
@@ -98,6 +99,17 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             DrinkItem(itemUI.itemData);
             itemUI.DeleteUI();
         }
+        else if(itemUI.itemData.itemTag2 == Item.ItemTag2.bottle)
+        {
+            // 물병에 물 채우기
+            UseBottle(itemUI);
+        }
+        else if(itemUI.itemData.itemTag2 == Item.ItemTag2.fireFood)
+        {
+            // 음식 굽기
+            GrillFoodOnFire(itemUI);
+
+        }
         else
         {
             UseItem(itemUI.itemData);
@@ -168,16 +180,58 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
                 GameData.useWhatOnOseanZone = item;  // 정보 넣어주기
             }  
         }
-        if (item.itemTag2 == Item.ItemTag2.fishing && GameData.playerCollisionState == "fishing")
-        {   // 낚시 구역에서 (fishing zone)
-            // 낚시도구 사용 -> 물고기 잡았다는 패널 띄우기
-            // use fishing tool -> show fishingPanel
-            fishingPanel.SetActive(true);
+        else if (GameData.playerCollisionState == "fishingWater")
+        {   
+            if(item.itemTag2 == Item.ItemTag2.fishing)
+            {   // 낚시&물 구역에서 (fishingWater zone)
+                // 낚시도구 사용 -> 물고기 잡았다는 패널 띄우기
+                // use fishing tool -> show fishingPanel
+                fishingPanel.SetActive(true);
+            }
         }
+        
 
 
+    }
 
+    private void GrillFoodOnFire(ItemUI0 itemUI)
+    {
+       if (GameData.playerCollisionState == "fire")
+        {   // 불 구역에서 (fire zone)
+            // 음식 사용 -> 불에 구운 후의 아이템 생성
+            // use food -> create item after fire
+            if (inventoryManager.IsInventoryFUll())
+            {
+                inventoryManager.NoticeInventoryFull();
+                return;
+            }
 
+            inventoryManager.SetItem(itemUI.itemData.itemAfterOnFire);
+            itemUI.DeleteUI();
+            
+        }
+                
+
+    }
+
+    private void UseBottle(ItemUI0 itemUI)
+    {
+        if (GameData.playerCollisionState == "fishingWater")
+        {   // 낚시&물 구역에서 (fishingWater zone)
+            // 물병 사용 -> 물통에 물 채우기(물병 삭제, 물있는물병 생성)
+            // use bottle -> bottle with water
+            if(inventoryManager.IsInventoryFUll())
+            {
+                inventoryManager.NoticeInventoryFull();
+            }
+            else
+            {
+                itemUI.DeleteUI();  // 기존 empty bottle 삭제
+                inventoryManager.SetItem(itemUI.itemData.bottleWithWater);  // bottle with water 인벤토리에 추가
+            }
+
+            
+        }
 
 
 

@@ -17,3 +17,11 @@ MonoBehaviour:
   itemTooltip: empty
   itemGameObject: {fileID: 374454649925898852, guid: 299fb18353ef8a24d93a0dcae2049b6e, type: 3}
   amount: 0
+  positionY: 0
+  itemTag: 0
+  itemTag2: 6
+  eatStateFull: 0
+  thirstStateFull: 0
+  combination: []
+  decomposition: {fileID: 0}
+  bottleWithWater: {fileID: 0}

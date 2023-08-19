@@ -19,7 +19,8 @@ public class CollisionZoneData : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            GameData.playerCollisionState = null;
+            if(GameData.playerCollisionState == collsionZoneName)
+                GameData.playerCollisionState = null;
         }
     }
 }

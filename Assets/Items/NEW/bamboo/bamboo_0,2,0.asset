@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3565753dd2abd574fa0f5c39bbce5bf2, type: 3}
+  m_Name: bamboo_0,2,0
+  m_EditorClassIdentifier: 
+  itemName: bamboo_0,2,0
+  itemImage: {fileID: 21300000, guid: 85bd92da53fa86b47b82fc93752309dd, type: 3}
+  itemTooltip: 
+  itemGameObject: {fileID: 8908577866756724249, guid: 0a7c417227a6c1c42a5f976de4ab12cf, type: 3}
+  itemTag: 0
+  itemTag2: 0
+  eatStateFull: 0
+  thirstStateFull: 0
+  combination: []
+  decomposition: {fileID: 0}
+  bottleWithWater: {fileID: 0}
