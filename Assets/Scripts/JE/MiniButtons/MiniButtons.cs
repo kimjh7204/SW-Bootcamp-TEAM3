@@ -206,9 +206,9 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
                 return;
             }
 
-            inventoryManager.SetItem(itemUI.itemData.itemAfterOnFire);
             itemUI.DeleteUI();
-            
+            inventoryManager.SetItem(itemUI.itemData.itemAfterOnFire);
+
         }
                 
 
