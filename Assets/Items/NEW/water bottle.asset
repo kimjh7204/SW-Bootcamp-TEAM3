@@ -15,11 +15,14 @@ MonoBehaviour:
   itemName: WaterBottle
   itemImage: {fileID: 21300000, guid: dbbe7b1275354d24d88168d43bd001b3, type: 3}
   itemTooltip: 
+  itemShortTooltip: 
   itemGameObject: {fileID: 736715598872398621, guid: 64055ccb7e0cd504aa82247e0f9380f0, type: 3}
-  amount: 0
-  positionY: 0
+  itemShowObject: {fileID: 736715598872398621, guid: 34decacfd1bc67b438cab3dbdcd956e4, type: 3}
   itemTag: 2
+  itemTag2: 0
   eatStateFull: 0
   thirstStateFull: 50
   combination: []
   decomposition: {fileID: 0}
+  bottleWithWater: {fileID: 0}
+  itemAfterOnFire: {fileID: 0}

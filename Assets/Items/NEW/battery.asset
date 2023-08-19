@@ -15,8 +15,14 @@ MonoBehaviour:
   itemName: battery
   itemImage: {fileID: 21300000, guid: 6c79492cddc1e6e4a941fe53769b68b2, type: 3}
   itemTooltip: This is BATTERY
+  itemShortTooltip: 
   itemGameObject: {fileID: 6066537493058635162, guid: 54f36278f92c27b459d608732c8b5a2c, type: 3}
-  amount: 0
-  positionY: 0
+  itemShowObject: {fileID: 6066537493058635162, guid: ddeab53f46a9f354781cde7e5ccf2422, type: 3}
   itemTag: 0
+  itemTag2: 0
   eatStateFull: 0
+  thirstStateFull: 0
+  combination: []
+  decomposition: {fileID: 0}
+  bottleWithWater: {fileID: 0}
+  itemAfterOnFire: {fileID: 0}

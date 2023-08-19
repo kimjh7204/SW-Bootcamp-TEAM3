@@ -15,8 +15,14 @@ MonoBehaviour:
   itemName: shoeslace
   itemImage: {fileID: 21300000, guid: efbfbeab15b90f54fba8aa3cc1733a32, type: 3}
   itemTooltip: 
+  itemShortTooltip: 
   itemGameObject: {fileID: 6195313791308062534, guid: b57264a2ed685c340abfcea8d9d0e200, type: 3}
-  amount: 0
-  positionY: 0
+  itemShowObject: {fileID: 6195313791308062534, guid: 662e3531e9c8cf74a88bbaa79419b441, type: 3}
   itemTag: 0
+  itemTag2: 0
   eatStateFull: 0
+  thirstStateFull: 0
+  combination: []
+  decomposition: {fileID: 0}
+  bottleWithWater: {fileID: 0}
+  itemAfterOnFire: {fileID: 0}

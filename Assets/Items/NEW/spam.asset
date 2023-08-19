@@ -15,11 +15,14 @@ MonoBehaviour:
   itemName: spam
   itemImage: {fileID: 21300000, guid: 18f4b6a7e189ec54d95b0732a53967b0, type: 3}
   itemTooltip: 
+  itemShortTooltip: 
   itemGameObject: {fileID: 1729908577340849787, guid: f68f034af16d3b340bbb54918149329e, type: 3}
-  amount: 0
-  positionY: 0
+  itemShowObject: {fileID: 1729908577340849787, guid: cd3ea3cb424a0ab4cbfd3dac1e979977, type: 3}
   itemTag: 1
+  itemTag2: 0
   eatStateFull: 30
   thirstStateFull: 0
   combination: []
   decomposition: {fileID: 0}
+  bottleWithWater: {fileID: 0}
+  itemAfterOnFire: {fileID: 0}

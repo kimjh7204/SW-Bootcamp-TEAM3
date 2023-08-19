@@ -15,12 +15,14 @@ MonoBehaviour:
   itemName: freid shell
   itemImage: {fileID: 21300000, guid: 7777251a4cf440245b93c3b497e148ae, type: 3}
   itemTooltip: 
+  itemShortTooltip: 
   itemGameObject: {fileID: 78193954056942374, guid: de1156a7a8094d3469a9caf1908c7f11, type: 3}
-  amount: 0
-  positionY: 0
+  itemShowObject: {fileID: 78193954056942374, guid: e52aed4709d3f6c4d9b4c8184c9733fd, type: 3}
   itemTag: 1
   itemTag2: 0
   eatStateFull: 15
   thirstStateFull: 0
   combination: []
   decomposition: {fileID: 0}
+  bottleWithWater: {fileID: 0}
+  itemAfterOnFire: {fileID: 0}

@@ -15,5 +15,14 @@ MonoBehaviour:
   itemName: compass
   itemImage: {fileID: 21300000, guid: 0c8358b8423f17e46aa95226fb4a72fd, type: 3}
   itemTooltip: yu can get direction.
+  itemShortTooltip: 
   itemGameObject: {fileID: 2639114003564357650, guid: e52d9ac787854d34f9780cd3f701afc2, type: 3}
-  amount: 0
+  itemShowObject: {fileID: 2639114003564357650, guid: c3e9583746f85384482d843b694be6c9, type: 3}
+  itemTag: 0
+  itemTag2: 0
+  eatStateFull: 0
+  thirstStateFull: 0
+  combination: []
+  decomposition: {fileID: 0}
+  bottleWithWater: {fileID: 0}
+  itemAfterOnFire: {fileID: 0}

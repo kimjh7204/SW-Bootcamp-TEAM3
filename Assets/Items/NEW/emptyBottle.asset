@@ -15,9 +15,9 @@ MonoBehaviour:
   itemName: empty bottle
   itemImage: {fileID: 21300000, guid: dbbe7b1275354d24d88168d43bd001b3, type: 3}
   itemTooltip: empty
+  itemShortTooltip: 
   itemGameObject: {fileID: 736715598872398621, guid: f410fc048cfd4c24786c835d31cdd792, type: 3}
-  amount: 0
-  positionY: 0
+  itemShowObject: {fileID: 736715598872398621, guid: 9f59a22a1cf03cb4ebb82b194cbd6ccc, type: 3}
   itemTag: 0
   itemTag2: 6
   eatStateFull: 0
@@ -25,3 +25,4 @@ MonoBehaviour:
   combination: []
   decomposition: {fileID: 0}
   bottleWithWater: {fileID: 11400000, guid: 12ade5cf11b749443ad0e177dccd5322, type: 2}
+  itemAfterOnFire: {fileID: 0}

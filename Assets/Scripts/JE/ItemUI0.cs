@@ -143,8 +143,8 @@ public class ItemUI0 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, ID
             Destroy(invetoryManager.showedObject);
             invetoryManager.tooltipText.text = null;
         }
-        invetoryManager.showedObject = Instantiate<GameObject>(itemData.itemGameObject, new Vector3(-0.0026165843f, -53.3899994f, 0), Quaternion.identity);
-        invetoryManager.showedObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
+        invetoryManager.showedObject = Instantiate<GameObject>(itemData.itemShowObject, new Vector3(-0.0026165843f, -53.3899994f, 0), Quaternion.identity);
+        //invetoryManager.showedObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
         invetoryManager.tooltipText.text = itemData.itemTooltip;
         if(i==0)
         {

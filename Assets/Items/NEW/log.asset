@@ -15,5 +15,14 @@ MonoBehaviour:
   itemName: log
   itemImage: {fileID: 21300000, guid: 580c9f0470aec604dbe8dcff2daa8d4f, type: 3}
   itemTooltip: log
+  itemShortTooltip: 
   itemGameObject: {fileID: 9501331725508357, guid: 9d0ca4d9ab551d045a4132394ad1c87d, type: 3}
-  amount: 0
+  itemShowObject: {fileID: 9501331725508357, guid: ea1c0f61f224b6c45ae0b76ef39029bf, type: 3}
+  itemTag: 0
+  itemTag2: 0
+  eatStateFull: 0
+  thirstStateFull: 0
+  combination: []
+  decomposition: {fileID: 0}
+  bottleWithWater: {fileID: 0}
+  itemAfterOnFire: {fileID: 0}

@@ -15,5 +15,14 @@ MonoBehaviour:
   itemName: leaf
   itemImage: {fileID: 21300000, guid: e2e5703674622e6459ee65c689e5c22e, type: 3}
   itemTooltip: leaf
+  itemShortTooltip: 
   itemGameObject: {fileID: 4526713492092127469, guid: 0e2df1d18b196d847a97e2bb69674d7e, type: 3}
-  amount: 0
+  itemShowObject: {fileID: 4526713492092127469, guid: ce4a3ba5144ee0f49abfc888b78ac882, type: 3}
+  itemTag: 0
+  itemTag2: 0
+  eatStateFull: 0
+  thirstStateFull: 0
+  combination: []
+  decomposition: {fileID: 0}
+  bottleWithWater: {fileID: 0}
+  itemAfterOnFire: {fileID: 0}

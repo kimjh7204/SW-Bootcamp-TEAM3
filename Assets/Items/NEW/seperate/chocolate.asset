@@ -15,7 +15,14 @@ MonoBehaviour:
   itemName: chocolate
   itemImage: {fileID: 21300000, guid: 97b73724d6740464d8f692b3310098ff, type: 3}
   itemTooltip: It seems delicious...
+  itemShortTooltip: 
   itemGameObject: {fileID: 999434723646932681, guid: 5e1305c5e8043de49ab7bf6930b699fe, type: 3}
-  amount: 0
+  itemShowObject: {fileID: 999434723646932681, guid: 5145d5b1a118934419454293ecc5974f, type: 3}
   itemTag: 0
+  itemTag2: 0
   eatStateFull: 0
+  thirstStateFull: 0
+  combination: []
+  decomposition: {fileID: 0}
+  bottleWithWater: {fileID: 0}
+  itemAfterOnFire: {fileID: 0}

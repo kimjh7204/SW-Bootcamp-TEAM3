@@ -14,8 +14,15 @@ public class Item : ScriptableObject
     [Header("아이템 설명")]
     public string itemTooltip;
 
+    [Header("미니탭에 띄우는 짧은 설명")]
+    public string itemShortTooltip;
+
     [Header("아이템 게임오브젝트(프리팹)")]
     public GameObject itemGameObject;
+
+    [Header("인벤토리에서 3D OBJ로 보여줄 오브젝트(프리팹)")]
+    public GameObject itemShowObject;
+
     public enum ItemTag
     { 
         item,

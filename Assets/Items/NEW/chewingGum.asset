@@ -15,5 +15,14 @@ MonoBehaviour:
   itemName: chewing gum
   itemImage: {fileID: 21300000, guid: b8c69d09368d9244388113fb910bce41, type: 3}
   itemTooltip: This is chewing gum paper
+  itemShortTooltip: 
   itemGameObject: {fileID: 7537348921127882717, guid: d02e41ab66050ed478086b8b8b80fb1e, type: 3}
-  amount: 0
+  itemShowObject: {fileID: 7537348921127882717, guid: d6456c8a8c2d0f24ca902da4e0193bce, type: 3}
+  itemTag: 0
+  itemTag2: 0
+  eatStateFull: 0
+  thirstStateFull: 0
+  combination: []
+  decomposition: {fileID: 0}
+  bottleWithWater: {fileID: 0}
+  itemAfterOnFire: {fileID: 0}

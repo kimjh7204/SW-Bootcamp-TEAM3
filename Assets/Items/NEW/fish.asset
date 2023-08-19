@@ -15,7 +15,9 @@ MonoBehaviour:
   itemName: 
   itemImage: {fileID: 21300000, guid: 1ef548fa94606014692b1fee626374cf, type: 3}
   itemTooltip: 
+  itemShortTooltip: 
   itemGameObject: {fileID: 1379924164706639345, guid: 66dabb4dec6397940a48078d20ef71a6, type: 3}
+  itemShowObject: {fileID: 1379924164706639345, guid: d05ff814c10377b4b841f602fb7d301c, type: 3}
   itemTag: 0
   itemTag2: 7
   eatStateFull: 0

@@ -15,10 +15,15 @@ MonoBehaviour:
   itemName: seperated lantern
   itemImage: {fileID: 21300000, guid: 9d83ae954eb83e940acf5d969e288479, type: 3}
   itemTooltip: seperated lantern
+  itemShortTooltip: 
   itemGameObject: {fileID: 2075754932268852283, guid: ab9700aa081af2c459761e676f6b2bfb, type: 3}
-  amount: 0
-  positionY: 0
+  itemShowObject: {fileID: 2075754932268852283, guid: 067ac0af9f414bc4c8f9e8650c6debee, type: 3}
   itemTag: 0
+  itemTag2: 0
   eatStateFull: 0
+  thirstStateFull: 0
   combination:
   - {fileID: 11400000, guid: 4af26a57cb4fb6e4dae1fbc6098e5f36, type: 2}
+  decomposition: {fileID: 0}
+  bottleWithWater: {fileID: 0}
+  itemAfterOnFire: {fileID: 0}

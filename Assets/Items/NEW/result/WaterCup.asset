@@ -15,7 +15,9 @@ MonoBehaviour:
   itemName: water_cup
   itemImage: {fileID: 21300000, guid: 447757ae9f4e9af4e820f8e79171141f, type: 3}
   itemTooltip: I'm Thisty.....
+  itemShortTooltip: 
   itemGameObject: {fileID: 491590477229990815, guid: 4f4ee9a5998bb4446bcd943ced6171db, type: 3}
+  itemShowObject: {fileID: 491590477229990815, guid: 2d89575ddb3e8d746b517e63a6a85ab5, type: 3}
   itemTag: 2
   itemTag2: 0
   eatStateFull: 0

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7991096091401886954}
   - component: {fileID: 3600339067039650432}
   m_Layer: 0
-  m_Name: pf.fishing
+  m_Name: pf. fishing
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

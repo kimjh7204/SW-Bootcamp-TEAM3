@@ -15,11 +15,14 @@ MonoBehaviour:
   itemName: knife
   itemImage: {fileID: 21300000, guid: ed8a20bc8e25e8c4ea930d5d235d725a, type: 3}
   itemTooltip: 
+  itemShortTooltip: 
   itemGameObject: {fileID: 3998092363173265847, guid: 7e7c92256c9b85b42b976e929b211e21, type: 3}
-  amount: 0
-  positionY: 0
+  itemShowObject: {fileID: 3998092363173265847, guid: 0254e00ff10a18e4493c2dd56be0ad8e, type: 3}
   itemTag: 3
+  itemTag2: 0
   eatStateFull: 0
   thirstStateFull: 0
   combination: []
   decomposition: {fileID: 0}
+  bottleWithWater: {fileID: 0}
+  itemAfterOnFire: {fileID: 0}

@@ -10,12 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3565753dd2abd574fa0f5c39bbce5bf2, type: 3}
-  m_Name: wallet
+  m_Name: walletRED
   m_EditorClassIdentifier: 
   itemName: wallet
   itemImage: {fileID: 21300000, guid: a0f63c08ddbe46745a3415ebd9f95db9, type: 3}
   itemTooltip: this is magnetic type.
+  itemShortTooltip: 
   itemGameObject: {fileID: 1279835676914482302, guid: 784ecc7becbbb764b9c020a88e8b402a, type: 3}
-  amount: 0
+  itemShowObject: {fileID: 1279835676914482302, guid: b3205b9ddd597be4c9def9725e3ab49e, type: 3}
   itemTag: 0
+  itemTag2: 0
   eatStateFull: 0
+  thirstStateFull: 0
+  combination: []
+  decomposition: {fileID: 0}
+  bottleWithWater: {fileID: 0}
+  itemAfterOnFire: {fileID: 0}

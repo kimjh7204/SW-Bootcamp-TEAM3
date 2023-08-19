@@ -15,5 +15,14 @@ MonoBehaviour:
   itemName: tape
   itemImage: {fileID: 21300000, guid: b9d03ed7952d1d64e8b766aaadb75e92, type: 3}
   itemTooltip: tape
+  itemShortTooltip: 
   itemGameObject: {fileID: 6228361611277651931, guid: 7a9f85d83136ad9448f67f6654a30fdb, type: 3}
-  amount: 0
+  itemShowObject: {fileID: 6228361611277651931, guid: 27edc0fe7ec06664dbcf054c99488927, type: 3}
+  itemTag: 0
+  itemTag2: 0
+  eatStateFull: 0
+  thirstStateFull: 0
+  combination: []
+  decomposition: {fileID: 0}
+  bottleWithWater: {fileID: 0}
+  itemAfterOnFire: {fileID: 0}

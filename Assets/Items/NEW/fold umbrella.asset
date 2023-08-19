@@ -15,7 +15,9 @@ MonoBehaviour:
   itemName: fold umbrella
   itemImage: {fileID: 21300000, guid: 9aaf6c03e1a1ee84aab2da449668ef72, type: 3}
   itemTooltip: 
+  itemShortTooltip: 
   itemGameObject: {fileID: 2623545443939187197, guid: cfac061fdbc6e50458870010c8efcd67, type: 3}
+  itemShowObject: {fileID: 2623545443939187197, guid: 090197a5d94db20408bea094dfb6d4c0, type: 3}
   itemTag: 0
   itemTag2: 0
   eatStateFull: 0

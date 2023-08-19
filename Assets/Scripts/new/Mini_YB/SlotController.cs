@@ -33,7 +33,7 @@ public class SlotController : MonoBehaviour, IPointerClickHandler
             {
                 itemImage.sprite = item.itemImage;
                 itemName.text = item.itemName;
-                itemTooltip.text = item.itemTooltip;
+                itemTooltip.text = item.itemShortTooltip;
                 this.gameObject.SetActive(true);
             }
 

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7892365451108243966}
   - component: {fileID: -4117536369787677565}
   m_Layer: 0
-  m_Name: pf. emptyWaterCup
+  m_Name: pf. WaterCup
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
