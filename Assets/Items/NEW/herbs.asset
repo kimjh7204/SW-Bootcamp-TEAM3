@@ -15,11 +15,14 @@ MonoBehaviour:
   itemName: herbs
   itemImage: {fileID: 21300000, guid: 967fcf5d84dfa0c44ac4d16950e3ec62, type: 3}
   itemTooltip: 
+  itemShortTooltip: 
   itemGameObject: {fileID: 4794405653283588353, guid: 314ccb22cff94d744a075c96a96a2a29, type: 3}
-  amount: 0
-  positionY: 0
+  itemShowObject: {fileID: 4794405653283588353, guid: 9b3b8312715bf9b4686b08486284fca6, type: 3}
   itemTag: 1
+  itemTag2: 0
   eatStateFull: 20
   thirstStateFull: 0
   combination: []
   decomposition: {fileID: 0}
+  bottleWithWater: {fileID: 0}
+  itemAfterOnFire: {fileID: 0}

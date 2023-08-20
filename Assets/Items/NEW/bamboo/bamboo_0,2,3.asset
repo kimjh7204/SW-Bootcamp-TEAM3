@@ -15,7 +15,9 @@ MonoBehaviour:
   itemName: bamboo_0,2,3
   itemImage: {fileID: 21300000, guid: cfb057974bac89c428e127e82ca21b52, type: 3}
   itemTooltip: 
+  itemShortTooltip: 
   itemGameObject: {fileID: 6591728592858664112, guid: 570eb8438b625064d94f7b2213083132, type: 3}
+  itemShowObject: {fileID: 6591728592858664112, guid: eaae2bcc2baae98449c7f30f81b74d58, type: 3}
   itemTag: 0
   itemTag2: 0
   eatStateFull: 0
@@ -23,3 +25,4 @@ MonoBehaviour:
   combination: []
   decomposition: {fileID: 0}
   bottleWithWater: {fileID: 0}
+  itemAfterOnFire: {fileID: 0}

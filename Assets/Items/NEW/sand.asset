@@ -15,8 +15,14 @@ MonoBehaviour:
   itemName: sand
   itemImage: {fileID: 21300000, guid: 51e48b3fef85c8d43a073aa9136e7c02, type: 3}
   itemTooltip: 
+  itemShortTooltip: 
   itemGameObject: {fileID: 2255626613518519282, guid: 4a62824a26c2c9a4a897012c9e9f6672, type: 3}
-  amount: 0
-  positionY: 0
+  itemShowObject: {fileID: 2255626613518519282, guid: a6ce8d20378b5d24a95903752d831a85, type: 3}
   itemTag: 0
+  itemTag2: 0
   eatStateFull: 0
+  thirstStateFull: 0
+  combination: []
+  decomposition: {fileID: 0}
+  bottleWithWater: {fileID: 0}
+  itemAfterOnFire: {fileID: 0}
