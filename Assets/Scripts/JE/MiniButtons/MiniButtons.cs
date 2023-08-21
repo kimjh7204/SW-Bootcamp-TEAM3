@@ -18,7 +18,8 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         {Item.ItemTag2.raft1, 0},
         {Item.ItemTag2.raft2, 0},
         {Item.ItemTag2.raft3, 0},
-        {Item.ItemTag2.fishing, 0}
+        {Item.ItemTag2.fishing, 0},
+        {Item.ItemTag2.light, 0}
     };
 
 
@@ -31,6 +32,8 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     [Header("³¬½Ã ÆÐ³Î")]
     public GameObject fishingPanel;
+
+
 
     public void SetItemUI(ItemUI0 itemui)
     {
@@ -109,6 +112,11 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             // À½½Ä ±Á±â
             GrillFoodOnFire(itemUI);
 
+        }
+        else if(itemUI.itemData.itemTag2 == Item.ItemTag2.light)
+        {
+            PlayerLightController.instance.LightUse();
+            PlayerLightController.itemUI = itemUI;
         }
         else
         {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CollisionZoneData : MonoBehaviour
 {
-    [Header("tree\r\nocean\r\nfishingWater\r\nfire\r\n중 택 1")]
+    [Header("tree\r\nocean\r\nfishingWater\r\nfire\r\nfirewood\r\n중 택 1")]
     public string collsionZoneName;
 
 

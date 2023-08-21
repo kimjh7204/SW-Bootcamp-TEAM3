@@ -2723,6 +2723,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 320710821}
   m_SourcePrefab: {fileID: 100100000, guid: 9234fd3b703da70458c3a67b2c8b1add, type: 3}
+--- !u!1 &367306922 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4121313929226488110, guid: 72a4b108a81b3fc45b70f1156d122535, type: 3}
+  m_PrefabInstance: {fileID: 1256122695}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &370415351 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5912875405561950973, guid: 50289c9befa85194c9276d7528a1aadf, type: 3}
@@ -12814,6 +12819,51 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 370415353}
   m_SourcePrefab: {fileID: 100100000, guid: 50289c9befa85194c9276d7528a1aadf, type: 3}
+--- !u!1 &1613836194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1613836196}
+  - component: {fileID: 1613836195}
+  m_Layer: 0
+  m_Name: player light controller (empty)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1613836195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613836194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 292dd6da8d4d6164e9d152761e742ca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLight: {fileID: 367306922}
+--- !u!4 &1613836196
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613836194}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.690264, y: 3.016378, z: -30.61768}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 39
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1616557658
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16989,7 +17039,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1146509074}
   m_HandleRect: {fileID: 1146509073}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0.9999606
   m_Size: 0.52
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -17330,7 +17380,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0000069478097, y: 0}
+  m_AnchoredPosition: {x: -0.000011289597, y: 0.007560374}
   m_SizeDelta: {x: 0, y: 400}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2038277136
