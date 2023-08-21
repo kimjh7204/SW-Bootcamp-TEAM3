@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
         if(Input.GetMouseButtonDown(0) && playerCanMove)
         {
             RaycastHit hit;
-            if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
+            if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 999999f, 1<<6))
             {
                 agent.SetDestination(hit.point);
                
