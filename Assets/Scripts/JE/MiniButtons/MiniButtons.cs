@@ -118,6 +118,10 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             PlayerLightController.instance.LightUse();
             PlayerLightController.itemUI = itemUI;
         }
+        else if(itemUI.itemData.itemTag2 == Item.ItemTag2.fireMaker)
+        {
+            UseFireMaker();
+        }
         else
         {
             UseItem(itemUI.itemData);
@@ -202,9 +206,16 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     }
 
+    private void UseFireMaker()
+    {
+        if (GameData.playerCollisionState != "fire") return;
+        FireController.instance.SetFire();
+    }
+
+
     private void GrillFoodOnFire(ItemUI0 itemUI)
     {
-       if (GameData.playerCollisionState == "fire")
+       if (GameData.playerCollisionState == "fire" && FireController.isFireOn)
         {   // 불 구역에서 (fire zone)
             // 음식 사용 -> 불에 구운 후의 아이템 생성
             // use food -> create item after fire
