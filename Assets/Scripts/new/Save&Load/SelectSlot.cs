@@ -9,7 +9,7 @@ using TMPro;
 
 public class SelectSlot : MonoBehaviour
 {
-    public TextMeshProUGUI[] slotText;
+    public TextMeshProUGUI[] BoxText;
     bool[] savefile = new bool[3];
     void Start()
     {
@@ -20,13 +20,13 @@ public class SelectSlot : MonoBehaviour
                 savefile[i] = true;
                 DataManager.instance.nowSlot = i;
                 DataManager.instance.LoadData();
-                slotText[i].text = "SAVED";
+                BoxText[i].text = "SAVED";
                 
 
             }
             else
             {
-                slotText[i].text = "EMPTY";
+                BoxText[i].text = "EMPTY";
             }
         }
         
@@ -40,7 +40,7 @@ public class SelectSlot : MonoBehaviour
         
     }
 
-    public void Slot(int number)
+    public void StageBox(int number)
     {
         DataManager.instance.nowSlot = number;
         
