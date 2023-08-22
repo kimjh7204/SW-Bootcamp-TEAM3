@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3565753dd2abd574fa0f5c39bbce5bf2, type: 3}
   m_Name: bamboo_0,0,3
   m_EditorClassIdentifier: 
-  itemName: bamboo_0,0,3
+  itemName: bamboo with something
   itemImage: {fileID: 21300000, guid: b9e111f4083a4364cbd8bda6ef297b75, type: 3}
   itemTooltip: 
   itemShortTooltip: 
