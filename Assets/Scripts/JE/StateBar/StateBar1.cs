@@ -39,6 +39,7 @@ public class StateBar1 : MonoBehaviour
         else if (hungry <= 0)
         {
             hungry = 0;
+            GameOverPanel.instance.gameoverPanel.SetActive(true);
         }
 
         stateBar1.sizeDelta = new Vector2(width, hungry);

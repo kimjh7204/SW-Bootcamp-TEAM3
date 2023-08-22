@@ -147,7 +147,7 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
         itemUI.DeleteUI();
 
-        InstallState.instance.CheckInstallItem(itemUI.itemData);
+        //InstallState.instance.CheckInstallItem(itemUI.itemData);
 
         this.gameObject.SetActive(false);
         DeleteShowed();

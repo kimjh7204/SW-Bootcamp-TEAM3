@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
         get => _playerCanMove;
         set
         {
-            staticAgent.isStopped = !value;
+            //staticAgent.isStopped = !value;
             _playerCanMove = value;
             staticAgent.ResetPath();
         }

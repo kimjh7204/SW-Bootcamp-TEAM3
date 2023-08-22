@@ -11,7 +11,7 @@ public class SlotController : MonoBehaviour, IPointerClickHandler
 {
     public Image itemImage;
     public TextMeshProUGUI itemName;
-    public TextMeshProUGUI itemTooltip;
+    //public TextMeshProUGUI itemTooltip;
     public Item _item = null;
     public InvetoryManager0 inventoryManager;
 
@@ -25,7 +25,7 @@ public class SlotController : MonoBehaviour, IPointerClickHandler
             {
                 itemName.text = null;
                 itemImage.sprite = null;
-                itemTooltip.text = null;
+                //itemTooltip.text = null;
                 this.gameObject.SetActive(false);
 
             }
@@ -33,7 +33,7 @@ public class SlotController : MonoBehaviour, IPointerClickHandler
             {
                 itemImage.sprite = item.itemImage;
                 itemName.text = item.itemName;
-                itemTooltip.text = item.itemShortTooltip;
+                //itemTooltip.text = item.itemShortTooltip;
                 this.gameObject.SetActive(true);
             }
 

@@ -26,6 +26,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f486dc682a4cf9d46b0f57bb7e691a26, type: 2}
   - {fileID: 11400000, guid: d84c49eb643ff444f85f27309df633c0, type: 2}
   - {fileID: 11400000, guid: 10cdccbc037fe6a44a8e61813d770819, type: 2}
+  - {fileID: 11400000, guid: 474bfbfce3b54e04f9c2bb0b54c1f9fe, type: 2}
   decomposition: {fileID: 0}
   bottleWithWater: {fileID: 0}
   itemAfterOnFire: {fileID: 0}
