@@ -188,9 +188,9 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         }
         else if(GameData.playerCollisionState == "ocean")
         {   
-            if(item.itemTag2 == Item.ItemTag2.raft1 || item.itemTag2 == Item.ItemTag2.raft2 || item.itemTag2 == Item.ItemTag2.raft3)
+            if(item.itemTag2 == Item.ItemTag2.raft1 || item.itemTag2 == Item.ItemTag2.raft2)
             {   // 바다 구역에서 (ocean zone)
-                // 뗏목1 사용 -> 패널 띄우기
+                // 뗏목1,2 사용 -> 패널 띄우기
                 // use raft1 -> show panel
                 raftPanel.SetActive(true);  // 이후 과정은 패널에서 처리
                 GameData.useWhatOnOseanZone = item;  // 정보 넣어주기

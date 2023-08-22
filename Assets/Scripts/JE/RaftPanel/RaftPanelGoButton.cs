@@ -6,6 +6,7 @@ public class RaftPanelGoButton : MonoBehaviour
 {
     public GameObject youCannotGoPanel;
     public GameObject raftPanel;
+    public GameObject gameoverPanel;
 
     private void Start()
     {
@@ -14,7 +15,12 @@ public class RaftPanelGoButton : MonoBehaviour
 
     public void RaftPanelGoButtonClick()
     {
-        switch(GameData.useWhatOnOseanZone.itemTag2)
+        gameoverPanel.SetActive(true);
+        raftPanel.SetActive(false);
+        
+
+
+        /*switch(GameData.useWhatOnOseanZone.itemTag2)
         {
             case Item.ItemTag2.raft1:
                 PlayerReset();
@@ -36,7 +42,7 @@ public class RaftPanelGoButton : MonoBehaviour
                     }
                     break;
                 }
-        }
+        }*/
     }
 
     private void PlayerReset()

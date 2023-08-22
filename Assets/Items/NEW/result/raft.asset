@@ -19,7 +19,7 @@ MonoBehaviour:
   itemGameObject: {fileID: 3306638624748445122, guid: 4f7377c6e3c8f9a458d710d6bf6f2d8d, type: 3}
   itemShowObject: {fileID: 3306638624748445122, guid: 0466aa69c7f76e241a8d3b9fbb53660b, type: 3}
   itemTag: 0
-  itemTag2: 0
+  itemTag2: 2
   eatStateFull: 0
   thirstStateFull: 0
   combination:
