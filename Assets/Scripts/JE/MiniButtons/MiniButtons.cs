@@ -122,6 +122,10 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         {
             UseFireMaker();
         }
+        else if(GameData.playerCollisionState == "ocean" && itemUI.itemData.itemTag2 == Item.ItemTag2.raft3)
+        {
+            EndingObjectMove.instance.ShowEnding();
+        }
         else
         {
             UseItem(itemUI.itemData);
@@ -251,11 +255,9 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
             
         }
-
-
-
-
     }
+
+
 
     private void DeleteShowed()
     {
