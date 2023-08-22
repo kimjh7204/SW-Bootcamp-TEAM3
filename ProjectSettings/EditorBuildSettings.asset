@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JE+Map 7.unity
     guid: 7861e7ec4acb35d4ea0b6ee56397c773
+  - enabled: 1
+    path: Assets/Scenes/cave.unity
+    guid: 419f960366dd5a64682f128f029ccadb
   m_configObjects: {}
