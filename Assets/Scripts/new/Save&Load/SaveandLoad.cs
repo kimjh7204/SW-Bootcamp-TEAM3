@@ -21,6 +21,7 @@ public class SaveandLoad : MonoBehaviour
 
     public void Save()
     {
+        SaveData();
         DataManager.instance.SaveData(); 
     }
 
@@ -44,7 +45,9 @@ public class SaveandLoad : MonoBehaviour
         DataManager.instance.LoadData();
         playerObject.transform.position = DataManager.instance.nowPlayer.playerPosition;
 
+        if (DataManager.instance.nowPlayer.amountofhunger != 0)
         StateBar1.instance.hungry = DataManager.instance.nowPlayer.amountofhunger;
+        if (DataManager.instance.nowPlayer.thirstLevel != 0)
         StateBar2.instance.thirst = DataManager.instance.nowPlayer.thirstLevel;
 
         UpdateUI();

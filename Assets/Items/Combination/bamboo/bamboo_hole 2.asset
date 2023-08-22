@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 790773649375b464fb553555c6107fd3, type: 3}
   m_Name: bamboo_hole 2
   m_EditorClassIdentifier: 
-  inputItem: {fileID: 0}
-  resultItem: {fileID: 0}
+  inputItem: {fileID: 11400000, guid: f70224bcd58377a47b46145b7e5c9557, type: 2}
+  resultItem: {fileID: 11400000, guid: 7481b0df867063842a783c5bab3a4e5d, type: 2}

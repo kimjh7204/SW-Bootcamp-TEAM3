@@ -22,7 +22,10 @@ MonoBehaviour:
   itemTag2: 0
   eatStateFull: 0
   thirstStateFull: 0
-  combination: []
+  combination:
+  - {fileID: 11400000, guid: 43ebb1751a62ac940ae2ed7b6f130575, type: 2}
+  - {fileID: 11400000, guid: e1335b9c9b65e4f4e86ce78d83407fd5, type: 2}
+  - {fileID: 11400000, guid: e10d2993f2cb02041a95ce65e9576789, type: 2}
   decomposition: {fileID: 0}
   bottleWithWater: {fileID: 0}
   itemAfterOnFire: {fileID: 0}
