@@ -722,7 +722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934dea16e6e221047a02d5f19bed73c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotText:
+  BoxText:
   - {fileID: 877326290}
   - {fileID: 590853839}
   - {fileID: 1023041142}
