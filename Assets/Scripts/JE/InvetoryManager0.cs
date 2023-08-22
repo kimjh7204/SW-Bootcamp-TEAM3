@@ -41,10 +41,10 @@ public class InvetoryManager0 : MonoBehaviour
 
     [SerializeField] private List<ItemSlot0> itemSlots = new List<ItemSlot0>();
 
-    [Header("¹Ì´Ï ¹öÆ° Ã¢")]
+    [Header("ï¿½Ì´ï¿½ ï¿½ï¿½Æ° Ã¢")]
     public GameObject miniButtons;
 
-    [Header("ÀÎº¥Åä¸® °¡µæ Ã¡À½À» ¾Ë·ÁÁÖ´Â ÆÐ³Î")]
+    [Header("ï¿½Îºï¿½ï¿½ä¸® ï¿½ï¿½ï¿½ï¿½ Ã¡ï¿½ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½Ö´ï¿½ ï¿½Ð³ï¿½")]
     public GameObject inventoryFullPanel;
 
     private void Start()
@@ -58,11 +58,12 @@ public class InvetoryManager0 : MonoBehaviour
         SetItem(testItem1);
         SetItem(testItem2);
         SetItem(testItem3);
+        
     }
 
     public void SetItem(Item item)
     {
-        // ÀÎº¥Åä¸®ÀÇ ºó ½½·Ô¿¡ itemUIPrefab »ý¼ºÇØ¼­ ³Ö´Â´Ù
+        // ï¿½Îºï¿½ï¿½ä¸®ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ô¿ï¿½ itemUIPrefab ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½Ö´Â´ï¿½
         for (int i = 3; i < itemSlots.Count; i++)
         {
             if (itemSlots[i].item == null)
@@ -79,7 +80,7 @@ public class InvetoryManager0 : MonoBehaviour
 
     public ItemUI0 SetItemAndReturnUI(Item item)
     {
-        // SetItem()°ú ¶È°°Àºµ¥ »ý¼ºÇÑ UI¸¦ returnÇÑ´Ù
+        // SetItem()ï¿½ï¿½ ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ UIï¿½ï¿½ returnï¿½Ñ´ï¿½
         for (int i = 3; i < itemSlots.Count; i++)
         {
             if (itemSlots[i].item == null)
@@ -96,8 +97,8 @@ public class InvetoryManager0 : MonoBehaviour
 
     public bool IsInventoryFUll()
     {
-        // ÀÎº¥Åä¸®°¡ °¡µæÃ¡´ÂÁö È®ÀÎÇÏ´Â ÇÔ¼ö
-        // °¡µæ Ã¡À¸¸é true, ºñ¾îÀÖÀ¸¸é false return  (À§ÀÇ ¹Ì´ÏÀÎº¥Åä¸®´Â Á¦¿ÜÀÓ)
+        // ï¿½Îºï¿½ï¿½ä¸®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã¡ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½
+        // ï¿½ï¿½ï¿½ï¿½ Ã¡ï¿½ï¿½ï¿½ï¿½ true, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ false return  (ï¿½ï¿½ï¿½ï¿½ ï¿½Ì´ï¿½ï¿½Îºï¿½ï¿½ä¸®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
         for (int i = 3; i < itemSlots.Count; i++)
         {
             if (itemSlots[i].item == null)
@@ -108,7 +109,8 @@ public class InvetoryManager0 : MonoBehaviour
 
     public void NoticeInventoryFull()
     {
-        // ÀÎº¥Åä¸®°¡ °¡µæ Ã¡À½À» ¾Ë·ÁÁÖ´Â ÇÔ¼ö
+        // ï¿½Îºï¿½ï¿½ä¸®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã¡ï¿½ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½Ö´ï¿½ ï¿½Ô¼ï¿½
         inventoryFullPanel.SetActive(true);
     }
+    
 }

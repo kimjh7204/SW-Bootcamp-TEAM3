@@ -15,7 +15,7 @@ public class StateBar1 : MonoBehaviour
     public float hungrySpeed;
 
     public static StateBar1 instance;
-    private float hungry;
+    public float hungry;
 
     private void Start()
     {
@@ -47,5 +47,10 @@ public class StateBar1 : MonoBehaviour
     public void EatFull(float full)
     {
         hungry += full;
+    }
+    
+    public int GetHunger()
+    {
+        return Mathf.FloorToInt(hungry);
     }
 }
