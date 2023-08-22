@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3565753dd2abd574fa0f5c39bbce5bf2, type: 3}
   m_Name: full figure
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: whole figure shoes
   itemImage: {fileID: 21300000, guid: 1dda2347e0c2afd4681c7a33f915050b, type: 3}
   itemTooltip: 
   itemShortTooltip: 

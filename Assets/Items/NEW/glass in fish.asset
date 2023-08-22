@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3565753dd2abd574fa0f5c39bbce5bf2, type: 3}
   m_Name: glass in fish
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: fish in glass
   itemImage: {fileID: 21300000, guid: a0c5c606dd23a91429088f086d89a929, type: 3}
   itemTooltip: 
   itemShortTooltip: 

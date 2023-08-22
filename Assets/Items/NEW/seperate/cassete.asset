@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3565753dd2abd574fa0f5c39bbce5bf2, type: 3}
   m_Name: cassete
   m_EditorClassIdentifier: 
-  itemName: cassete
+  itemName: cassette
   itemImage: {fileID: 21300000, guid: 92f1e5b20046bcf418a087369b9d4fdc, type: 3}
   itemTooltip: you can listen music...
   itemShortTooltip: 

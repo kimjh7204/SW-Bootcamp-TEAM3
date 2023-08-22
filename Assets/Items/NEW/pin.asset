@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3565753dd2abd574fa0f5c39bbce5bf2, type: 3}
   m_Name: pin
   m_EditorClassIdentifier: 
-  itemName: pin
+  itemName: hairpin
   itemImage: {fileID: 21300000, guid: 4d00b516001868349b43e934a5aa49bb, type: 3}
   itemTooltip: This is pin
   itemShortTooltip: 

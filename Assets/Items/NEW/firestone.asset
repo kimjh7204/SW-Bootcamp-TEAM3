@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3565753dd2abd574fa0f5c39bbce5bf2, type: 3}
   m_Name: firestone
   m_EditorClassIdentifier: 
-  itemName: fire stone
+  itemName: firestone
   itemImage: {fileID: 21300000, guid: afbc34f8bbb14c443b2e8e0313bd48aa, type: 3}
   itemTooltip: 
   itemShortTooltip: 

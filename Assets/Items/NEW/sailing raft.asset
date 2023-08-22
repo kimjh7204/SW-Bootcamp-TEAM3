@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3565753dd2abd574fa0f5c39bbce5bf2, type: 3}
   m_Name: sailing raft
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: sailing raft
   itemImage: {fileID: 21300000, guid: 956a898c6d3f30d45b4270b7909e0edb, type: 3}
   itemTooltip: 
   itemShortTooltip: 

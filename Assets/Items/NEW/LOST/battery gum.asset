@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3565753dd2abd574fa0f5c39bbce5bf2, type: 3}
   m_Name: battery gum
   m_EditorClassIdentifier: 
-  itemName: battery gum
+  itemName: battery and gum
   itemImage: {fileID: 21300000, guid: 3b64e8f2bbfdec94580ea4fa1a758242, type: 3}
   itemTooltip: 
   itemShortTooltip: 

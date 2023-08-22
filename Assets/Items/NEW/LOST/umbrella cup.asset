@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3565753dd2abd574fa0f5c39bbce5bf2, type: 3}
   m_Name: umbrella cup
   m_EditorClassIdentifier: 
-  itemName: umbrella cup
+  itemName: umbrella and cup
   itemImage: {fileID: 21300000, guid: 54da86d5d91f508459150582a35aebe4, type: 3}
   itemTooltip: 
   itemShortTooltip: 

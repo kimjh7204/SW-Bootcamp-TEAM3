@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3565753dd2abd574fa0f5c39bbce5bf2, type: 3}
   m_Name: trees
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: logs
   itemImage: {fileID: 21300000, guid: ddc92fda63e2efe42b3f1c6c66277d10, type: 3}
   itemTooltip: 
   itemShortTooltip: 

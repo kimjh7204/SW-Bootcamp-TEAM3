@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3565753dd2abd574fa0f5c39bbce5bf2, type: 3}
   m_Name: rock
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: stone
   itemImage: {fileID: 21300000, guid: 8c01b0ccf43b0f942a4a510e192d668b, type: 3}
   itemTooltip: 
   itemShortTooltip: 

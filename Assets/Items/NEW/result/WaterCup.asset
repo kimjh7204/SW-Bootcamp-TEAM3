@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3565753dd2abd574fa0f5c39bbce5bf2, type: 3}
   m_Name: WaterCup
   m_EditorClassIdentifier: 
-  itemName: water_cup
+  itemName: water cup
   itemImage: {fileID: 21300000, guid: 447757ae9f4e9af4e820f8e79171141f, type: 3}
   itemTooltip: I'm Thisty.....
   itemShortTooltip: 

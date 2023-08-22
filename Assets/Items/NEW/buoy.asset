@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3565753dd2abd574fa0f5c39bbce5bf2, type: 3}
   m_Name: buoy
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: buoy
   itemImage: {fileID: 21300000, guid: a9a7a90dd3c620e44bfee3a716d566a5, type: 3}
   itemTooltip: 
   itemShortTooltip: 

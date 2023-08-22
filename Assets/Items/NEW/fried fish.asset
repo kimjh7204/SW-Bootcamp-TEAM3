@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3565753dd2abd574fa0f5c39bbce5bf2, type: 3}
   m_Name: fried fish
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: grilled fish
   itemImage: {fileID: 21300000, guid: c8a7957bff1a3df47a1516150b6632dd, type: 3}
   itemTooltip: 
   itemShortTooltip: 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3565753dd2abd574fa0f5c39bbce5bf2, type: 3}
   m_Name: shoeslace branch
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: branch with shoelace
   itemImage: {fileID: 0}
   itemTooltip: 
   itemShortTooltip: 

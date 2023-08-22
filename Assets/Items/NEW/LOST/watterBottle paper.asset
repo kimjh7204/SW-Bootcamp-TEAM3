@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3565753dd2abd574fa0f5c39bbce5bf2, type: 3}
   m_Name: watterBottle paper
   m_EditorClassIdentifier: 
-  itemName: watter bottle paper
+  itemName: watter bottle and paper
   itemImage: {fileID: 21300000, guid: 63da0486c66c0a940b6adadee8fc8efb, type: 3}
   itemTooltip: 
   itemShortTooltip: 

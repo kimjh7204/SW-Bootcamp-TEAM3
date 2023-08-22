@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3565753dd2abd574fa0f5c39bbce5bf2, type: 3}
   m_Name: coconut2
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: coconut water
   itemImage: {fileID: 21300000, guid: 051d6fbe190e3b348b01308b397823bf, type: 3}
   itemTooltip: 
   itemShortTooltip: 

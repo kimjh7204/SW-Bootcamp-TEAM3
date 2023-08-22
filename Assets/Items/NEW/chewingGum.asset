@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3565753dd2abd574fa0f5c39bbce5bf2, type: 3}
   m_Name: chewingGum
   m_EditorClassIdentifier: 
-  itemName: chewing gum
+  itemName: gum wrapper
   itemImage: {fileID: 21300000, guid: b8c69d09368d9244388113fb910bce41, type: 3}
   itemTooltip: This is chewing gum paper
   itemShortTooltip: 
