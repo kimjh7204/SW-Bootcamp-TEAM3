@@ -15,11 +15,14 @@ MonoBehaviour:
   itemName: cassete
   itemImage: {fileID: 21300000, guid: 92f1e5b20046bcf418a087369b9d4fdc, type: 3}
   itemTooltip: you can listen music...
-  itemGameObject: {fileID: 919132149155446097, guid: cc16ba001887270478cc44a90fea0add, type: 3}
-  amount: 0
-  positionY: 0
+  itemShortTooltip: 
+  itemGameObject: {fileID: 8153866145034680988, guid: 22c304b35f3b62b49a7525dfe5ecbe8c, type: 3}
+  itemShowObject: {fileID: 8153866145034680988, guid: 7c75fabec7063e34b89aa63cece1c805, type: 3}
   itemTag: 0
+  itemTag2: 0
   eatStateFull: 0
   thirstStateFull: 0
   combination: []
-  decomposition: {fileID: 0}
+  decomposition: {fileID: 11400000, guid: d486ab87431cd0c49b459f900e280d34, type: 2}
+  bottleWithWater: {fileID: 0}
+  itemAfterOnFire: {fileID: 0}

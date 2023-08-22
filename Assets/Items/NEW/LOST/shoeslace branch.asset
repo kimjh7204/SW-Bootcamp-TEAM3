@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3565753dd2abd574fa0f5c39bbce5bf2, type: 3}
+  m_Name: shoeslace branch
+  m_EditorClassIdentifier: 
+  itemName: 
+  itemImage: {fileID: 0}
+  itemTooltip: 
+  itemShortTooltip: 
+  itemGameObject: {fileID: 7963899880068311319, guid: 0cdec02979358584d886457d36f73489, type: 3}
+  itemShowObject: {fileID: 7963899880068311319, guid: 06f24aec3d8c7a8408dee602df93b83a, type: 3}
+  itemTag: 0
+  itemTag2: 0
+  eatStateFull: 0
+  thirstStateFull: 0
+  combination:
+  - {fileID: 11400000, guid: afa63a8fbd50e3c4fa53deff61a16346, type: 2}
+  decomposition: {fileID: 11400000, guid: 720bb8f7f1d8b72419f92ac086b4bb9a, type: 2}
+  bottleWithWater: {fileID: 0}
+  itemAfterOnFire: {fileID: 0}

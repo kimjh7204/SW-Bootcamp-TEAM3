@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 790773649375b464fb553555c6107fd3, type: 3}
-  m_Name: treeCombination
+  m_Script: {fileID: 11500000, guid: b4a45c9da3b6cc041b313ba22c47824b, type: 3}
+  m_Name: umbrella cup
   m_EditorClassIdentifier: 
-  inputItem: {fileID: 11400000, guid: 3b782ae56fe0e5948ab55e707c75ea94, type: 2}
-  resultItem: {fileID: 11400000, guid: 4c460e01c71754d43a46b13ccd150f0e, type: 2}
+  decompositionItem1: {fileID: 11400000, guid: c2fe6b094bab88d479ad730cb13d384c, type: 2}
+  decompositionItem2: {fileID: 11400000, guid: 43fceac6d023f384998c46fabdfe6efa, type: 2}

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3565753dd2abd574fa0f5c39bbce5bf2, type: 3}
+  m_Name: fried shell
+  m_EditorClassIdentifier: 
+  itemName: 
+  itemImage: {fileID: 21300000, guid: 17ee529ec7ab35745844df5b70357e71, type: 3}
+  itemTooltip: 
+  itemShortTooltip: 
+  itemGameObject: {fileID: 5906108200171988976, guid: 005c1a6988f229543aca53726cb2d314, type: 3}
+  itemShowObject: {fileID: 5906108200171988976, guid: 289d8c6981be80c4195df3ddd6dae5aa, type: 3}
+  itemTag: 1
+  itemTag2: 0
+  eatStateFull: 25
+  thirstStateFull: 0
+  combination: []
+  decomposition: {fileID: 0}
+  bottleWithWater: {fileID: 0}
+  itemAfterOnFire: {fileID: 0}

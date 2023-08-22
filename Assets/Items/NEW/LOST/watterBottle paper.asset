@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3565753dd2abd574fa0f5c39bbce5bf2, type: 3}
-  m_Name: fried shell
+  m_Name: watterBottle paper
   m_EditorClassIdentifier: 
-  itemName: freid shell
-  itemImage: {fileID: 21300000, guid: 7777251a4cf440245b93c3b497e148ae, type: 3}
+  itemName: watter bottle paper
+  itemImage: {fileID: 21300000, guid: 63da0486c66c0a940b6adadee8fc8efb, type: 3}
   itemTooltip: 
   itemShortTooltip: 
-  itemGameObject: {fileID: 78193954056942374, guid: de1156a7a8094d3469a9caf1908c7f11, type: 3}
-  itemShowObject: {fileID: 78193954056942374, guid: e52aed4709d3f6c4d9b4c8184c9733fd, type: 3}
-  itemTag: 1
-  itemTag2: 0
-  eatStateFull: 15
+  itemGameObject: {fileID: 2275767022721871851, guid: 6e7a8e0db0690124197528ee8d7b3cd6, type: 3}
+  itemShowObject: {fileID: 2275767022721871851, guid: 2eeb9fcbf3ccccf4b8b670f6712efaa6, type: 3}
+  itemTag: 0
+  itemTag2: 9
+  eatStateFull: 0
   thirstStateFull: 0
   combination: []
-  decomposition: {fileID: 0}
+  decomposition: {fileID: 11400000, guid: 575766c511620be4588d3c73d80d3171, type: 2}
   bottleWithWater: {fileID: 0}
   itemAfterOnFire: {fileID: 0}

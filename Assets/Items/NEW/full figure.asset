@@ -23,6 +23,6 @@ MonoBehaviour:
   eatStateFull: 0
   thirstStateFull: 0
   combination: []
-  decomposition: {fileID: 0}
+  decomposition: {fileID: 11400000, guid: 2e82ac9afee432843b2974d3dc917108, type: 2}
   bottleWithWater: {fileID: 0}
   itemAfterOnFire: {fileID: 0}

@@ -25,4 +25,4 @@ MonoBehaviour:
   combination: []
   decomposition: {fileID: 0}
   bottleWithWater: {fileID: 0}
-  itemAfterOnFire: {fileID: 11400000, guid: 9754267ee31ab8c47b8c2a2f24428478, type: 2}
+  itemAfterOnFire: {fileID: 11400000, guid: b746a29c632128b48a6c64c969694a1c, type: 2}

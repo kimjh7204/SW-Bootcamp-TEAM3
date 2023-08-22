@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3565753dd2abd574fa0f5c39bbce5bf2, type: 3}
+  m_Name: umbrella cup
+  m_EditorClassIdentifier: 
+  itemName: umbrella cup
+  itemImage: {fileID: 21300000, guid: 54da86d5d91f508459150582a35aebe4, type: 3}
+  itemTooltip: 
+  itemShortTooltip: 
+  itemGameObject: {fileID: 1092164665985951055, guid: fb661c39c01893448ba4528751a028bc, type: 3}
+  itemShowObject: {fileID: 1092164665985951055, guid: dfa53bd2c676d9640b3c38777c166882, type: 3}
+  itemTag: 0
+  itemTag2: 0
+  eatStateFull: 0
+  thirstStateFull: 0
+  combination: []
+  decomposition: {fileID: 11400000, guid: c98588f2ded550b44abeee86bbbfce3a, type: 2}
+  bottleWithWater: {fileID: 0}
+  itemAfterOnFire: {fileID: 0}
