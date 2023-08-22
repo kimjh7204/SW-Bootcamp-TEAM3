@@ -41,11 +41,12 @@ public class InvetoryManager0 : MonoBehaviour
     
     [SerializeField] private List<ItemSlot0> itemSlots = new List<ItemSlot0>();
 
-    [Header("¹Ì´Ï ¹öÆ° Ã¢")]
+    [Header("ï¿½Ì´ï¿½ ï¿½ï¿½Æ° Ã¢")]
     public GameObject miniButtons;
 
     private void Start()
     {
+        
 
         for(var i = 0;  i < itemSlots.Count; i++)
         {
@@ -55,12 +56,13 @@ public class InvetoryManager0 : MonoBehaviour
         SetItem(testItem1);
         SetItem(testItem2);
         SetItem(testItem3);
+        
     }
 
     public void SetItem(Item item)
     {
-        // Ã³À½ È¹µæÇÏ´Â ¾ÆÀÌÅÛÀÌ¸é ÀÎº¥Åä¸®ÀÇ ºó ½½·Ô¿¡ itemUIPrefab »ý¼ºÇØ¼­ ³Ö°í
-        // ¾Æ´Ï¶ó¸é ¾ÆÀÌÅÛ Á¤º¸ÀÇ amount¸¸ ´Ã¸°´Ù -> Ãë¼Ò
+        // Ã³ï¿½ï¿½ È¹ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½ ï¿½Îºï¿½ï¿½ä¸®ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ô¿ï¿½ itemUIPrefab ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½Ö°ï¿½
+        // ï¿½Æ´Ï¶ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ amountï¿½ï¿½ ï¿½Ã¸ï¿½ï¿½ï¿½ -> ï¿½ï¿½ï¿½
 
 
         
@@ -82,8 +84,8 @@ public class InvetoryManager0 : MonoBehaviour
 
     public ItemUI0 SetItemAndReturnUI(Item item)
     {
-        // Ã³À½ È¹µæÇÏ´Â ¾ÆÀÌÅÛÀÌ¸é ÀÎº¥Åä¸®ÀÇ ºó ½½·Ô¿¡ itemUIPrefab »ý¼ºÇØ¼­ ³Ö°í
-        // ¾Æ´Ï¶ó¸é ¾ÆÀÌÅÛ Á¤º¸ÀÇ amount¸¸ ´Ã¸°´Ù -> Ãë¼Ò
+        // Ã³ï¿½ï¿½ È¹ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½ ï¿½Îºï¿½ï¿½ä¸®ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ô¿ï¿½ itemUIPrefab ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½Ö°ï¿½
+        // ï¿½Æ´Ï¶ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ amountï¿½ï¿½ ï¿½Ã¸ï¿½ï¿½ï¿½ -> ï¿½ï¿½ï¿½
 
 
 
@@ -103,4 +105,5 @@ public class InvetoryManager0 : MonoBehaviour
 
 
     }
+    
 }

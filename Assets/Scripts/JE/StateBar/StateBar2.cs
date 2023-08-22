@@ -6,18 +6,18 @@ public class StateBar2 : MonoBehaviour
 {
     
 
-    [Header("±æÀÌ Á¶ÀıÇÒ ÀÌ¹ÌÁö")]
+    [Header("ê¸¸ì´ ì¡°ì ˆ í•  ì´ë¯¸ì§€")]
     public RectTransform stateBar2;
 
-    [Header("¿ø·¡ Å©±â")]
+    [Header("ì›ë˜ í¬ê¸°")]
     public float width;
     public float height;
 
-    [Header("ÁÙ¾îµå´Â ¼Óµµ")]
+    [Header("ì¤„ì–´ë“œëŠ” ì†ë„")]
     public float thirstSpeed;
 
     public static StateBar2 instance;
-    private float thirst;
+    public float thirst = 100;
 
     private void Start()
     {
@@ -49,6 +49,12 @@ public class StateBar2 : MonoBehaviour
     public void Drink(float water)
     {
         thirst += water;
+    }
+    
+    
+    public int GetThirst()
+    {
+        return Mathf.FloorToInt(thirst);
     }
 
 }

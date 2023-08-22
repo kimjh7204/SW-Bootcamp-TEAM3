@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+
+
 
 
 //저장하는 방법
@@ -12,21 +17,24 @@ using System.IO;
 
 public class PlayerData
     {
-        public int amountofhunger; //배고픔 수치
-        public float location; //현재위치
+        public float amountofhunger; //배고픔 수치
+        public Vector3 playerPosition; //현재위치
+        public float thirstLevel; //목마름 수치
+        public float lastSaveTime; //제일 마지막에 저장된 시간
     }
 
 public class DataManager : MonoBehaviour
 {
     public static DataManager instance;
-    PlayerData nowPlayer = new PlayerData();
+    public PlayerData nowPlayer = new PlayerData();
 
     public string path;
     public int nowSlot;
 
-    
+
     private void Awake()
     {
+        //싱글톤
         if (instance == null)
         {
             instance = this;
@@ -37,7 +45,9 @@ public class DataManager : MonoBehaviour
         }
         DontDestroyOnLoad(this.gameObject);
 
-        path = Application.persistentDataPath + "/Uninhabitated-Save";;
+        path = Application.persistentDataPath + "/Uninhabitated-Save";
+        print(path);
+        
     }
 
     void Start()
@@ -48,13 +58,20 @@ public class DataManager : MonoBehaviour
     public void SaveData()
     {
         string data = JsonUtility.ToJson(nowPlayer);
-        File.WriteAllText(path + nowSlot.ToString(),data);
+        File.WriteAllText(path + nowSlot.ToString(), data);
     }
 
     public void LoadData()
     {
         string data = File.ReadAllText(path + nowSlot.ToString());
         nowPlayer = JsonUtility.FromJson<PlayerData>(data);
+        
     }
-   
+    public void DataClear()
+    {
+        nowSlot = -1;
+        nowPlayer = new PlayerData();
+    }
+    
+
 }
