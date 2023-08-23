@@ -17,6 +17,9 @@ public class StateBar1 : MonoBehaviour
     public static StateBar1 instance;
     public float hungry;
 
+    [Header("game over panel")]
+    public GameObject gameoverPanel;
+
     private void Start()
     {
         instance = this;
@@ -39,7 +42,7 @@ public class StateBar1 : MonoBehaviour
         else if (hungry <= 0)
         {
             hungry = 0;
-            GameOverPanel.instance.gameoverPanel.SetActive(true);
+            gameoverPanel.SetActive(true);
         }
 
         stateBar1.sizeDelta = new Vector2(width, hungry);
