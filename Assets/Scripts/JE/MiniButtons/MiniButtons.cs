@@ -188,8 +188,8 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         if (Random.Range(0, 100) < percentages[item.itemTag2]) return;  // 확률
 
         if (item.itemTag2 == Item.ItemTag2.ax && GameData.playerCollisionState == "tree")
-        {   // ���� �������� (tree zone)
-            // ���� ��� -> ���ڳ� ����, ������� ����
+        {   // 나무 구역에서 (tree zone)
+            // 도끼 사용 -> 코코넛 생성, 통나무 생성
             // use ax -> create coconut or log
             pos = new Vector3(player.position.x + 1f, player.position.y + 2f, player.position.z);
             if (Random.Range(0, 100) < 50)
@@ -206,8 +206,8 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         else if (GameData.playerCollisionState == "ocean")
         {
             if (item.itemTag2 == Item.ItemTag2.raft1 || item.itemTag2 == Item.ItemTag2.raft2)
-            {   // �ٴ� �������� (ocean zone)
-                // �¸�1,2 ��� -> �г� ����
+            {   // 바다 구역에서 (ocean zone)
+                // 뗏목1,2 사용 -> 패널 띄우기
                 // use raft1 -> show panel
                 raftPanel.SetActive(true);  // ���� ������ �гο��� ó��
                 GameData.useWhatOnOseanZone = item;  // ���� �־��ֱ�
@@ -216,8 +216,8 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         else if (GameData.playerCollisionState == "fishingWater")
         {
             if (item.itemTag2 == Item.ItemTag2.fishing)
-            {   // ����&�� �������� (fishingWater zone)
-                // ���õ��� ��� -> ������ ��Ҵٴ� �г� ����
+            {   // 낚시&물 구역에서 (fishingWater zone)
+                // 낚시도구 사용 -> 물고기 잡았다는 패널 띄우기
                 // use fishing tool -> show fishingPanel
                 fishingPanel.SetActive(true);
             }

@@ -33,7 +33,7 @@ public class ForDecomposition : MonoBehaviour, IPointerClickHandler
             // item 삭제
             Destroy(inventoryManager.showedItemUI.gameObject);
             Destroy(inventoryManager.showedObject);
-            // item ���� �� ������ �ΰ� ����
+            // item 분해 후 아이템 두개 생성
             if (inventoryManager.showedItem.decomposition.decompositionItem1 != null)
                 inventoryManager.SetItem(inventoryManager.showedItem.decomposition.decompositionItem1);
             if (inventoryManager.showedItem.decomposition.decompositionItem2 != null)
