@@ -20,7 +20,8 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         {Item.ItemTag2.raft3, 0},
         {Item.ItemTag2.fishing, 0},
         {Item.ItemTag2.light, 0},
-        {Item.ItemTag2.umbrellaCup, 0}
+        {Item.ItemTag2.umbrellaCup, 0},
+        {Item.ItemTag2.fireMaker, 0}
     };
 
 
@@ -191,7 +192,7 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             // 도끼 사용 -> 코코넛 생성, 나무기둥 생성
             // use ax -> create coconut or log
             pos = new Vector3(player.position.x + 1f, player.position.y + 2f, player.position.z);
-            if(Random.Range(0, 100) < 50)
+            if (Random.Range(0, 100) < 50)
             {
                 var coco = Instantiate<GameObject>(coconut.itemGameObject, pos, Quaternion.identity);
             }
@@ -199,27 +200,31 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             {
                 var loog = Instantiate<GameObject>(log.itemGameObject, pos, Quaternion.identity);
             }
-            
-            
+
+
         }
-        else if(GameData.playerCollisionState == "ocean")
-        {   
-            if(item.itemTag2 == Item.ItemTag2.raft1 || item.itemTag2 == Item.ItemTag2.raft2)
+        else if (GameData.playerCollisionState == "ocean")
+        {
+            if (item.itemTag2 == Item.ItemTag2.raft1 || item.itemTag2 == Item.ItemTag2.raft2)
             {   // 바다 구역에서 (ocean zone)
                 // 뗏목1,2 사용 -> 패널 띄우기
                 // use raft1 -> show panel
                 raftPanel.SetActive(true);  // 이후 과정은 패널에서 처리
                 GameData.useWhatOnOseanZone = item;  // 정보 넣어주기
-            }  
+            }
         }
         else if (GameData.playerCollisionState == "fishingWater")
-        {   
-            if(item.itemTag2 == Item.ItemTag2.fishing)
+        {
+            if (item.itemTag2 == Item.ItemTag2.fishing)
             {   // 낚시&물 구역에서 (fishingWater zone)
                 // 낚시도구 사용 -> 물고기 잡았다는 패널 띄우기
                 // use fishing tool -> show fishingPanel
                 fishingPanel.SetActive(true);
             }
+        }
+        else if(GameData.playerCollisionState == "fire" && item.itemTag2 == Item.ItemTag2.fireMaker)
+        {
+            FireController.instance.SetFire();
         }
         
 
