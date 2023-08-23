@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class InvetoryManager0 : MonoBehaviour
 {
+    public static InvetoryManager0 InventoryManagerInstance;
     public Item testItem1;
     public Item testItem2;
     public Item testItem3;
@@ -47,23 +48,53 @@ public class InvetoryManager0 : MonoBehaviour
     [Header("�κ��丮 ���� á���� �˷��ִ� �г�")]
     public GameObject inventoryFullPanel;
 
+    //public List<string> itemKeys;
+    public List<Item> itemDatas;
+
+    public Dictionary<string, Item> itemDictionary;
+
     private void Start()
     {
+        InventoryManagerInstance = this;
         inventoryFullPanel.SetActive(false);
         for (var i = 0; i < itemSlots.Count; i++)
         {
             itemSlots[i].Init(this);
         }
 
+        for (var i = 0; i < itemDatas.Count; i++)
+        {
+            itemDictionary.Add(itemDatas[i].itemName, itemDatas[i]);
+        }
+        
         SetItem(testItem1);
         SetItem(testItem2);
         SetItem(testItem3);
         
     }
 
+    public string[] GetKeys()
+    {
+        List<string> tempItem = new List<string>();
+        foreach (var itemSlot0 in itemSlots)
+        {
+            if (itemSlot0.item != null)
+            {
+                tempItem.Add(itemSlot0.item.itemData.itemName);
+            }
+        }
+
+        return tempItem.ToArray();
+    }
+    
+    public void SetItem(string key)
+    {
+        SetItem(itemDictionary[key]);
+    }
+    
     public void SetItem(Item item)
     {
-        // �κ��丮�� �� ���Կ� itemUIPrefab �����ؼ� �ִ´�
+        //itemUIPrefab
         for (int i = 3; i < itemSlots.Count; i++)
         {
             if (itemSlots[i].item == null)
@@ -80,7 +111,7 @@ public class InvetoryManager0 : MonoBehaviour
 
     public ItemUI0 SetItemAndReturnUI(Item item)
     {
-        // SetItem()�� �Ȱ����� ������ UI�� return�Ѵ�
+        // SetItem() UI return
         for (int i = 3; i < itemSlots.Count; i++)
         {
             if (itemSlots[i].item == null)

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class FishingPanelPutBtn : MonoBehaviour
 {
-    [Header("¿¬°áÇØÁÖ¼¼¿ä")]
+    [Header("ì—°ê²°í•´ì£¼ì„¸ìš”")]
     public InvetoryManager0 inventoryManager;
     public GameObject fishingPanel;
 
-    [Header("³¬½Ã·Î Àâ´Â ¹°°í±â(¾ÆÀÌÅÛ)")]
+    [Header("ë‚šì‹œë¡œ ì¡ëŠ” ë¬¼ê³ ê¸°(ì•„ì´í…œ)")]
     public Item fish;
 
     public void PutBtnClick()

@@ -18,7 +18,6 @@ public class SaveandLoad : MonoBehaviour
         UpdateUI();
     }
 
-
     public void Save()
     {
         SaveData();
@@ -30,31 +29,33 @@ public class SaveandLoad : MonoBehaviour
         hunger.fillAmount = (StateBar1.instance.GetHunger() / (float)StateBar1.instance.height)*100;
         thirst.fillAmount = (StateBar2.instance.GetThirst() / (float)StateBar2.instance.height)*100;
     }
-
-
+    
     private void SaveData()
     {
         DataManager.instance.nowPlayer.playerPosition = playerObject.transform.position;
         DataManager.instance.nowPlayer.amountofhunger = StateBar1.instance.GetHunger();
         DataManager.instance.nowPlayer.thirstLevel = StateBar2.instance.GetThirst();
+        DataManager.instance.nowPlayer.item = InvetoryManager0.InventoryManagerInstance.GetKeys();
         DataManager.instance.SaveData();
     }
 
     private void LoadData()
     {
         DataManager.instance.LoadData();
+        
         playerObject.transform.position = DataManager.instance.nowPlayer.playerPosition;
+        Debug.Log(DataManager.instance.nowPlayer.playerPosition);
+        Debug.Log(playerObject.transform.position);
 
-        if (DataManager.instance.nowPlayer.amountofhunger != 0)
-        StateBar1.instance.hungry = DataManager.instance.nowPlayer.amountofhunger;
-        if (DataManager.instance.nowPlayer.thirstLevel != 0)
-        StateBar2.instance.thirst = DataManager.instance.nowPlayer.thirstLevel;
+        // foreach (var i in DataManager.instance.nowPlayer.item)
+        // {
+        //     InvetoryManager0.InventoryManagerInstance.SetItem(i);
+        // }
+        
+
+        if (DataManager.instance.nowPlayer.amountofhunger != 0) StateBar1.instance.hungry = DataManager.instance.nowPlayer.amountofhunger;
+        if (DataManager.instance.nowPlayer.thirstLevel != 0) StateBar2.instance.thirst = DataManager.instance.nowPlayer.thirstLevel;
 
         UpdateUI();
     }
-
-
-
-
-
 }

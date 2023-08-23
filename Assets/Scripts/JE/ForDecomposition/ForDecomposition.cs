@@ -30,10 +30,10 @@ public class ForDecomposition : MonoBehaviour, IPointerClickHandler
         }
         else
         {
-            // item »èÁ¦
+            // item ì‚­ì œ
             Destroy(inventoryManager.showedItemUI.gameObject);
             Destroy(inventoryManager.showedObject);
-            // item ºÐÇØ ÈÄ ¾ÆÀÌÅÛ µÎ°³ »ý¼º
+            // item ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½
             if (inventoryManager.showedItem.decomposition.decompositionItem1 != null)
                 inventoryManager.SetItem(inventoryManager.showedItem.decomposition.decompositionItem1);
             if (inventoryManager.showedItem.decomposition.decompositionItem2 != null)
