@@ -7,12 +7,12 @@ using UnityEngine.EventSystems;
 
 public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    private ItemUI0 itemUI; // ³»°¡ ¿ìÅ¬¸¯ÇÑ ÇöÀç ItemUI
+    private ItemUI0 itemUI; // ë‚´ê°€ ìš°í´ë¦­í•œ í˜„ì¬ ItemUI
     public TextMeshProUGUI useOReatText;
     public Transform player;
     public InvetoryManager0 inventoryManager;
     private Dictionary<Item.ItemTag2, int> percentages = new Dictionary<Item.ItemTag2, int>()
-    {  // UseItem() ÇßÀ» ¶§ »ç¿ëÀÌ ¾ÈµÇ´Â È®·ü
+    {  // UseItem() í–ˆì„ ë•Œ ì‚¬ìš©ì´ ì•ˆë˜ëŠ” í™•ë¥ 
         {Item.ItemTag2.none, 100},
         {Item.ItemTag2.ax, 50},
         {Item.ItemTag2.raft1, 0},
@@ -23,14 +23,14 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     };
 
 
-    [Header("»ç¿ëÇÏ±â ¹öÆ°À» ÅëÇØ »ı¼ºÇÒ ÇÊ¿ä°¡ ÀÖ´Â °Íµé")]
+    [Header("ì‚¬ìš©í•˜ê¸° ë²„íŠ¼ì„ í†µí•´ ìƒì„±í•  í•„ìš”ê°€ ìˆëŠ” ê²ƒë“¤")]
     public Item coconut;
     private Vector3 pos;
 
-    [Header("¶Â¸ñ »ç¿ë½Ã ¶ç¿ï ÆĞ³Î")]
+    [Header("ë—ëª© ì‚¬ìš©ì‹œ ë„ìš¸ íŒ¨ë„")]
     public GameObject raftPanel;
 
-    [Header("³¬½Ã ÆĞ³Î")]
+    [Header("ë‚šì‹œ íŒ¨ë„")]
     public GameObject fishingPanel;
 
 
@@ -71,15 +71,15 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
 
     //------------------------------
-    // ¹öÆ° ±â´Éµé
+    // ë²„íŠ¼ ê¸°ëŠ¥ë“¤
 
     public void InstallButtonClick()
     {
-        // ¾ÆÀÌÅÛÀÌ ÀåÂøµÇ°í(InstallState¿¡ ¾ÆÀÌÅÛ Á¤º¸ Àü´Ş)
-        // ÀåÂøÇÑ ¾ÆÀÌÅÛÀº ÀÎº¥Åä¸®¿¡ ³²¾ÆÀÖ´Â°¡*****
+        // ì•„ì´í…œì´ ì¥ì°©ë˜ê³ (InstallStateì— ì•„ì´í…œ ì •ë³´ ì „ë‹¬)
+        // ì¥ì°©í•œ ì•„ì´í…œì€ ì¸ë²¤í† ë¦¬ì— ë‚¨ì•„ìˆëŠ”ê°€*****
         if(this.itemUI != null)
         {
-            InstallState.instance.InstallItem(itemUI.itemData);  //InstallState¿¡ ¾ÆÀÌÅÛ Á¤º¸ Àü´Ş
+            InstallState.instance.InstallItem(itemUI.itemData);  //InstallStateì— ì•„ì´í…œ ì •ë³´ ì „ë‹¬
         }
         
 
@@ -87,11 +87,11 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
    
     public void UseOrEatButtonClick()
     {
-        // ¾ÆÀÌÅÛÀ» »ç¿ëÇÏ°Å³ª ¸ÔÀº È¿°ú°¡ ³ªÅ¸³ª°í
-        // ¾ÆÀÌÅÛ °³¼ö°¡ ÇÏ³ª ÁÙ¾îµç´Ù
+        // ì•„ì´í…œì„ ì‚¬ìš©í•˜ê±°ë‚˜ ë¨¹ì€ íš¨ê³¼ê°€ ë‚˜íƒ€ë‚˜ê³ 
+        // ì•„ì´í…œ ê°œìˆ˜ê°€ í•˜ë‚˜ ì¤„ì–´ë“ ë‹¤
 
-        // ÇöÀç ½½·ÔÀÎ itemUIÀÇ itemDataÀÇ itemTag°¡ food ÀÌ¸é eat ½ÇÇà
-        // ¾Æ´Ï¸é use ½ÇÇà
+        // í˜„ì¬ ìŠ¬ë¡¯ì¸ itemUIì˜ itemDataì˜ itemTagê°€ food ì´ë©´ eat ì‹¤í–‰
+        // ì•„ë‹ˆë©´ use ì‹¤í–‰
         if(itemUI.itemData.itemTag == Item.ItemTag.food)
         {
             EatItem(itemUI.itemData);
@@ -104,12 +104,12 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         }
         else if(itemUI.itemData.itemTag2 == Item.ItemTag2.bottle)
         {
-            // ¹°º´¿¡ ¹° Ã¤¿ì±â
+            // ë¬¼ë³‘ì— ë¬¼ ì±„ìš°ê¸°
             UseBottle(itemUI);
         }
         else if(itemUI.itemData.itemTag2 == Item.ItemTag2.fireFood)
         {
-            // À½½Ä ±Á±â
+            // ìŒì‹ êµ½ê¸°
             GrillFoodOnFire(itemUI);
 
         }
@@ -139,8 +139,8 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void ThrowButtonClick()
     {
-        // ÇÃ·¹ÀÌ¾î position ¾ÕÂÊ À§Ä¡¿¡ ÇöÀç ½½·ÔÀÎ itemUIÀÇ itemDataÀÇ itemGameObject¸¦ »ı¼º
-        // ÇØ´ç ¾ÆÀÌÅÛ »èÁ¦
+        // í”Œë ˆì´ì–´ position ì•ìª½ ìœ„ì¹˜ì— í˜„ì¬ ìŠ¬ë¡¯ì¸ itemUIì˜ itemDataì˜ itemGameObjectë¥¼ ìƒì„±
+        // í•´ë‹¹ ì•„ì´í…œ ì‚­ì œ
 
         var newItem = Instantiate<GameObject>(itemUI.itemData.itemGameObject, player.position, Quaternion.identity);
         newItem.transform.SetParent(player.transform);
@@ -177,11 +177,11 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         // item use
         //Debug.Log(item.itemName + GameData.playerCollisionState);
 
-        if (Random.Range(0, 100) < percentages[item.itemTag2]) return;  // È®·ü
+        if (Random.Range(0, 100) < percentages[item.itemTag2]) return;  // í™•ë¥ 
 
         if (item.itemTag2 == Item.ItemTag2.ax && GameData.playerCollisionState == "tree")
-        {   // ³ª¹« ±¸¿ª¿¡¼­ (tree zone)
-            // µµ³¢ »ç¿ë -> ÄÚÄÚ³Ó »ı¼º
+        {   // ë‚˜ë¬´ êµ¬ì—­ì—ì„œ (tree zone)
+            // ë„ë¼ ì‚¬ìš© -> ì½”ì½”ë„› ìƒì„±
             // use ax -> create coconut
             pos = new Vector3(player.position.x + 1f, player.position.y + 2f, player.position.z);
             var coco = Instantiate<GameObject>(coconut.itemGameObject, pos, Quaternion.identity);
@@ -189,18 +189,18 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         else if(GameData.playerCollisionState == "ocean")
         {   
             if(item.itemTag2 == Item.ItemTag2.raft1 || item.itemTag2 == Item.ItemTag2.raft2)
-            {   // ¹Ù´Ù ±¸¿ª¿¡¼­ (ocean zone)
-                // ¶Â¸ñ1,2 »ç¿ë -> ÆĞ³Î ¶ç¿ì±â
+            {   // ë°”ë‹¤ êµ¬ì—­ì—ì„œ (ocean zone)
+                // ë—ëª©1,2 ì‚¬ìš© -> íŒ¨ë„ ë„ìš°ê¸°
                 // use raft1 -> show panel
-                raftPanel.SetActive(true);  // ÀÌÈÄ °úÁ¤Àº ÆĞ³Î¿¡¼­ Ã³¸®
-                GameData.useWhatOnOseanZone = item;  // Á¤º¸ ³Ö¾îÁÖ±â
+                raftPanel.SetActive(true);  // ì´í›„ ê³¼ì •ì€ íŒ¨ë„ì—ì„œ ì²˜ë¦¬
+                GameData.useWhatOnOseanZone = item;  // ì •ë³´ ë„£ì–´ì£¼ê¸°
             }  
         }
         else if (GameData.playerCollisionState == "fishingWater")
         {   
             if(item.itemTag2 == Item.ItemTag2.fishing)
-            {   // ³¬½Ã&¹° ±¸¿ª¿¡¼­ (fishingWater zone)
-                // ³¬½Ãµµ±¸ »ç¿ë -> ¹°°í±â Àâ¾Ò´Ù´Â ÆĞ³Î ¶ç¿ì±â
+            {   // ë‚šì‹œ&ë¬¼ êµ¬ì—­ì—ì„œ (fishingWater zone)
+                // ë‚šì‹œë„êµ¬ ì‚¬ìš© -> ë¬¼ê³ ê¸° ì¡ì•˜ë‹¤ëŠ” íŒ¨ë„ ë„ìš°ê¸°
                 // use fishing tool -> show fishingPanel
                 fishingPanel.SetActive(true);
             }
@@ -220,8 +220,8 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     private void GrillFoodOnFire(ItemUI0 itemUI)
     {
        if (GameData.playerCollisionState == "fire" && FireController.isFireOn)
-        {   // ºÒ ±¸¿ª¿¡¼­ (fire zone)
-            // À½½Ä »ç¿ë -> ºÒ¿¡ ±¸¿î ÈÄÀÇ ¾ÆÀÌÅÛ »ı¼º
+        {   // ë¶ˆ êµ¬ì—­ì—ì„œ (fire zone)
+            // ìŒì‹ ì‚¬ìš© -> ë¶ˆì— êµ¬ìš´ í›„ì˜ ì•„ì´í…œ ìƒì„±
             // use food -> create item after fire
             if (inventoryManager.IsInventoryFUll())
             {
@@ -240,8 +240,8 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     private void UseBottle(ItemUI0 itemUI)
     {
         if (GameData.playerCollisionState == "fishingWater")
-        {   // ³¬½Ã&¹° ±¸¿ª¿¡¼­ (fishingWater zone)
-            // ¹°º´ »ç¿ë -> ¹°Åë¿¡ ¹° Ã¤¿ì±â(¹°º´ »èÁ¦, ¹°ÀÖ´Â¹°º´ »ı¼º)
+        {   // ë‚šì‹œ&ë¬¼ êµ¬ì—­ì—ì„œ (fishingWater zone)
+            // ë¬¼ë³‘ ì‚¬ìš© -> ë¬¼í†µì— ë¬¼ ì±„ìš°ê¸°(ë¬¼ë³‘ ì‚­ì œ, ë¬¼ìˆëŠ”ë¬¼ë³‘ ìƒì„±)
             // use bottle -> bottle with water
             if(inventoryManager.IsInventoryFUll())
             {
@@ -249,8 +249,8 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             }
             else
             {
-                itemUI.DeleteUI();  // ±âÁ¸ empty bottle »èÁ¦
-                inventoryManager.SetItem(itemUI.itemData.bottleWithWater);  // bottle with water ÀÎº¥Åä¸®¿¡ Ãß°¡
+                itemUI.DeleteUI();  // ê¸°ì¡´ empty bottle ì‚­ì œ
+                inventoryManager.SetItem(itemUI.itemData.bottleWithWater);  // bottle with water ì¸ë²¤í† ë¦¬ì— ì¶”ê°€
             }
 
             

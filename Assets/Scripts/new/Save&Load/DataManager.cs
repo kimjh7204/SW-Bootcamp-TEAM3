@@ -21,6 +21,7 @@ public class PlayerData
         public Vector3 playerPosition; //현재위치
         public float thirstLevel; //목마름 수치
         public float lastSaveTime; //제일 마지막에 저장된 시간
+        public string[] item;
     }
 
 public class DataManager : MonoBehaviour
@@ -49,12 +50,6 @@ public class DataManager : MonoBehaviour
         print(path);
         
     }
-
-    void Start()
-    {
-      
-    }
-
     public void SaveData()
     {
         string data = JsonUtility.ToJson(nowPlayer);
