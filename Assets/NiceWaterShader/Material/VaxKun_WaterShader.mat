@@ -71,11 +71,11 @@ Material:
     - _FresnelExponent: 8.5
     - _LightColorIntensity: 0.5
     - _Lights: 1
-    - _MainFoamDistance: 3.56
-    - _MainFoamOpacity: 0.7
+    - _MainFoamDistance: 5.64
+    - _MainFoamOpacity: 0.47
     - _MainFoamPower: 1
-    - _MainFoamScale: 5
-    - _MainFoamSpeed: 0.025
+    - _MainFoamScale: 22.37
+    - _MainFoamSpeed: 0.01
     - _MaxFoamDistance: 1
     - _MinFoamDistance: 0
     - _MinimumFoamDistance: 0.25
@@ -108,8 +108,8 @@ Material:
     - _VertexOffset: 1
     - _WaveDistortionIntensity: 4
     - _WavesAmplitude: 10
-    - _WavesIntensity: 0.01
-    - _WavesSpeed: 1
+    - _WavesIntensity: 0.0005
+    - _WavesSpeed: 0.02
     - __dirty: 1
     - _isSpecularNormalIntensity: 0
     - _node_1043: 2.8
@@ -121,9 +121,9 @@ Material:
     - _node_8447: 2
     - _node_9315: 1
     m_Colors:
-    - _DepthColor0: {r: 0.10586833, g: 0.5960784, b: 0.61960775, a: 0}
-    - _DepthColor1: {r: 0.23056811, g: 0.5119275, b: 0.6320754, a: 0}
-    - _DepthColor2: {r: 0.14809442, g: 0.20305169, b: 0.3679235, a: 0}
+    - _DepthColor0: {r: 0.10584415, g: 0.5960784, b: 0.61960775, a: 0}
+    - _DepthColor1: {r: 0.23054394, g: 0.5119275, b: 0.6320754, a: 0}
+    - _DepthColor2: {r: 0.1480715, g: 0.20302877, b: 0.36789933, a: 0}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 0}
     - _FresnelColor: {r: 0.48616034, g: 0.8962264, b: 0.8699822, a: 0}
     - _node_4409: {r: 0.5, g: 0.5, b: 0.5, a: 1}
