@@ -363,6 +363,7 @@ MonoBehaviour:
   player: {fileID: 0}
   inventoryManager: {fileID: 0}
   coconut: {fileID: 11400000, guid: b475c63205499d64db82bc31b9143a9c, type: 2}
+  log: {fileID: 11400000, guid: 4728f353feb5097498fbd5b552a24d9e, type: 2}
   raftPanel: {fileID: 0}
   fishingPanel: {fileID: 0}
 --- !u!1 &5248629229949886227

@@ -145,7 +145,7 @@ public class ItemUI0 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, ID
         }
         invetoryManager.showedObject = Instantiate<GameObject>(itemData.itemShowObject, new Vector3(-0.0026165843f, -53.3899994f, 0), Quaternion.identity);
         //invetoryManager.showedObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
-        invetoryManager.tooltipText.text = itemData.itemTooltip;
+        invetoryManager.tooltipText.text = itemData.itemName;
         if(i==0)
         {
             invetoryManager.showedItem = itemData;

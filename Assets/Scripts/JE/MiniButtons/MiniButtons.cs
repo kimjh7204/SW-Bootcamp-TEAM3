@@ -26,6 +26,7 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     [Header("사용하기 버튼을 통해 생성할 필요가 있는 것들")]
     public Item coconut;
     private Vector3 pos;
+    public Item log;
 
     [Header("뗏목 사용시 띄울 패널")]
     public GameObject raftPanel;
@@ -181,10 +182,19 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
         if (item.itemTag2 == Item.ItemTag2.ax && GameData.playerCollisionState == "tree")
         {   // 나무 구역에서 (tree zone)
-            // 도끼 사용 -> 코코넛 생성
-            // use ax -> create coconut
+            // 도끼 사용 -> 코코넛 생성, 나무기둥 생성
+            // use ax -> create coconut or log
             pos = new Vector3(player.position.x + 1f, player.position.y + 2f, player.position.z);
-            var coco = Instantiate<GameObject>(coconut.itemGameObject, pos, Quaternion.identity);
+            if(Random.Range(0, 100) < 50)
+            {
+                var coco = Instantiate<GameObject>(coconut.itemGameObject, pos, Quaternion.identity);
+            }
+            else
+            {
+                var loog = Instantiate<GameObject>(log.itemGameObject, pos, Quaternion.identity);
+            }
+            
+            
         }
         else if(GameData.playerCollisionState == "ocean")
         {   
