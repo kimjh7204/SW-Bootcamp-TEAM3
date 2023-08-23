@@ -28,12 +28,11 @@ public class ObjRotate : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     public void OnDrag(PointerEventData eventData)
     {
         if(inventoryManager.showedObject == null) return;
-        offset = (-Input.mousePosition + mousePos);
+        //offset = (-Input.mousePosition + mousePos);
         float x = eventData.delta.x * Time.deltaTime * rotateSpeed;
         float y = eventData.delta.y * Time.deltaTime * rotateSpeed;
         inventoryManager.showedObject.transform.Rotate(y, -x, 0, Space.World);
-        
-        mousePos = Input.mousePosition;
+        //mousePos = Input.mousePosition;
     }
 
     

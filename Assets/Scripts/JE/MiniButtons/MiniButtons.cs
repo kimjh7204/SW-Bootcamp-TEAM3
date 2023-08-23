@@ -19,7 +19,8 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         {Item.ItemTag2.raft2, 0},
         {Item.ItemTag2.raft3, 0},
         {Item.ItemTag2.fishing, 0},
-        {Item.ItemTag2.light, 0}
+        {Item.ItemTag2.light, 0},
+        {Item.ItemTag2.umbrellaCup, 0}
     };
 
 
@@ -27,6 +28,7 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public Item coconut;
     private Vector3 pos;
     public Item log;
+    public Item umbrellaCup;
 
     [Header("뗏목 사용시 띄울 패널")]
     public GameObject raftPanel;
@@ -127,6 +129,10 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         {
             EndingObjectMove.instance.ShowEnding();
         }
+        else if(itemUI.itemData.itemTag2 == Item.ItemTag2.umbrellaCup)
+        {
+            UseUmbrellaCup(itemUI);
+        }
         else
         {
             UseItem(itemUI.itemData);
@@ -218,6 +224,17 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         
 
 
+    }
+
+    private void UseUmbrellaCup(ItemUI0 itemUI)
+    {
+        if (GameData.playerCollisionState != "groundHole") return;
+        // 아이템 생성
+        pos = new Vector3(2.32088661f, 10.4499998f, -98.0699997f);
+        var tempItem = Instantiate<GameObject>(umbrellaCup.itemGameObject, pos, Quaternion.identity);
+        tempItem.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
+        tempItem.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+        itemUI.DeleteUI();
     }
 
     private void UseFireMaker()

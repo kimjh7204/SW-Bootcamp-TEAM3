@@ -44,7 +44,8 @@ public class Item : ScriptableObject
         bottle,
         fireFood,
         light,
-        fireMaker
+        fireMaker,
+        umbrellaCup
     }
     [Header("아이템 태그2(아이템 사용을 위한 태그임)")]
     public ItemTag2 itemTag2;
