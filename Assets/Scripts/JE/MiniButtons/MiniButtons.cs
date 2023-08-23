@@ -66,7 +66,7 @@ public class MiniButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
         this.gameObject.SetActive(false);
 
-        raftPanel.SetActive(false);
+        //raftPanel.SetActive(false);
     }
 
 

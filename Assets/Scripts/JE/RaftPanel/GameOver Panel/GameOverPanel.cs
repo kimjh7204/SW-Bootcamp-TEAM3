@@ -16,7 +16,6 @@ public class GameOverPanel : MonoBehaviour
     private void Start()
     {
         instance = this;
-        gameoverPanel.SetActive(false);
     }
 
     public void GoMainBtnClick()

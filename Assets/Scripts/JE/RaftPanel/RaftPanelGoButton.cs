@@ -8,10 +8,6 @@ public class RaftPanelGoButton : MonoBehaviour
     public GameObject raftPanel;
     public GameObject gameoverPanel;
 
-    private void Start()
-    {
-        youCannotGoPanel.SetActive(false);
-    }
 
     public void RaftPanelGoButtonClick()
     {
