@@ -11,6 +11,7 @@ public class SelectSlot : MonoBehaviour
 {
     public TextMeshProUGUI[] BoxText;
     bool[] savefile = new bool[3];
+
     void Start()
     {
         for (int i = 0; i < 3; i++)
@@ -46,8 +47,11 @@ public class SelectSlot : MonoBehaviour
         
         //1. 저장데이터가 있을 때
         if (savefile[number])
-        { 
+        {
             DataManager.instance.LoadData();
+
+            
+
             GoGame();
         }
         //2. 저장데이터가 없을 때
@@ -60,11 +64,7 @@ public class SelectSlot : MonoBehaviour
 
     public void GoGame()
     {
-        {
-            if (!savefile[DataManager.instance.nowSlot])
-                DataManager.instance.SaveData();
-        }
-        SceneManager.LoadScene(1);
+       SceneManager.LoadScene(1);
     }
     
 }

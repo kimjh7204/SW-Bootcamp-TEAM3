@@ -31,8 +31,11 @@ public class SaveandLoad : MonoBehaviour
         DataManager.instance.SaveData();
     }
 
-    private void LoadData()
+    public void LoadData()
     {
+
+        if (!File.Exists(DataManager.instance.path + DataManager.instance.nowSlot)) return;
+        
         DataManager.instance.LoadData();
 
         playerObject.transform.position = DataManager.instance.nowPlayer.playerPosition;
