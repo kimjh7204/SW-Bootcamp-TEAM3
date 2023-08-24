@@ -15,4 +15,9 @@ public static class GameData
 
     public static Item useWhatOnOseanZone = null;  // 플레이어가 ocean 구역에 있을 때 사용한 아이템(뗏목)
 
+    public static float hungry;
+    public static float thirsty;
+
+    public static Item[] inventoryItems = new Item[19];
+
 }

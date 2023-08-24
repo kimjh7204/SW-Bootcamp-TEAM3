@@ -40,7 +40,7 @@ public class InvetoryManager0 : MonoBehaviour
         set => _selectedSlot = value;
     }
 
-    [SerializeField] private List<ItemSlot0> itemSlots = new List<ItemSlot0>();
+    public List<ItemSlot0> itemSlots = new List<ItemSlot0>();
 
     [Header("�̴� ��ư â")]
     public GameObject miniButtons;
@@ -67,9 +67,9 @@ public class InvetoryManager0 : MonoBehaviour
             itemDictionary.Add(itemDatas[i].itemName, itemDatas[i]);
         }
         
-        SetItem(testItem1);
+        /*SetItem(testItem1);
         SetItem(testItem2);
-        SetItem(testItem3);
+        SetItem(testItem3);*/
         
     }
 
@@ -107,6 +107,19 @@ public class InvetoryManager0 : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public void SetItemIndex(int idx, Item item)
+    {
+        if (itemSlots[idx].item != null)
+        {
+            itemSlots[idx].item.DeleteUI();
+        }
+        GameObject tempItemUI = Instantiate(itemUIPrefab, itemSlots[idx].transform);
+        ItemUI0 temp = tempItemUI.GetComponent<ItemUI0>();
+        Item tempItemData = item;
+        temp.Init(tempItemData, this, itemSlots[idx], miniButtons);
+
     }
 
     public ItemUI0 SetItemAndReturnUI(Item item)
