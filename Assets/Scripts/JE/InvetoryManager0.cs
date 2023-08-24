@@ -51,9 +51,9 @@ public class InvetoryManager0 : MonoBehaviour
     //public List<string> itemKeys;
     public List<Item> itemDatas;
 
-    public Dictionary<string, Item> itemDictionary;
+    public Dictionary<string, Item> itemDictionary = new Dictionary<string, Item>();
 
-    private void Start()
+    private void Awake()
     {
         InventoryManagerInstance = this;
         inventoryFullPanel.SetActive(false);

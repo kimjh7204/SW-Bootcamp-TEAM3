@@ -22,6 +22,7 @@ public class CaveButtons : MonoBehaviour
         GameData.hungry = StateBar1.instance.hungry;
         GameData.thirsty = StateBar2.instance.thirst;
 
+        GameData.playerWasInCave = true;
         SceneManager.LoadScene(gameSceneNum);
     }
 

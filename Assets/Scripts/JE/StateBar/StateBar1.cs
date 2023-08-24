@@ -20,7 +20,7 @@ public class StateBar1 : MonoBehaviour
     [Header("game over panel")]
     public GameObject gameoverPanel;
 
-    private void Start()
+    private void Awake()
     {
         instance = this;
         hungry = height;

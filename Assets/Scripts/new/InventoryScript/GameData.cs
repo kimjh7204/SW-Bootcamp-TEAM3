@@ -20,4 +20,6 @@ public static class GameData
 
     public static Item[] inventoryItems = new Item[19];
 
+    public static bool playerWasInCave = false;
+
 }
